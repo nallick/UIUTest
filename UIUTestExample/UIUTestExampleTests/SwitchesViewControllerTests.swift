@@ -5,7 +5,7 @@
 //
 
 import XCTest
-@testable import UIUTestExample
+import UIUTestExample
 
 class SwitchesViewControllerTests: XCTestCase
 {

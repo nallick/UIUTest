@@ -1,12 +1,12 @@
 //
 //  SwitchesViewController.swift
 //
-//  Copyright © 2017 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2017-2018 Purgatory Design. Licensed under the MIT License.
 //
 
 import UIKit
 
-class SwitchesViewController: UIViewController
+public class SwitchesViewController: UIViewController
 {
     @IBOutlet private var bulbSwitch: UISwitch!
     @IBOutlet private var bulbSlider: UISlider!
@@ -29,7 +29,7 @@ class SwitchesViewController: UIViewController
         self.sliderAlphaLabel.text = "\(Int(round(sliderValue*100.0)))%"
     }
 
-    override func viewWillAppear(_ animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.switchBulbLabel.isHidden = !self.bulbSwitch.isOn
     }

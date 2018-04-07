@@ -6,12 +6,15 @@
 
 import UIKit
 
-struct DefaultAuthenticator: Authenticator
+public struct DefaultAuthenticator: Authenticator
 {
-	static let validUser = "admin"
-	static let validPassword = "admin"
+	public static let validUser = "admin"
+	public static let validPassword = "admin"
 
-	func authenticate(user: String, password: String) -> Bool {
+	public init() {
+	}
+
+	public func authenticate(user: String, password: String) -> Bool {
 		return (user == DefaultAuthenticator.validUser && password == DefaultAuthenticator.validPassword)
 	}
 }

@@ -8,7 +8,7 @@ import UIKit
 
 extension UITextField
 {
-	var count: String.IndexDistance {
+	var count: Int {
 //		return self.text?.count ?? 0
 		return self.text!.count		// text is never nil and the test above dings our code coverage
 	}

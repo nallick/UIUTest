@@ -6,7 +6,7 @@
 
 import UIKit
 
-class InfoViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
+public class InfoViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate
 {
     @IBOutlet private var lightBulbLabel: UILabel!
     @IBOutlet private var pickerView: UIPickerView!
@@ -36,24 +36,24 @@ class InfoViewController: UIViewController, UIPickerViewDataSource, UIPickerView
         self.dayOfWeekLabel.text = sender.date.dayOfWeek
     }
 
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
 
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return 12
     }
 
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return String(row + 1)
     }
 
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // print("didSelectRow: \(row)")
         self.pickerLabel.text = String(row + 1)
     }
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         self.dayOfWeekLabel.text = self.datePicker.date.dayOfWeek
     }

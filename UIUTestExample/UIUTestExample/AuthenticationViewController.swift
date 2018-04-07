@@ -6,12 +6,12 @@
 
 import UIKit
 
-protocol Authenticator
+public protocol Authenticator
 {
     func authenticate(user: String, password: String) -> Bool
 }
 
-class AuthenticationViewController: UIViewController, UITextFieldDelegate
+public class AuthenticationViewController: UIViewController, UITextFieldDelegate
 {
     @IBOutlet private var userNameField: UITextField!
     @IBOutlet private var passwordField: UITextField!
@@ -21,10 +21,10 @@ class AuthenticationViewController: UIViewController, UITextFieldDelegate
     @IBInspectable var maxUserNameLength = 0
     @IBInspectable var maxPasswordLength = 0
 
-    static var defaultAuthenticator: Authenticator?
+    public static var defaultAuthenticator: Authenticator?
     private var authenticator: Authenticator? = defaultAuthenticator
 
-    var passwordIsSecure: Bool {
+    public var passwordIsSecure: Bool {
         get {
             return self.passwordField.isSecureTextEntry
         }
@@ -33,7 +33,7 @@ class AuthenticationViewController: UIViewController, UITextFieldDelegate
         }
     }
 
-    func setAuthenticator(_ authenticator: Authenticator) {
+    public func setAuthenticator(_ authenticator: Authenticator) {
         self.authenticator = authenticator
     }
 
@@ -60,7 +60,7 @@ class AuthenticationViewController: UIViewController, UITextFieldDelegate
         self.invalidCredentialsLabel.isHidden = true
     }
 
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
     {
         let maxLength = (textField === self.userNameField) ? self.maxUserNameLength : (textField === self.passwordField) ? self.maxPasswordLength : 0;
         let currentLength = textField.count

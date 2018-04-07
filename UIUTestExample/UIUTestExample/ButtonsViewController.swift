@@ -6,7 +6,7 @@
 
 import UIKit
 
-class ButtonsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource
+public class ButtonsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource
 {
     @IBOutlet private var numberLabel: UILabel!
     @IBOutlet private var collectionView: UICollectionView!
@@ -51,12 +51,12 @@ class ButtonsViewController: UIViewController, UICollectionViewDelegate, UIColle
         self.labelValue = Int(sender.value)
     }
 
-    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+    public func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
 //        print("shouldSelectItemAt: \(indexPath.item)")
         return true//(indexPath.item%2 == 0)
     }
 
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		let newValue = indexPath.item + 1
 		if newValue == self.labelValue {
 			self.collectionView.deselectItem(at: indexPath, animated: true)
@@ -68,33 +68,33 @@ class ButtonsViewController: UIViewController, UICollectionViewDelegate, UIColle
 //        print("didSelectItemAt: \(indexPath.item)")
     }
 
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+    public func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
 //        print("didDeselectItemAt: \(indexPath.item)")
     }
 
-    func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+    public func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
 //        print("shouldHighlightItemAt: \(indexPath.item)")
         return true
     }
 
-    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+    public func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
 //        print("didHighlightItemAt: \(indexPath.item)")
     }
 
-    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+    public func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
 //        print("didUnhighlightItemAt: \(indexPath.item)")
     }
 
-//    func collectionView(_ collectionView: UICollectionView, shouldDeselectItemAt indexPath: IndexPath) -> Bool {
+//    public func collectionView(_ collectionView: UICollectionView, shouldDeselectItemAt indexPath: IndexPath) -> Bool {
 //        print("shouldDeselectItemAt: \(indexPath.item)")
 //        return true
 //    }
 
-    internal func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 12
     }
 
-    internal func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let labelString = String(indexPath.item + 1)
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "DefaultCell", for: indexPath)
         (cell.backgroundView as? UILabel)?.text = labelString
@@ -106,7 +106,7 @@ class ButtonsViewController: UIViewController, UICollectionViewDelegate, UIColle
         super.prepare(for: segue, sender: sender)
     }
 
-    override func viewWillAppear(_ animated: Bool) {
+    public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //self.collectionView.allowsSelection = false
         //self.collectionView.allowsMultipleSelection = true

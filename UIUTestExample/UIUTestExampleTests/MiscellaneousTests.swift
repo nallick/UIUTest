@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import UIUTestExample
+import UIUTestExample
 
 class MiscellaneousTests: XCTestCase
 {

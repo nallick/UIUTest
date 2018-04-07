@@ -5,7 +5,7 @@
 //
 
 import XCTest
-@testable import UIUTestExample
+import UIUTestExample
 
 struct TestAuthenticator: Authenticator
 {
