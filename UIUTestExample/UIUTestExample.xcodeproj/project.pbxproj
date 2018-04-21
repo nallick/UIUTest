@@ -96,7 +96,7 @@
 		01928DC9208BCBDD00F33D25 /* ToolbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarViewController.swift; sourceTree = "<group>"; };
 		01928DCB208BE0C600F33D25 /* TabBarControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerTests.swift; sourceTree = "<group>"; };
 		01928DCD208BE54B00F33D25 /* ToolbarViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarViewControllerTests.swift; sourceTree = "<group>"; };
-		01928DD1208BF15500F33D25 /* UIBarButtonItemTestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemTestable.swift; sourceTree = "<group>"; };
+		01928DD1208BF15500F33D25 /* UIBarButtonItemTestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIBarButtonItemTestable.swift; path = "Testable Extensions/UIBarButtonItemTestable.swift"; sourceTree = "<group>"; };
 		01B3B2AE201E209500DBB071 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01B3B2B0201E20EA00DBB071 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		01B3B2C0201E254E00DBB071 /* UIWindowSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIWindowSimulation.swift; path = "Simulation Extensions/UIWindowSimulation.swift"; sourceTree = "<group>"; };
