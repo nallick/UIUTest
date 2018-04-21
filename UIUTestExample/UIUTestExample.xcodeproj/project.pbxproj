@@ -26,6 +26,10 @@
 		010B1BBD201D924E00448B0E /* ButtonsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B1BB5201D924E00448B0E /* ButtonsViewControllerTests.swift */; };
 		010B1BBE201D924E00448B0E /* TableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B1BB6201D924E00448B0E /* TableViewControllerTests.swift */; };
 		010B1BC0201D924E00448B0E /* MiscellaneousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B1BB8201D924E00448B0E /* MiscellaneousTests.swift */; };
+		01928DCA208BCBDD00F33D25 /* ToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01928DC9208BCBDD00F33D25 /* ToolbarViewController.swift */; };
+		01928DCC208BE0C600F33D25 /* TabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01928DCB208BE0C600F33D25 /* TabBarControllerTests.swift */; };
+		01928DCE208BE54B00F33D25 /* ToolbarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01928DCD208BE54B00F33D25 /* ToolbarViewControllerTests.swift */; };
+		01928DD2208BF15500F33D25 /* UIBarButtonItemTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01928DD1208BF15500F33D25 /* UIBarButtonItemTestable.swift */; };
 		01B3B2AF201E209500DBB071 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B3B2AE201E209500DBB071 /* LaunchScreen.storyboard */; };
 		01B3B2B1201E20EA00DBB071 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B3B2B0201E20EA00DBB071 /* Main.storyboard */; };
 		01B3B2CE201E254F00DBB071 /* UIWindowSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3B2C0201E254E00DBB071 /* UIWindowSimulation.swift */; };
@@ -89,6 +93,10 @@
 		010B1BB6201D924E00448B0E /* TableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerTests.swift; sourceTree = "<group>"; };
 		010B1BB7201D924E00448B0E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		010B1BB8201D924E00448B0E /* MiscellaneousTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiscellaneousTests.swift; sourceTree = "<group>"; };
+		01928DC9208BCBDD00F33D25 /* ToolbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarViewController.swift; sourceTree = "<group>"; };
+		01928DCB208BE0C600F33D25 /* TabBarControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerTests.swift; sourceTree = "<group>"; };
+		01928DCD208BE54B00F33D25 /* ToolbarViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarViewControllerTests.swift; sourceTree = "<group>"; };
+		01928DD1208BF15500F33D25 /* UIBarButtonItemTestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemTestable.swift; sourceTree = "<group>"; };
 		01B3B2AE201E209500DBB071 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01B3B2B0201E20EA00DBB071 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		01B3B2C0201E254E00DBB071 /* UIWindowSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIWindowSimulation.swift; path = "Simulation Extensions/UIWindowSimulation.swift"; sourceTree = "<group>"; };
@@ -168,6 +176,7 @@
 				010B1B86201D904E00448B0E /* main.swift */,
 				010B1B8D201D904F00448B0E /* SwitchesViewController.swift */,
 				010B1B8A201D904E00448B0E /* TableViewController.swift */,
+				01928DC9208BCBDD00F33D25 /* ToolbarViewController.swift */,
 				010B1B8F201D904F00448B0E /* UITextFieldExtensions.swift */,
 				010B1B88201D904E00448B0E /* UIViewControllerExtensions.swift */,
 			);
@@ -183,7 +192,9 @@
 				010B1BB3201D924E00448B0E /* InfoViewControllerTests.swift */,
 				010B1BB8201D924E00448B0E /* MiscellaneousTests.swift */,
 				010B1BB4201D924E00448B0E /* SwitchesViewControllerTests.swift */,
+				01928DCB208BE0C600F33D25 /* TabBarControllerTests.swift */,
 				010B1BB6201D924E00448B0E /* TableViewControllerTests.swift */,
+				01928DCD208BE54B00F33D25 /* ToolbarViewControllerTests.swift */,
 				010B1BB7201D924E00448B0E /* Info.plist */,
 			);
 			path = UIUTestExampleTests;
@@ -236,6 +247,7 @@
 		01B3B2DC201E257400DBB071 /* Testable Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				01928DD1208BF15500F33D25 /* UIBarButtonItemTestable.swift */,
 				01B3B2DF201E259E00DBB071 /* UIStoryboardSegueTestable.swift */,
 				01B3B2DD201E259E00DBB071 /* UITableViewCellTestable.swift */,
 				01B3B2DE201E259E00DBB071 /* UIViewControllerTestable.swift */,
@@ -303,18 +315,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Purgatory Design";
 				TargetAttributes = {
 					010B1B5F201D8F8E00448B0E = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					010B1B73201D8F8E00448B0E = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 010B1B5F201D8F8E00448B0E;
 					};
 				};
@@ -363,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01928DCA208BCBDD00F33D25 /* ToolbarViewController.swift in Sources */,
 				010B1B96201D904F00448B0E /* AppDelegate.swift in Sources */,
 				010B1B90201D904F00448B0E /* AuthenticationViewController.swift in Sources */,
 				010B1B98201D904F00448B0E /* ButtonsViewController.swift in Sources */,
@@ -387,6 +400,7 @@
 				010B1BBD201D924E00448B0E /* ButtonsViewControllerTests.swift in Sources */,
 				010B1BB9201D924E00448B0E /* DateExtensionTests.swift in Sources */,
 				01B3B2F1201E25D100DBB071 /* GeometryExtensions.swift in Sources */,
+				01928DCE208BE54B00F33D25 /* ToolbarViewControllerTests.swift in Sources */,
 				010B1BBB201D924E00448B0E /* InfoViewControllerTests.swift in Sources */,
 				010B1BC0201D924E00448B0E /* MiscellaneousTests.swift in Sources */,
 				01B3B2F2201E25D100DBB071 /* NSObjectAssociatedObject.swift in Sources */,
@@ -401,6 +415,7 @@
 				01B3B2D1201E254F00DBB071 /* UIDatePickerSimulation.swift in Sources */,
 				01B3B2D0201E254F00DBB071 /* UIPickerViewSimulation.swift in Sources */,
 				01B3B2D2201E254F00DBB071 /* UISegmentedControlSimulation.swift in Sources */,
+				01928DCC208BE0C600F33D25 /* TabBarControllerTests.swift in Sources */,
 				01B3B2E2201E259F00DBB071 /* UIStoryboardSegueTestable.swift in Sources */,
 				01B3B2D3201E254F00DBB071 /* UISwitchSimulation.swift in Sources */,
 				01B3B2D9201E254F00DBB071 /* UISliderSimulation.swift in Sources */,
@@ -412,6 +427,7 @@
 				01B3B2E1201E259F00DBB071 /* UIViewControllerTestable.swift in Sources */,
 				01B3B2ED201E25D100DBB071 /* UIViewExtensions.swift in Sources */,
 				01B3B2D6201E254F00DBB071 /* UIViewSimulation.swift in Sources */,
+				01928DD2208BF15500F33D25 /* UIBarButtonItemTestable.swift in Sources */,
 				01B3B2CE201E254F00DBB071 /* UIWindowSimulation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +457,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -448,6 +465,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -497,6 +515,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -504,6 +523,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -537,8 +557,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AJ855837T2;
 				INFOPLIST_FILE = UIUTestExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PurgatoryDesign.UIUTestExample;
@@ -555,8 +576,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AJ855837T2;
 				INFOPLIST_FILE = UIUTestExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PurgatoryDesign.UIUTestExample;
@@ -573,8 +595,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AJ855837T2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -597,8 +620,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AJ855837T2;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

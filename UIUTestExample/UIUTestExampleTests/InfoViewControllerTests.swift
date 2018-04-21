@@ -10,16 +10,18 @@ import UIUTestExample
 class InfoViewControllerTests: XCTestCase
 {
     var viewController: InfoViewController!
+	var view: UIView!
 
     override func setUp() {
         super.setUp()
 
         UIViewController.initializeTestable()
         viewController = UIViewController.loadFromStoryboard(identifier: "InfoViewController") as! InfoViewController
+		view = viewController.view!
     }
 
     func testDoneButton() {
-        let doneButton = viewController.view.viewWithAccessibilityIdentifier("Done") as! UIButton
+        let doneButton = view.viewWithAccessibilityIdentifier("Done") as! UIButton
 
         doneButton.simulateTouch()
 
@@ -27,7 +29,6 @@ class InfoViewControllerTests: XCTestCase
     }
     
     func testLightBulbButton() {
-        let view = viewController.view!
         let lightBulbButton = view.viewWithAccessibilityIdentifier("LightBulbButton") as! UIButton
         let lightBulbLabel = view.viewWithAccessibilityIdentifier("LightBulb") as! UILabel
 
@@ -45,7 +46,6 @@ class InfoViewControllerTests: XCTestCase
     }
 
     func testPickerViewDisplaysSelectedRow() {
-        let view = viewController.view!
         let pickerView = view.viewWithAccessibilityIdentifier("PickerView") as! UIPickerView
         let pickerLabel = view.viewWithAccessibilityIdentifier("PickerLabel") as! UILabel
 
@@ -55,7 +55,6 @@ class InfoViewControllerTests: XCTestCase
     }
 
     func testDatePickerDisplayDayOfWeek() {
-        let view = viewController.view!
         let datePicker = view.viewWithAccessibilityIdentifier("DatePicker") as! UIDatePicker
         let dayOfWeekLabel = view.viewWithAccessibilityIdentifier("DayOfWeekrLabel") as! UILabel
         let today = Date.today

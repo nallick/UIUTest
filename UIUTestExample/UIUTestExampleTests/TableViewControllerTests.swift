@@ -9,15 +9,18 @@ import UIUTestExample
 
 class TableViewControllerTests: XCTestCase
 {
+    var viewController: TableViewController!
+    var tableView: UITableView!
+
     override func setUp() {
         super.setUp()
+
         UIViewController.initializeTestable()
+        viewController = UIViewController.loadFromStoryboard(identifier: "TableViewController") as! TableViewController
+        tableView = viewController.tableView!
     }
 
     func testSegueFromInfoButtonToInfoViewController() {
-        let viewController = UIViewController.loadFromStoryboard() as! TableViewController
-        let tableView = viewController.tableView!
-
         tableView.simulateAccessoryTouch(at: IndexPath(row: 1, section: 0))
 
         let segue = viewController.mostRecentlyPerformedSegue!
@@ -26,9 +29,6 @@ class TableViewControllerTests: XCTestCase
     }
 
     func testSegueFromTableToNextViewController() {
-        let viewController = UIViewController.loadFromStoryboard() as! TableViewController
-        let tableView = viewController.tableView!
-
         tableView.simulateTouch(at: IndexPath(row: 2, section: 0))
 
         let segue = viewController.mostRecentlyPerformedSegue!

@@ -9,17 +9,17 @@ import UIUTestExample
 
 class SwitchesViewControllerTests: XCTestCase
 {
-    var viewController: SwitchesViewController!
+	var view: UIView!
 
     override func setUp() {
         super.setUp()
 
         UIViewController.initializeTestable()
-        viewController = UIViewController.loadFromStoryboard(identifier: "SwitchesViewController") as! SwitchesViewController
+        let viewController = UIViewController.loadFromStoryboard(identifier: "SwitchesViewController") as! SwitchesViewController
+		view = viewController.view!
     }
 
     func testToggleButton() {
-        let view = viewController.view!
         let toggleButton = view.viewWithAccessibilityIdentifier("BulbToggle") as! UIButton
         let bulbLabel = view.viewWithAccessibilityIdentifier("ButtonBulb") as! UILabel
 
@@ -31,7 +31,6 @@ class SwitchesViewControllerTests: XCTestCase
     }
 
     func testBulbSwitch() {
-        let view = viewController.view!
         let bulbSwitch = view.viewWithAccessibilityIdentifier("BulbSwitch") as! UISwitch
         let bulbLabel = view.viewWithAccessibilityIdentifier("SwitchBulb") as! UILabel
 
@@ -46,7 +45,6 @@ class SwitchesViewControllerTests: XCTestCase
     }
 
     func testBulbSlider() {
-        let view = viewController.view!
         let bulbSlider = view.viewWithAccessibilityIdentifier("BulbSlider") as! UISlider
         let lightBulbLabel = view.viewWithAccessibilityIdentifier("SliderBulb") as! UILabel
         let sliderAlphaLabel = view.viewWithAccessibilityIdentifier("SliderAlphaLabel") as! UILabel
