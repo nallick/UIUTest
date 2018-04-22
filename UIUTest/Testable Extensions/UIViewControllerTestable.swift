@@ -63,7 +63,7 @@ public extension UIViewController
         UIViewController.classInitialized   // reference to ensure initialization is called once and only once
     }
 
-    public static func loadFromStoryboard(identifier: String? = nil, storyboard name: String = "Main", bundle: Bundle = Bundle.main, forNavigation: Bool = false) -> UIViewController? {
+	public static func loadFromStoryboard(identifier: String? = nil, storyboard name: String = "Main", bundle: Bundle = Bundle.main, forNavigation: Bool = false) -> UIViewController? {
         var result: UIViewController?
 
         let storyboard = UIStoryboard(name: name, bundle: bundle)
@@ -81,8 +81,19 @@ public extension UIViewController
             let _ = UINavigationController(rootViewController: result!)
         }
 
-        UIApplication.shared.keyWindow!.rootViewController = result
+		let window = UIApplication.shared.keyWindow!
+		if let rootViewController = window.rootViewController {
+			rootViewController.dismiss(animated: false, completion: nil)
+			rootViewController.view.removeFromSuperview()
+			if let navigationController = rootViewController.navigationController {
+				navigationController.view.removeFromSuperview()
+				navigationController.viewControllers = []
+			}
+		}
+
+		window.rootViewController = result
         result?.loadViewIfNeeded()
+
         return result
     }
 

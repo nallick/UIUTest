@@ -67,10 +67,12 @@ class ToolbarViewControllerTests: XCTestCase
 		let toolbar = view.viewWithAccessibilityIdentifier("Toolbar") as! UIToolbar
 		let toolLabel = view.viewWithAccessibilityIdentifier("ToolLabel") as! UILabel
 		let toolbarItems = toolbar.items!
+//		toolbar.loadItems()
 
 		for index in stride(from: 1, to: toolbarItems.count, by: 2) {
 			let toolbarItem = toolbarItems[index]
 			toolbarItem.simulateTouch()
+//			toolbar.simulateTouchInItem(at: index)
 
 			XCTAssertEqual(toolLabel.text, toolbarItem.title)
 		}
