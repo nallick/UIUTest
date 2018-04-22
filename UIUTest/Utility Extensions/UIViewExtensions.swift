@@ -30,8 +30,7 @@ public extension UIView
     }
 
     public func subview(ofType type: UIView.Type) -> UIView? {
-        guard let index = self.subviews.index(where: {$0.isKind(of: type)}) else { return nil }
-        return subviews[index]
+        return self.subviews.first(where: { $0.isKind(of: type) })
     }
 
     public func superview<T>(ofType type: T.Type) -> T? {
