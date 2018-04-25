@@ -93,6 +93,7 @@ public extension UIViewController
 
 		window.rootViewController = result
         result?.loadViewIfNeeded()
+		result?.view.layoutIfNeeded()
 
         return result
     }
