@@ -16,7 +16,7 @@ public extension UITableView
         guard !rowBounds.isEmpty else { return nil }
         let rowCenter = self.superview!.convert(rowBounds.midPoint, to: window)
         let hitView = window.hitTest(rowCenter, with: nil)
-        guard hitView === self else { return nil }
+        guard hitView === self || self.contains(subview: hitView) else { return nil }
 
         guard let delegate = self.delegate else { return nil }
         guard delegate.responds(to: #selector(UITableViewDelegate.tableView(_:willSelectRowAt:))) else { return indexPath }
