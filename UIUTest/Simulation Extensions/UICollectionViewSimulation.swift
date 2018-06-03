@@ -17,7 +17,7 @@ public extension UICollectionView
         guard let cell = self.cellForItem(at: indexPath) else { return false }
         guard let layoutAttributes = self.layoutAttributesForItem(at: indexPath) else { return false }
         guard let hitView = self.touchWillHitView(at: layoutAttributes.center) else { return false }
-        return hitView === cell.contentView
+        return hitView === cell.contentView || cell.contentView.contains(subview: hitView)
     }
 
     public func willRespondToUserInContentView(at indexPath: IndexPath) -> UIView? {
