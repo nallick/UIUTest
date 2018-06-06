@@ -16,7 +16,7 @@ class InfoViewControllerTests: XCTestCase
         super.setUp()
 
         UIViewController.initializeTestable()
-        viewController = UIViewController.loadFromStoryboard(identifier: "InfoViewController") as! InfoViewController
+		viewController = (UIViewController.loadFromStoryboard(identifier: "InfoViewController") as! InfoViewController)
 		view = viewController.view!
     }
 

@@ -15,7 +15,7 @@ class TabBarControllerTests: XCTestCase
 		super.setUp()
 
 		UIViewController.initializeTestable()
-		viewController = UIViewController.loadFromStoryboard() as! UITabBarController
+		viewController = (UIViewController.loadFromStoryboard() as! UITabBarController)
 	}
 
 	func testTabsInitializedWithExpectedTypes() {

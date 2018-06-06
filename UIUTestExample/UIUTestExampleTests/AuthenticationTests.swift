@@ -36,13 +36,13 @@ class AuthenticationTests: XCTestCase
 	}
 
 	private func initializeTest() {
-		viewController = UIViewController.loadFromStoryboard(identifier: "Authentication") as! AuthenticationViewController
+		viewController = (UIViewController.loadFromStoryboard(identifier: "Authentication") as! AuthenticationViewController)
 		let view = viewController.view!
-		userNameField = view.viewWithAccessibilityIdentifier("userName") as! UITextField
-		passwordField = view.viewWithAccessibilityIdentifier("password") as! UITextField
-		showPasswordButton = view.viewWithAccessibilityIdentifier("showPassword") as! UIButton
-		authenticateButton = view.viewWithAccessibilityIdentifier("authenticate") as! UIButton
-		invalidCredentialsLabel = view.viewWithAccessibilityIdentifier("invalidCredentials") as! UILabel
+		userNameField = (view.viewWithAccessibilityIdentifier("userName") as! UITextField)
+		passwordField = (view.viewWithAccessibilityIdentifier("password") as! UITextField)
+		showPasswordButton = (view.viewWithAccessibilityIdentifier("showPassword") as! UIButton)
+		authenticateButton = (view.viewWithAccessibilityIdentifier("authenticate") as! UIButton)
+		invalidCredentialsLabel = (view.viewWithAccessibilityIdentifier("invalidCredentials") as! UILabel)
 	}
 
     func testAuthenticateEnabled() {

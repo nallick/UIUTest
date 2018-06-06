@@ -16,7 +16,7 @@ class TableViewControllerTests: XCTestCase
         super.setUp()
 
         UIViewController.initializeTestable()
-        viewController = UIViewController.loadFromStoryboard(identifier: "TableViewController") as! TableViewController
+		viewController = (UIViewController.loadFromStoryboard(identifier: "TableViewController") as! TableViewController)
         tableView = viewController.tableView!
     }
 

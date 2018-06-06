@@ -17,7 +17,7 @@ class ToolbarViewControllerTests: XCTestCase
 		super.setUp()
 
 		UIViewController.initializeTestable()
-		viewController = UIViewController.loadFromStoryboard(identifier: "ToolbarViewController") as! ToolbarViewController
+		viewController = (UIViewController.loadFromStoryboard(identifier: "ToolbarViewController") as! ToolbarViewController)
 		view = viewController.view!
 	}
 
