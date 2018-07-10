@@ -63,7 +63,7 @@ public extension UIViewController
         UIViewController.classInitialized   // reference to ensure initialization is called once and only once
     }
 
-	public static func loadFromStoryboard(identifier: String? = nil, storyboard name: String = "Main", bundle: Bundle = Bundle.main, forNavigation: Bool = false) -> UIViewController? {
+	public static func loadFromStoryboard(identifier: String? = nil, storyboard name: String = "Main", bundle: Bundle = Bundle.main, forNavigation: Bool = false, configure: ((UIViewController) -> Void)? = nil) -> UIViewController? {
         var result: UIViewController?
 
         let storyboard = UIStoryboard(name: name, bundle: bundle)
@@ -91,9 +91,12 @@ public extension UIViewController
 			}
 		}
 
-		window.rootViewController = result
-        result?.loadViewIfNeeded()
-		result?.view.layoutIfNeeded()
+		if let viewController = result {
+			configure?(viewController)
+			window.rootViewController = viewController
+			viewController.loadViewIfNeeded()
+			viewController.view.layoutIfNeeded()
+		}
 
         return result
     }
