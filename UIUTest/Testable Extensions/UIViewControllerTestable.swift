@@ -63,23 +63,25 @@ public extension UIViewController
         UIViewController.classInitialized   // reference to ensure initialization is called once and only once
     }
 
-	public static func loadFromStoryboard(identifier: String? = nil, storyboard name: String = "Main", bundle: Bundle = Bundle.main, forNavigation: Bool = false, configure: ((UIViewController) -> Void)? = nil) -> UIViewController? {
-        var result: UIViewController?
+	public static func loadFromStoryboard<T>(identifier: String? = nil, storyboard name: String = "Main", bundle: Bundle = Bundle.main, forNavigation: Bool = false, configure: ((T) -> Void)? = nil) -> T? where T: UIViewController {
+        var viewController: UIViewController?
 
         let storyboard = UIStoryboard(name: name, bundle: bundle)
         if let identifier = identifier {
-            result = storyboard.instantiateViewController(withIdentifier: identifier)
+            viewController = storyboard.instantiateViewController(withIdentifier: identifier)
         }
         else {
             guard let initialViewController = storyboard.instantiateInitialViewController() else { return nil }
-            result = initialViewController
+            viewController = initialViewController
         }
-        if let navigationController = result as? UINavigationController, let topViewController = navigationController.topViewController {
-            result = topViewController
+        if let navigationController = viewController as? UINavigationController, let topViewController = navigationController.topViewController {
+            viewController = topViewController
         }
-        else if forNavigation && result != nil {
-            let _ = UINavigationController(rootViewController: result!)
+        else if forNavigation && viewController != nil {
+            let _ = UINavigationController(rootViewController: viewController!)
         }
+
+        guard let result = viewController as? T else { return nil }
 
 		let window = UIApplication.shared.keyWindow!
 		if let rootViewController = window.rootViewController {
@@ -91,12 +93,10 @@ public extension UIViewController
 			}
 		}
 
-		if let viewController = result {
-			configure?(viewController)
-			window.rootViewController = viewController
-			viewController.loadViewIfNeeded()
-			viewController.view.layoutIfNeeded()
-		}
+        configure?(result)
+        window.rootViewController = result
+        result.loadViewIfNeeded()
+        result.view.layoutIfNeeded()
 
         return result
     }
