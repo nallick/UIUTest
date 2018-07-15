@@ -98,6 +98,8 @@ public extension UIViewController
         result.loadViewIfNeeded()
         result.view.layoutIfNeeded()
 
+        CATransaction.flush()   // flush pending CoreAnimation operations to display the new view controller
+
         return result
     }
 
