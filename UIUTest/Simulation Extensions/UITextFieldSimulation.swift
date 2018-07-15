@@ -27,6 +27,7 @@ public extension UITextField
 
             if event == .touchUpInside {
                 self.becomeFirstResponder()
+				RunLoop.current.singlePass()	// allow left and/or right button to appear
             }
         }
     }
@@ -65,4 +66,3 @@ public extension UITextField
         NotificationCenter.default.post(Notification(name: NSNotification.Name.UITextFieldTextDidChange, object: self))
     }
 }
-
