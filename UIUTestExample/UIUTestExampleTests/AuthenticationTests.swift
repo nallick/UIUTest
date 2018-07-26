@@ -35,6 +35,11 @@ class AuthenticationTests: XCTestCase
 		initializeTest()
 	}
 
+	override func tearDown() {
+		super.tearDown()
+		UIViewController.flushPendingTestArtifacts()
+	}
+
 	private func initializeTest() {
 		viewController = (UIViewController.loadFromStoryboard(identifier: "Authentication") as! AuthenticationViewController)
 		let view = viewController.view!

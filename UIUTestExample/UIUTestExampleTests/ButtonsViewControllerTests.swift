@@ -14,6 +14,11 @@ class ButtonsViewControllerTests: XCTestCase
         UIViewController.initializeTestable()
     }
 
+	override func tearDown() {
+		super.tearDown()
+		UIViewController.flushPendingTestArtifacts()
+	}
+
     func testSegueFromNextButtonToNextViewController() {
         let viewController = UIViewController.loadFromStoryboard(identifier: "ButtonsViewController") as! ButtonsViewController
         let nextButton = viewController.view!.viewWithAccessibilityIdentifier("Next") as! UIButton

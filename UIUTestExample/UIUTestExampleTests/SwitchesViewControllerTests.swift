@@ -19,6 +19,11 @@ class SwitchesViewControllerTests: XCTestCase
 		view = viewController.view!
     }
 
+	override func tearDown() {
+		super.tearDown()
+		UIViewController.flushPendingTestArtifacts()
+	}
+
     func testToggleButton() {
         let toggleButton = view.viewWithAccessibilityIdentifier("BulbToggle") as! UIButton
         let bulbLabel = view.viewWithAccessibilityIdentifier("ButtonBulb") as! UILabel

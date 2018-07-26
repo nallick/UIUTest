@@ -59,8 +59,13 @@ public extension UIViewController
         }
     }
 
-	public static func initializeTestable() {
+    public static func initializeTestable() {
         UIViewController.classInitialized   // reference to ensure initialization is called once and only once
+    }
+
+    public static func flushPendingTestArtifacts() {
+        UIApplication.shared.keyWindow?.removeViewsFromRootViewController()
+        RunLoop.current.singlePass()
     }
 
 	public static func loadFromStoryboard<T>(identifier: String? = nil, storyboard name: String = "Main", bundle: Bundle = Bundle.main, forNavigation: Bool = false, configure: ((T) -> Void)? = nil) -> T? where T: UIViewController {
@@ -83,15 +88,8 @@ public extension UIViewController
 
         guard let result = viewController as? T else { return nil }
 
-		let window = UIApplication.shared.keyWindow!
-		if let rootViewController = window.rootViewController {
-			rootViewController.dismiss(animated: false, completion: nil)
-			rootViewController.view.removeFromSuperview()
-			if let navigationController = rootViewController.navigationController {
-				navigationController.view.removeFromSuperview()
-				navigationController.viewControllers = []
-			}
-		}
+        let window = UIApplication.shared.keyWindow!
+        window.removeViewsFromRootViewController()
 
         configure?(result)
         window.rootViewController = result

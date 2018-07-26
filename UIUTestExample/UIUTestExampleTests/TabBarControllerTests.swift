@@ -18,6 +18,11 @@ class TabBarControllerTests: XCTestCase
 		viewController = (UIViewController.loadFromStoryboard() as! UITabBarController)
 	}
 
+	override func tearDown() {
+		super.tearDown()
+		UIViewController.flushPendingTestArtifacts()
+	}
+
 	func testTabsInitializedWithExpectedTypes() {
 		XCTAssertEqual(viewController.viewControllers?.count, 2)
 		XCTAssertNotNil(viewController.viewControllers?[0] as? ToolbarViewController)

@@ -21,6 +21,11 @@ class ToolbarViewControllerTests: XCTestCase
 		view = viewController.view!
 	}
 
+	override func tearDown() {
+		super.tearDown()
+		UIViewController.flushPendingTestArtifacts()
+	}
+
 	func testToolbarInitializedWithExpectedItemCount() {
 		let toolbar = view.viewWithAccessibilityIdentifier("Toolbar") as! UIToolbar
 

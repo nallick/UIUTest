@@ -20,6 +20,11 @@ class InfoViewControllerTests: XCTestCase
 		view = viewController.view!
     }
 
+	override func tearDown() {
+		super.tearDown()
+		UIViewController.flushPendingTestArtifacts()
+	}
+
     func testDoneButton() {
         let doneButton = view.viewWithAccessibilityIdentifier("Done") as! UIButton
 

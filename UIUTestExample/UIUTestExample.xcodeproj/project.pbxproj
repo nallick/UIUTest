@@ -26,6 +26,7 @@
 		010B1BBD201D924E00448B0E /* ButtonsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B1BB5201D924E00448B0E /* ButtonsViewControllerTests.swift */; };
 		010B1BBE201D924E00448B0E /* TableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B1BB6201D924E00448B0E /* TableViewControllerTests.swift */; };
 		010B1BC0201D924E00448B0E /* MiscellaneousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B1BB8201D924E00448B0E /* MiscellaneousTests.swift */; };
+		017DE95A210A3A2700D902E4 /* UIWindowTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DE959210A3A2600D902E4 /* UIWindowTestable.swift */; };
 		01928DCA208BCBDD00F33D25 /* ToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01928DC9208BCBDD00F33D25 /* ToolbarViewController.swift */; };
 		01928DCC208BE0C600F33D25 /* TabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01928DCB208BE0C600F33D25 /* TabBarControllerTests.swift */; };
 		01928DCE208BE54B00F33D25 /* ToolbarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01928DCD208BE54B00F33D25 /* ToolbarViewControllerTests.swift */; };
@@ -60,16 +61,6 @@
 		01B3B2F3201E25D100DBB071 /* AlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3B2EB201E25D100DBB071 /* AlertControllerExtensions.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		010B1B75201D8F8E00448B0E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 010B1B58201D8F8E00448B0E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 010B1B5F201D8F8E00448B0E;
-			remoteInfo = UIUTestExample;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		010B1B60201D8F8E00448B0E /* UIUTestExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIUTestExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		010B1B74201D8F8E00448B0E /* UIUTestExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIUTestExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +85,7 @@
 		010B1BB6201D924E00448B0E /* TableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerTests.swift; sourceTree = "<group>"; };
 		010B1BB7201D924E00448B0E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		010B1BB8201D924E00448B0E /* MiscellaneousTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiscellaneousTests.swift; sourceTree = "<group>"; };
+		017DE959210A3A2600D902E4 /* UIWindowTestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIWindowTestable.swift; path = "Testable Extensions/UIWindowTestable.swift"; sourceTree = "<group>"; };
 		01928DC9208BCBDD00F33D25 /* ToolbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarViewController.swift; sourceTree = "<group>"; };
 		01928DCB208BE0C600F33D25 /* TabBarControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerTests.swift; sourceTree = "<group>"; };
 		01928DCD208BE54B00F33D25 /* ToolbarViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarViewControllerTests.swift; sourceTree = "<group>"; };
@@ -254,6 +246,7 @@
 				01B3B2DD201E259E00DBB071 /* UITableViewCellTestable.swift */,
 				01928DD7208D366400F33D25 /* UIToolbarTestable.swift */,
 				01B3B2DE201E259E00DBB071 /* UIViewControllerTestable.swift */,
+				017DE959210A3A2600D902E4 /* UIWindowTestable.swift */,
 			);
 			name = "Testable Extensions";
 			sourceTree = "<group>";
@@ -304,7 +297,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				010B1B76201D8F8E00448B0E /* PBXTargetDependency */,
 			);
 			name = UIUTestExampleTests;
 			productName = UIUTestExampleTests;
@@ -388,6 +380,7 @@
 				010B1B93201D904F00448B0E /* main.swift in Sources */,
 				010B1B9A201D904F00448B0E /* SwitchesViewController.swift in Sources */,
 				010B1B97201D904F00448B0E /* TableViewController.swift in Sources */,
+				017DE95A210A3A2700D902E4 /* UIWindowTestable.swift in Sources */,
 				010B1B9C201D904F00448B0E /* UITextFieldExtensions.swift in Sources */,
 				010B1B95201D904F00448B0E /* UIViewControllerExtensions.swift in Sources */,
 			);
@@ -437,14 +430,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		010B1B76201D8F8E00448B0E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 010B1B5F201D8F8E00448B0E /* UIUTestExample */;
-			targetProxy = 010B1B75201D8F8E00448B0E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		010B1B7B201D8F8E00448B0E /* Debug */ = {

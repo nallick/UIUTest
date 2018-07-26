@@ -20,6 +20,11 @@ class TableViewControllerTests: XCTestCase
         tableView = viewController.tableView!
     }
 
+	override func tearDown() {
+		super.tearDown()
+		UIViewController.flushPendingTestArtifacts()
+	}
+
     func testSegueFromInfoButtonToInfoViewController() {
         tableView.simulateAccessoryTouch(at: IndexPath(row: 1, section: 0))
 
