@@ -36,7 +36,7 @@ class ButtonsViewControllerTests: XCTestCase
         let alternateButton = viewController.view!.viewWithAccessibilityIdentifier("Alternate") as! UIButton
 
         alternateButton.simulateTouch()
-        RunLoop.current.singlePass()     // allow the animation
+		UIView.allowAnimation()
 
         XCTAssertNotNil(navigationController.topViewController as? SwitchesViewController)
     }
@@ -48,7 +48,7 @@ class ButtonsViewControllerTests: XCTestCase
 		let alternateButton = viewController.view!.viewWithAccessibilityIdentifier("Alternate") as! UIButton
 
 		alternateButton.simulateTouch()
-		RunLoop.current.singlePass()     // allow the animation
+		UIView.allowAnimation()
 
 		XCTAssertNil(navigationController.topViewController as? SwitchesViewController)
 	}

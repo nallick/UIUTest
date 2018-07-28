@@ -24,4 +24,8 @@ public extension UIView
         let windowLocation = self.convert(location, to: window)
         return window.willHitView(at: windowLocation)
     }
+
+	public static func allowAnimation() {
+		RunLoop.current.singlePass()     // allow any animations a chance to complete
+	}
 }

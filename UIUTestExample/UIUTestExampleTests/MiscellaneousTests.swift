@@ -16,7 +16,7 @@ class MiscellaneousTests: XCTestCase
 		let navigationController = viewController.navigationController!
 
 		viewController.pushSiblingViewController(withIdentifier: "SwitchesViewController", storyBoardName: "Main", animated: true)
-		RunLoop.current.singlePass()     // allow the animation
+		UIView.allowAnimation()
 
 		XCTAssertNotNil(navigationController.topViewController as? SwitchesViewController)
 	}
