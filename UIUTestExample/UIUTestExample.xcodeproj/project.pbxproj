@@ -28,6 +28,7 @@
 		010B1BC0201D924E00448B0E /* MiscellaneousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B1BB8201D924E00448B0E /* MiscellaneousTests.swift */; };
 		017DE95A210A3A2700D902E4 /* UIWindowTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DE959210A3A2600D902E4 /* UIWindowTestable.swift */; };
 		017DE95D210B51E900D902E4 /* UITextViewSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DE95B210A3B4600D902E4 /* UITextViewSimulation.swift */; };
+		017DE962210CEA9D00D902E4 /* UIGestureRecognizerTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DE960210CE81B00D902E4 /* UIGestureRecognizerTestable.swift */; };
 		01928DCA208BCBDD00F33D25 /* ToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01928DC9208BCBDD00F33D25 /* ToolbarViewController.swift */; };
 		01928DCC208BE0C600F33D25 /* TabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01928DCB208BE0C600F33D25 /* TabBarControllerTests.swift */; };
 		01928DCE208BE54B00F33D25 /* ToolbarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01928DCD208BE54B00F33D25 /* ToolbarViewControllerTests.swift */; };
@@ -88,6 +89,7 @@
 		010B1BB8201D924E00448B0E /* MiscellaneousTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiscellaneousTests.swift; sourceTree = "<group>"; };
 		017DE959210A3A2600D902E4 /* UIWindowTestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIWindowTestable.swift; path = "Testable Extensions/UIWindowTestable.swift"; sourceTree = "<group>"; };
 		017DE95B210A3B4600D902E4 /* UITextViewSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITextViewSimulation.swift; path = "Simulation Extensions/UITextViewSimulation.swift"; sourceTree = "<group>"; };
+		017DE960210CE81B00D902E4 /* UIGestureRecognizerTestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIGestureRecognizerTestable.swift; path = "Testable Extensions/UIGestureRecognizerTestable.swift"; sourceTree = "<group>"; };
 		01928DC9208BCBDD00F33D25 /* ToolbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarViewController.swift; sourceTree = "<group>"; };
 		01928DCB208BE0C600F33D25 /* TabBarControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerTests.swift; sourceTree = "<group>"; };
 		01928DCD208BE54B00F33D25 /* ToolbarViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarViewControllerTests.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				01928DD1208BF15500F33D25 /* UIBarButtonItemTestable.swift */,
+				017DE960210CE81B00D902E4 /* UIGestureRecognizerTestable.swift */,
 				01B3B2DF201E259E00DBB071 /* UIStoryboardSegueTestable.swift */,
 				01B3B2DD201E259E00DBB071 /* UITableViewCellTestable.swift */,
 				01928DD7208D366400F33D25 /* UIToolbarTestable.swift */,
@@ -406,6 +409,7 @@
 				01B3B2F2201E25D100DBB071 /* NSObjectAssociatedObject.swift in Sources */,
 				01B3B2F0201E25D100DBB071 /* NSObjectExchangeMethods.swift in Sources */,
 				01B3B2EE201E25D100DBB071 /* RunLoopExtensions.swift in Sources */,
+				017DE962210CEA9D00D902E4 /* UIGestureRecognizerTestable.swift in Sources */,
 				010B1BBC201D924E00448B0E /* SwitchesViewControllerTests.swift in Sources */,
 				010B1BBE201D924E00448B0E /* TableViewControllerTests.swift in Sources */,
 				01B3B2CF201E254F00DBB071 /* UIAlertActionSimulation.swift in Sources */,

@@ -14,6 +14,7 @@ class InfoViewControllerTests: XCTestCase
 
     override func setUp() {
         super.setUp()
+		self.continueAfterFailure = false
 
         UIViewController.initializeTestable()
 		viewController = (UIViewController.loadFromStoryboard(identifier: "InfoViewController") as! InfoViewController)
@@ -70,4 +71,20 @@ class InfoViewControllerTests: XCTestCase
         datePicker.simulateSwipe(toDate: tomorrow)
         XCTAssertEqual(dayOfWeekLabel.text, tomorrow.dayOfWeek)
     }
+
+	func testGestureTogglesIconVisibility() {
+		let infoLabel = view.viewWithAccessibilityIdentifier("Info") as! UILabel
+		let iconLabel = view.viewWithAccessibilityIdentifier("Icon") as! UILabel
+		let gestureRecognizer = infoLabel.gestureRecognizers?.first { $0 is UILongPressGestureRecognizer }
+
+		XCTAssertTrue(iconLabel.isHidden)
+		XCTAssertEqual(gestureRecognizer?.state, .possible)
+		XCTAssertTrue(gestureRecognizer!.isEnabled)
+
+		self.waitForRecognizedState(of: gestureRecognizer!)
+		XCTAssertFalse(iconLabel.isHidden)
+
+		self.waitForRecognizedState(of: gestureRecognizer!)
+		XCTAssertTrue(iconLabel.isHidden)
+	}
 }

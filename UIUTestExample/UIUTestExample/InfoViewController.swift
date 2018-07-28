@@ -12,7 +12,8 @@ public class InfoViewController: UIViewController, UIPickerViewDataSource, UIPic
     @IBOutlet private var pickerView: UIPickerView!
     @IBOutlet private var datePicker: UIDatePicker!
     @IBOutlet private var pickerLabel: UILabel!
-    @IBOutlet private var dayOfWeekLabel: UILabel!
+	@IBOutlet private var dayOfWeekLabel: UILabel!
+	@IBOutlet private var iconLabel: UILabel!
 
     @IBAction private func dismiss(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -31,10 +32,15 @@ public class InfoViewController: UIViewController, UIPickerViewDataSource, UIPic
         self.present(actionSheet, animated: true, completion: nil)
     }
 
-    @IBAction private func dateChanaged(_ sender: UIDatePicker) {
-        // print("dateChanaged")
-        self.dayOfWeekLabel.text = sender.date.dayOfWeek
-    }
+	@IBAction private func dateChanaged(_ sender: UIDatePicker) {
+		self.dayOfWeekLabel.text = sender.date.dayOfWeek
+	}
+
+	@IBAction private func showHideIcon(_ sender: UIGestureRecognizer) {
+		if sender.state == .recognized {
+			self.iconLabel.isHidden.toggle()
+		}
+	}
 
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -49,7 +55,6 @@ public class InfoViewController: UIViewController, UIPickerViewDataSource, UIPic
     }
 
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        // print("didSelectRow: \(row)")
         self.pickerLabel.text = String(row + 1)
     }
 
