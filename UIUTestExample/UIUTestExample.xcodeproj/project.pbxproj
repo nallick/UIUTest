@@ -27,6 +27,7 @@
 		010B1BBE201D924E00448B0E /* TableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B1BB6201D924E00448B0E /* TableViewControllerTests.swift */; };
 		010B1BC0201D924E00448B0E /* MiscellaneousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B1BB8201D924E00448B0E /* MiscellaneousTests.swift */; };
 		017DE95A210A3A2700D902E4 /* UIWindowTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DE959210A3A2600D902E4 /* UIWindowTestable.swift */; };
+		017DE95D210B51E900D902E4 /* UITextViewSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DE95B210A3B4600D902E4 /* UITextViewSimulation.swift */; };
 		01928DCA208BCBDD00F33D25 /* ToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01928DC9208BCBDD00F33D25 /* ToolbarViewController.swift */; };
 		01928DCC208BE0C600F33D25 /* TabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01928DCB208BE0C600F33D25 /* TabBarControllerTests.swift */; };
 		01928DCE208BE54B00F33D25 /* ToolbarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01928DCD208BE54B00F33D25 /* ToolbarViewControllerTests.swift */; };
@@ -86,6 +87,7 @@
 		010B1BB7201D924E00448B0E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		010B1BB8201D924E00448B0E /* MiscellaneousTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiscellaneousTests.swift; sourceTree = "<group>"; };
 		017DE959210A3A2600D902E4 /* UIWindowTestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIWindowTestable.swift; path = "Testable Extensions/UIWindowTestable.swift"; sourceTree = "<group>"; };
+		017DE95B210A3B4600D902E4 /* UITextViewSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITextViewSimulation.swift; path = "Simulation Extensions/UITextViewSimulation.swift"; sourceTree = "<group>"; };
 		01928DC9208BCBDD00F33D25 /* ToolbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarViewController.swift; sourceTree = "<group>"; };
 		01928DCB208BE0C600F33D25 /* TabBarControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerTests.swift; sourceTree = "<group>"; };
 		01928DCD208BE54B00F33D25 /* ToolbarViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarViewControllerTests.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				01B3B2C5201E254F00DBB071 /* UISwitchSimulation.swift */,
 				01B3B2C6201E254F00DBB071 /* UITableViewSimulation.swift */,
 				01B3B2CD201E254F00DBB071 /* UITextFieldSimulation.swift */,
+				017DE95B210A3B4600D902E4 /* UITextViewSimulation.swift */,
 				01B3B2C8201E254F00DBB071 /* UIViewSimulation.swift */,
 				01B3B2C0201E254E00DBB071 /* UIWindowSimulation.swift */,
 			);
@@ -393,6 +396,7 @@
 				01B3B2EF201E25D100DBB071 /* AccessibilityIdentifierExtensions.swift in Sources */,
 				01B3B2F3201E25D100DBB071 /* AlertControllerExtensions.swift in Sources */,
 				010B1BBA201D924E00448B0E /* AuthenticationTests.swift in Sources */,
+				017DE95D210B51E900D902E4 /* UITextViewSimulation.swift in Sources */,
 				010B1BBD201D924E00448B0E /* ButtonsViewControllerTests.swift in Sources */,
 				010B1BB9201D924E00448B0E /* DateExtensionTests.swift in Sources */,
 				01B3B2F1201E25D100DBB071 /* GeometryExtensions.swift in Sources */,

@@ -12,8 +12,9 @@ public class SwitchesViewController: UIViewController
     @IBOutlet private var bulbSlider: UISlider!
     @IBOutlet private var buttonBulbLabel: UILabel!
     @IBOutlet private var switchBulbLabel: UILabel!
-    @IBOutlet private var sliderBulbLabel: UILabel!
-    @IBOutlet private var sliderAlphaLabel: UILabel!
+	@IBOutlet private var sliderBulbLabel: UILabel!
+	@IBOutlet private var textBulbLabel: UILabel!
+	@IBOutlet private var sliderAlphaLabel: UILabel!
 
     @IBAction private func toggleButtonBulb(_ sender: Any) {
         self.buttonBulbLabel.isHidden = !self.buttonBulbLabel.isHidden
@@ -33,4 +34,11 @@ public class SwitchesViewController: UIViewController
         super.viewWillAppear(animated)
         self.switchBulbLabel.isHidden = !self.bulbSwitch.isOn
     }
+}
+
+extension SwitchesViewController: UITextViewDelegate
+{
+	public func textViewDidChange(_ textView: UITextView) {
+		self.textBulbLabel.isHidden = textView.text.isEmpty
+	}
 }

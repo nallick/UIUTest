@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BaS-uS-w6a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BaS-uS-w6a">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -460,7 +459,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeS-Ok-dKt">
-                                <rect key="frame" x="17.5" y="78" width="340" height="400"/>
+                                <rect key="frame" x="17.5" y="78" width="340" height="340"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTL-ZK-bnr">
                                         <rect key="frame" x="20" y="42" width="92" height="30"/>
@@ -537,13 +536,48 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="340" id="3zG-a9-5Bt"/>
-                                    <constraint firstAttribute="height" constant="400" id="BS6-JZ-lxo"/>
+                                    <constraint firstAttribute="height" constant="340" id="BS6-JZ-lxo"/>
+                                </constraints>
+                            </view>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uk7-kd-5Vx">
+                                <rect key="frame" x="153" y="451" width="69" height="77"/>
+                                <accessibility key="accessibilityConfiguration" identifier="TextBulb"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pbd-Uw-Lh8">
+                                <rect key="frame" x="20" y="532" width="335" height="66"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LgJ-iA-9zv">
+                                        <rect key="frame" x="1" y="1" width="333" height="64"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="Text"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="5cP-Hc-fZ8" id="clO-f0-xgp"/>
+                                        </connections>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="LgJ-iA-9zv" firstAttribute="leading" secondItem="Pbd-Uw-Lh8" secondAttribute="leading" constant="1" id="0a0-f8-OVm"/>
+                                    <constraint firstAttribute="trailing" secondItem="LgJ-iA-9zv" secondAttribute="trailing" constant="1" id="1jt-OX-ag2"/>
+                                    <constraint firstAttribute="height" constant="66" id="RbB-Gf-U7o"/>
+                                    <constraint firstAttribute="bottom" secondItem="LgJ-iA-9zv" secondAttribute="bottom" constant="1" id="kWV-RY-9Qy"/>
+                                    <constraint firstItem="LgJ-iA-9zv" firstAttribute="top" secondItem="Pbd-Uw-Lh8" secondAttribute="top" constant="1" id="smU-cG-gq1"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Pbd-Uw-Lh8" firstAttribute="trailing" secondItem="gOM-Ic-FYj" secondAttribute="trailing" constant="-20" id="0pS-YQ-akK"/>
                             <constraint firstItem="IeS-Ok-dKt" firstAttribute="centerX" secondItem="gOM-Ic-FYj" secondAttribute="centerX" id="1pY-aO-EXJ"/>
+                            <constraint firstItem="Pbd-Uw-Lh8" firstAttribute="top" secondItem="Uk7-kd-5Vx" secondAttribute="bottom" constant="4" id="1xM-gv-lxc"/>
+                            <constraint firstItem="Pbd-Uw-Lh8" firstAttribute="bottom" secondItem="gOM-Ic-FYj" secondAttribute="bottom" constant="-20" id="3MQ-Ks-Y2U"/>
+                            <constraint firstItem="Pbd-Uw-Lh8" firstAttribute="leading" secondItem="gOM-Ic-FYj" secondAttribute="leading" constant="20" id="Ri7-Xh-vbg"/>
+                            <constraint firstItem="Pbd-Uw-Lh8" firstAttribute="centerX" secondItem="Uk7-kd-5Vx" secondAttribute="centerX" id="Wm8-WM-8VX"/>
                             <constraint firstItem="IeS-Ok-dKt" firstAttribute="top" secondItem="gOM-Ic-FYj" secondAttribute="top" constant="14" id="gys-HN-ddo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gOM-Ic-FYj"/>
@@ -556,11 +590,12 @@
                         <outlet property="sliderAlphaLabel" destination="69u-Yh-tOq" id="E66-j6-pqz"/>
                         <outlet property="sliderBulbLabel" destination="Krz-LN-vTz" id="2po-GY-h1P"/>
                         <outlet property="switchBulbLabel" destination="BeI-wX-MK3" id="UZ7-aK-4L0"/>
+                        <outlet property="textBulbLabel" destination="Uk7-kd-5Vx" id="gfL-PP-Ruf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Od-WX-lIY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3296" y="36"/>
+            <point key="canvasLocation" x="3295.1999999999998" y="35.532233883058474"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="JfF-pL-wtU">

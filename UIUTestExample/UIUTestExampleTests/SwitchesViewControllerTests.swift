@@ -66,4 +66,17 @@ class SwitchesViewControllerTests: XCTestCase
         XCTAssertEqual(lightBulbLabel.alpha, 0.0)
         XCTAssertEqual(sliderAlphaLabel.text, "0%")
     }
+
+	func testTextBulbIsVisibleWhenTextExists() {
+		let textView = view.viewWithAccessibilityIdentifier("Text") as! UITextView
+		let lightBulbLabel = view.viewWithAccessibilityIdentifier("TextBulb") as! UILabel
+
+		XCTAssertTrue(lightBulbLabel.isHidden)
+
+		textView.simulateTouch()
+		textView.simulateTyping("Test")
+		textView.simulateTyping(" Again")
+
+		XCTAssertFalse(lightBulbLabel.isHidden)
+	}
 }

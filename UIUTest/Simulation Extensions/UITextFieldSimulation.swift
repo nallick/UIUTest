@@ -61,8 +61,10 @@ public extension UITextField
     }
 
     public func setTextAndNotify(_ string: String?) {
-        self.text = string
-        self.sendActions(for: .editingChanged)
-        NotificationCenter.default.post(Notification(name: NSNotification.Name.UITextFieldTextDidChange, object: self))
+		if string != self.text {
+			self.text = string
+			self.sendActions(for: .editingChanged)
+			NotificationCenter.default.post(Notification(name: NSNotification.Name.UITextFieldTextDidChange, object: self))
+		}
     }
 }
