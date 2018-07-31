@@ -10,7 +10,9 @@ public extension UIWindow
 {
     public func removeViewsFromRootViewController() {
         if let rootViewController = self.rootViewController {
-            rootViewController.dismiss(animated: false, completion: nil)
+            if let presentedViewController = rootViewController.presentingViewController, !presentedViewController.isBeingDismissed {
+                rootViewController.dismiss(animated: false, completion: nil)
+            }
             rootViewController.view.removeFromSuperview()
             if let navigationController = rootViewController.navigationController {
                 navigationController.view.removeFromSuperview()
