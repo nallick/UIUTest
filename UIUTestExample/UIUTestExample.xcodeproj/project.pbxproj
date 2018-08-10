@@ -61,6 +61,7 @@
 		01B3B2F1201E25D100DBB071 /* GeometryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3B2E9201E25D100DBB071 /* GeometryExtensions.swift */; };
 		01B3B2F2201E25D100DBB071 /* NSObjectAssociatedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3B2EA201E25D100DBB071 /* NSObjectAssociatedObject.swift */; };
 		01B3B2F3201E25D100DBB071 /* AlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3B2EB201E25D100DBB071 /* AlertControllerExtensions.swift */; };
+		01C16294211DCD7E00708546 /* NotificationTestMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C16292211DCD4A00708546 /* NotificationTestMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +123,7 @@
 		01B3B2E9201E25D100DBB071 /* GeometryExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GeometryExtensions.swift; path = "Utility Extensions/GeometryExtensions.swift"; sourceTree = "<group>"; };
 		01B3B2EA201E25D100DBB071 /* NSObjectAssociatedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSObjectAssociatedObject.swift; path = "Utility Extensions/NSObjectAssociatedObject.swift"; sourceTree = "<group>"; };
 		01B3B2EB201E25D100DBB071 /* AlertControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertControllerExtensions.swift; path = "Utility Extensions/AlertControllerExtensions.swift"; sourceTree = "<group>"; };
+		01C16292211DCD4A00708546 /* NotificationTestMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationTestMonitor.swift; path = "Utility Extensions/NotificationTestMonitor.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +265,7 @@
 				01B3B2E7201E25D100DBB071 /* AccessibilityIdentifierExtensions.swift */,
 				01B3B2EB201E25D100DBB071 /* AlertControllerExtensions.swift */,
 				01B3B2E9201E25D100DBB071 /* GeometryExtensions.swift */,
+				01C16292211DCD4A00708546 /* NotificationTestMonitor.swift */,
 				01B3B2EA201E25D100DBB071 /* NSObjectAssociatedObject.swift */,
 				01B3B2E8201E25D100DBB071 /* NSObjectExchangeMethods.swift */,
 				01B3B2E6201E25D100DBB071 /* RunLoopExtensions.swift */,
@@ -402,6 +405,7 @@
 				017DE95D210B51E900D902E4 /* UITextViewSimulation.swift in Sources */,
 				010B1BBD201D924E00448B0E /* ButtonsViewControllerTests.swift in Sources */,
 				010B1BB9201D924E00448B0E /* DateExtensionTests.swift in Sources */,
+				01C16294211DCD7E00708546 /* NotificationTestMonitor.swift in Sources */,
 				01B3B2F1201E25D100DBB071 /* GeometryExtensions.swift in Sources */,
 				01928DCE208BE54B00F33D25 /* ToolbarViewControllerTests.swift in Sources */,
 				010B1BBB201D924E00448B0E /* InfoViewControllerTests.swift in Sources */,
