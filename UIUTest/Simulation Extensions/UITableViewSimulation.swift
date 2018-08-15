@@ -8,13 +8,17 @@ import UIKit
 
 public extension UITableView
 {
+    public static func loadDataForTesting() {
+        RunLoop.current.singlePass()    // allow initialization
+    }
+
     public func willRespondToUser(at indexPath: IndexPath) -> IndexPath? {
         guard self.currentlyAllowsSelection else { return nil }
 
         guard let window = self.window else { return nil }
         let rowBounds = self.rectForRow(at: indexPath)
         guard !rowBounds.isEmpty else { return nil }
-        let rowCenter = self.superview!.convert(rowBounds.midPoint, to: window)
+        let rowCenter = self.convert(rowBounds.midPoint, to: window)
         let hitView = window.hitTest(rowCenter, with: nil)
         guard hitView === self || self.contains(subview: hitView) else { return nil }
 
@@ -41,9 +45,15 @@ public extension UITableView
 
     public func simulateTouch(at indexPath: IndexPath) {
         if let indexPath = self.willRespondToUser(at: indexPath), let cell = self.cellForRow(at: indexPath) {
-            self.selectRowAndNotify(at: indexPath, animated: false, scrollPosition: .none)
-            if let segueIdentifer = cell.selectionSegueIdentifier, let viewController = self.viewController {
-                viewController.performSegue(withIdentifier: segueIdentifer, sender: cell)
+            let willSelectRow = !self.currentlyAllowsMultipleSelection || !self.cellIsSelected(at: indexPath)
+            if willSelectRow {
+                self.selectRowAndNotify(at: indexPath, animated: false, scrollPosition: .none)
+                if let segueIdentifer = cell.selectionSegueIdentifier, let viewController = self.viewController {
+                    viewController.performSegue(withIdentifier: segueIdentifer, sender: cell)
+                }
+            }
+            else {
+                self.deselectRowAndNotify(at: indexPath, animated: false)
             }
         }
     }

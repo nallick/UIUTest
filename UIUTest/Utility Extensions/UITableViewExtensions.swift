@@ -15,7 +15,11 @@ public extension UITableView
     public var currentlyAllowsMultipleSelection: Bool {
         return self.isEditing ? self.allowsMultipleSelectionDuringEditing : self.allowsMultipleSelection
     }
-    
+
+    public func cellIsSelected(at indexPath: IndexPath) -> Bool {
+        return self.indexPathsForSelectedRows?.contains(indexPath) ?? false
+    }
+
     public func selectRowAndNotify(at indexPath: IndexPath?, animated: Bool, scrollPosition: UITableViewScrollPosition) {
         if (indexPath == nil || !self.currentlyAllowsMultipleSelection), let indexPathsForSelectedRows = self.indexPathsForSelectedRows {
             var changed = false
@@ -43,7 +47,7 @@ public extension UITableView
     }
 
     public func deselectRowAndNotify(at indexPath: IndexPath, animated: Bool) {
-        if let selection = self.indexPathsForSelectedRows, selection.contains(indexPath) {
+        if self.cellIsSelected(at: indexPath) {
             self.deselectRow(at: indexPath, animated: animated)
             if let delegate = self.delegate {
                 delegate.tableView?(self, didDeselectRowAt: indexPath)
