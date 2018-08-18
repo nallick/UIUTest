@@ -38,7 +38,7 @@ public class InfoViewController: UIViewController, UIPickerViewDataSource, UIPic
 
 	@IBAction private func showHideIcon(_ sender: UIGestureRecognizer) {
 		if sender.state == .recognized {
-			self.iconLabel.isHidden.toggle()
+			self.iconLabel.isHidden = !self.iconLabel.isHidden
 		}
 	}
 
