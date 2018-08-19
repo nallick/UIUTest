@@ -6,10 +6,10 @@
 
 import XCTest
 
-class NotificationTestMonitor: NSObject {
+public class NotificationTestMonitor: NSObject {
     private var expectations: [NSNotification.Name: XCTestExpectation] = [:]
 
-    func expectNotification(_ name: NSNotification.Name, on notificationCenter: NotificationCenter = .default, for object: Any? = nil, description: String = "") -> XCTestExpectation {
+    public func expectNotification(_ name: NSNotification.Name, on notificationCenter: NotificationCenter = .default, for object: Any? = nil, description: String = "") -> XCTestExpectation {
         if let existingExpectation = self.expectations[name] {
             existingExpectation.fulfill()
         }
