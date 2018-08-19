@@ -9,8 +9,8 @@ Pod::Spec.new do |s|
   
     s.homepage         = 'https://github.com/nallick/UIUTest'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
-    s.author           = { 'Nick Nallick' => 'Nick.Nallick@Asynchrony.com' }
-    s.source           = { :git => 'https://github.com/Tyler-Keith-Thompson/UIUTest.git', :tag => s.version.to_s }
+    s.author           = { 'Nick Nallick' => 'Nick@PurgatoryDesign.com' }
+    s.source           = { :git => 'https://github.com/nallick/UIUTest.git', :tag => s.version.to_s }
   
     s.ios.deployment_target = '9.0'
     s.swift_version = '4.0'
