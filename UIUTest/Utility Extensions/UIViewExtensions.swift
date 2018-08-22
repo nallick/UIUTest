@@ -21,8 +21,7 @@ public extension UIView
 
 	public var topSuperview: UIView? {
 		guard var result = self.superview else { return nil }
-		while true {
-			guard let nextSuperview = result.superview else { break }
+		while let nextSuperview = result.superview {
 			result = nextSuperview
 		}
 
