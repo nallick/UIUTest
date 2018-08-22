@@ -19,6 +19,16 @@ public extension UIView
         return nil
     }
 
+	public var topSuperview: UIView? {
+		guard var result = self.superview else { return nil }
+		while true {
+			guard let nextSuperview = result.superview else { break }
+			result = nextSuperview
+		}
+
+		return result
+	}
+
     public func contains(subview: UIView?) -> Bool {
         var testView = subview?.superview
         while testView != nil {

@@ -88,11 +88,11 @@ public extension UIViewController
 
         guard let result = viewController as? T else { return nil }
 
-        let window = UIApplication.shared.keyWindow!
-        window.removeViewsFromRootViewController()
+        let window = UIApplication.shared.keyWindow
+        window?.removeViewsFromRootViewController()
 
         configure?(result)
-        window.rootViewController = result
+        window?.rootViewController = result
         result.loadViewIfNeeded()
         result.view.layoutIfNeeded()
 

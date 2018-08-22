@@ -15,11 +15,11 @@ public extension UITableView
     public func willRespondToUser(at indexPath: IndexPath) -> IndexPath? {
         guard self.currentlyAllowsSelection else { return nil }
 
-        guard let window = self.window else { return nil }
+        guard let topView = self.topSuperview else { return nil }
         let rowBounds = self.rectForRow(at: indexPath)
         guard !rowBounds.isEmpty else { return nil }
-        let rowCenter = self.convert(rowBounds.midPoint, to: window)
-        let hitView = window.hitTest(rowCenter, with: nil)
+        let rowCenter = self.convert(rowBounds.midPoint, to: topView)
+        let hitView = topView.hitTest(rowCenter, with: nil)
         guard hitView === self || self.contains(subview: hitView) else { return nil }
 
         guard let delegate = self.delegate else { return nil }

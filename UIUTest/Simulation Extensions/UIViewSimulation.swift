@@ -14,15 +14,17 @@ public extension UIView
     }
 
     public var touchWillHitView: UIView? {
-        guard let window = self.window else { return nil }
-        let viewCenter = self.superview!.convert(self.center, to: window)
-        return window.willHitView(at: viewCenter)
+        guard let topView = self.topSuperview else { return nil }
+        let viewCenter = self.superview!.convert(self.center, to: topView)
+		if let window = topView as? UIWindow { return window.willHitView(at: viewCenter) }
+		return topView.hitTest(viewCenter, with: nil)
     }
 
     public func touchWillHitView(at location: CGPoint) -> UIView? {
-        guard let window = self.window else { return nil }
-        let windowLocation = self.convert(location, to: window)
-        return window.willHitView(at: windowLocation)
+        guard let topView = self.topSuperview else { return nil }
+        let topLocation = self.convert(location, to: topView)
+		if let window = topView as? UIWindow { return window.willHitView(at: topLocation) }
+		return topView.hitTest(topLocation, with: nil)
     }
 
 	public static func allowAnimation() {
