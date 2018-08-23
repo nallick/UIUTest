@@ -1,7 +1,7 @@
- get the latest code
+ # get the latest code
  git checkout master
  git reset --hard origin/master
-# git clean -df
+ git clean -df
 
 # do the podspec stuff
 # npm install -g podspec-bump #uncomment if you need the node package
