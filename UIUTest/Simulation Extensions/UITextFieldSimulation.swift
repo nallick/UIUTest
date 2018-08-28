@@ -60,6 +60,12 @@ public extension UITextField
         }
     }
 
+    public func simulateReturnKeyAsync() {
+        DispatchQueue.main.async {
+            self.simulateReturnKey()
+        }
+    }
+
     public func setTextAndNotify(_ string: String?) {
 		if string != self.text {
 			self.text = string
