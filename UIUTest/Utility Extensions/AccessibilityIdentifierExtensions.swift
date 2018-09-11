@@ -57,7 +57,7 @@ public extension UIView
         }
 
         for subview in self.subviews {
-            if let foundSubview = subview.viewWithAccessibilityIdentifier(identifier) {
+			if let foundSubview = subview.viewWithAccessibilityIdentifier(identifier, where: inclusionTest) {
                 return foundSubview
             }
         }
