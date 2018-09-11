@@ -1,0 +1,20 @@
+PODS:
+  - CucumberSwift (2.0.2)
+  - UIUTest (0.0.1)
+
+DEPENDENCIES:
+  - CucumberSwift
+  - UIUTest
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CucumberSwift
+    - UIUTest
+
+SPEC CHECKSUMS:
+  CucumberSwift: 3846ce536528554f60d6f1319eec88cb2ae305b8
+  UIUTest: e6329aee8367bc101187fd100d9a3ea979c0b44a
+
+PODFILE CHECKSUM: f5ba3ec0c8ab97a15984ef33ef5fb24f54eec632
+
+COCOAPODS: 1.5.3
