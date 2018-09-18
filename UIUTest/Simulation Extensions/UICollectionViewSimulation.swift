@@ -8,8 +8,13 @@ import UIKit
 
 public extension UICollectionView
 {
-    public func loadDataForTesting() {
+    public static func loadDataForTesting() {
         RunLoop.current.singlePass()    // allow initialization
+    }
+
+    public override var willRespondToUser: Bool {
+        let hitView = self.touchWillHitView
+        return hitView === self || self.contains(subview: hitView)
     }
 
     public func willRespondToUser(at indexPath: IndexPath) -> Bool {

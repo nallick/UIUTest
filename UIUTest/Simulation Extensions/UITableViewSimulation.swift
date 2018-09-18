@@ -12,6 +12,11 @@ public extension UITableView
         RunLoop.current.singlePass()    // allow initialization
     }
 
+    public override var willRespondToUser: Bool {
+        let hitView = self.touchWillHitView
+        return hitView === self || self.contains(subview: hitView)
+    }
+
     public func willRespondToUser(at indexPath: IndexPath) -> IndexPath? {
         guard self.currentlyAllowsSelection else { return nil }
 
