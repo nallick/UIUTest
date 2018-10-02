@@ -17,21 +17,43 @@ public extension UIBarButtonItemGroup
 
         return nil
     }
+
+	public func itemWithAccessibilityLabel(_ label: String, where inclusionTest: ((UIBarButtonItem) -> Bool)? = nil) -> UIBarButtonItem? {
+		for item in self.barButtonItems {
+			if item.accessibilityLabel == label && (inclusionTest?(item) ?? true) {
+				return item
+			}
+		}
+
+		return nil
+	}
 }
 
 public extension UITabBar
 {
-    public func itemWithAccessibilityIdentifier(_ identifier: String, where inclusionTest: ((UITabBarItem) -> Bool)? = nil) -> UITabBarItem? {
-        if let items = self.items {
-            for item in items {
-                if item.accessibilityIdentifier == identifier && (inclusionTest?(item) ?? true) {
-                    return item
-                }
-            }
-        }
+	public func itemWithAccessibilityIdentifier(_ identifier: String, where inclusionTest: ((UITabBarItem) -> Bool)? = nil) -> UITabBarItem? {
+		if let items = self.items {
+			for item in items {
+				if item.accessibilityIdentifier == identifier && (inclusionTest?(item) ?? true) {
+					return item
+				}
+			}
+		}
 
-        return nil
-    }
+		return nil
+	}
+
+	public func itemWithAccessibilityLabel(_ label: String, where inclusionTest: ((UITabBarItem) -> Bool)? = nil) -> UITabBarItem? {
+		if let items = self.items {
+			for item in items {
+				if item.accessibilityLabel == label && (inclusionTest?(item) ?? true) {
+					return item
+				}
+			}
+		}
+
+		return nil
+	}
 }
 
 public extension UIToolbar
@@ -47,6 +69,18 @@ public extension UIToolbar
 
         return nil
     }
+
+	public func itemWithAccessibilityLabel(_ label: String, where inclusionTest: ((UIBarButtonItem) -> Bool)? = nil) -> UIBarButtonItem? {
+		if let items = self.items {
+			for item in items {
+				if item.accessibilityLabel == label && (inclusionTest?(item) ?? true) {
+					return item
+				}
+			}
+		}
+
+		return nil
+	}
 }
 
 public extension UIView
@@ -64,4 +98,18 @@ public extension UIView
 
         return nil
     }
+
+	public func viewWithAccessibilityLabel(_ label: String, where inclusionTest: ((UIView) -> Bool)? = nil) -> UIView? {
+		if self.accessibilityLabel == label && (inclusionTest?(self) ?? true) {
+			return self
+		}
+
+		for subview in self.subviews {
+			if let foundSubview = subview.viewWithAccessibilityLabel(label, where: inclusionTest) {
+				return foundSubview
+			}
+		}
+
+		return nil
+	}
 }
