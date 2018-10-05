@@ -32,6 +32,10 @@ public class ButtonsViewController: UIViewController, UICollectionViewDelegate, 
         self.stepper.isHidden = false
         self.labelValue = Int(self.stepper.value)
     }
+    
+    @IBAction func labelTapped() {
+        self.labelValue += 1
+    }
 
     @IBAction private func alternateNext(_ sender: Any) {
         guard self.isActiveInNavigationController else { return }

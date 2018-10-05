@@ -62,6 +62,7 @@
 		01B3B2F2201E25D100DBB071 /* NSObjectAssociatedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3B2EA201E25D100DBB071 /* NSObjectAssociatedObject.swift */; };
 		01B3B2F3201E25D100DBB071 /* AlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3B2EB201E25D100DBB071 /* AlertControllerExtensions.swift */; };
 		01C16294211DCD7E00708546 /* NotificationTestMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C16292211DCD4A00708546 /* NotificationTestMonitor.swift */; };
+		AD9CDFBD2168263100F5D9B8 /* UIGestureRecognizerSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9CDFBC2168263100F5D9B8 /* UIGestureRecognizerSimulation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +125,7 @@
 		01B3B2EA201E25D100DBB071 /* NSObjectAssociatedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSObjectAssociatedObject.swift; path = "Utility Extensions/NSObjectAssociatedObject.swift"; sourceTree = "<group>"; };
 		01B3B2EB201E25D100DBB071 /* AlertControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertControllerExtensions.swift; path = "Utility Extensions/AlertControllerExtensions.swift"; sourceTree = "<group>"; };
 		01C16292211DCD4A00708546 /* NotificationTestMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationTestMonitor.swift; path = "Utility Extensions/NotificationTestMonitor.swift"; sourceTree = "<group>"; };
+		AD9CDFBC2168263100F5D9B8 /* UIGestureRecognizerSimulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGestureRecognizerSimulation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +243,7 @@
 				017DE95B210A3B4600D902E4 /* UITextViewSimulation.swift */,
 				01B3B2C8201E254F00DBB071 /* UIViewSimulation.swift */,
 				01B3B2C0201E254E00DBB071 /* UIWindowSimulation.swift */,
+				AD9CDFBC2168263100F5D9B8 /* UIGestureRecognizerSimulation.swift */,
 			);
 			name = "Simulation Extensions";
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				010B1B96201D904F00448B0E /* AppDelegate.swift in Sources */,
 				010B1B90201D904F00448B0E /* AuthenticationViewController.swift in Sources */,
 				010B1B98201D904F00448B0E /* ButtonsViewController.swift in Sources */,
+				AD9CDFBD2168263100F5D9B8 /* UIGestureRecognizerSimulation.swift in Sources */,
 				010B1B9B201D904F00448B0E /* DateExtensions.swift in Sources */,
 				010B1B99201D904F00448B0E /* DefaultAuthenticator.swift in Sources */,
 				010B1B91201D904F00448B0E /* InfoViewController.swift in Sources */,

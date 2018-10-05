@@ -127,7 +127,18 @@ class ButtonsViewControllerTests: XCTestCase
 		XCTAssertEqual(countStepper.value, 1.0)
 		XCTAssertEqual(label.text!, "1")
 	}
+    
+    func testTappingOnLabelChangesLabel() {
+        let viewController = UIViewController.loadFromStoryboard(identifier: "ButtonsViewController") as! ButtonsViewController
+        let view = viewController.view!
+        let label = view.viewWithAccessibilityIdentifier("Label") as! UILabel
 
+        XCTAssertEqual(label.text!, "0")
+
+        label.gestureRecognizers!.first!.simulateTouch()
+        
+        XCTAssertEqual(label.text!, "1")
+    }
 	func testReselectingCollectionChangesLabel() {
 		let viewController = UIViewController.loadFromStoryboard(identifier: "ButtonsViewController") as! ButtonsViewController
 		let view = viewController.view!
