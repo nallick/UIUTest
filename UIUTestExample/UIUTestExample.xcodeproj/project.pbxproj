@@ -62,6 +62,7 @@
 		01B3B2F2201E25D100DBB071 /* NSObjectAssociatedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3B2EA201E25D100DBB071 /* NSObjectAssociatedObject.swift */; };
 		01B3B2F3201E25D100DBB071 /* AlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3B2EB201E25D100DBB071 /* AlertControllerExtensions.swift */; };
 		01C16294211DCD7E00708546 /* NotificationTestMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C16292211DCD4A00708546 /* NotificationTestMonitor.swift */; };
+		01D253FB216A782900C5C244 /* UIViewHitTestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D253FA216A782900C5C244 /* UIViewHitTestExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +125,7 @@
 		01B3B2EA201E25D100DBB071 /* NSObjectAssociatedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSObjectAssociatedObject.swift; path = "Utility Extensions/NSObjectAssociatedObject.swift"; sourceTree = "<group>"; };
 		01B3B2EB201E25D100DBB071 /* AlertControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertControllerExtensions.swift; path = "Utility Extensions/AlertControllerExtensions.swift"; sourceTree = "<group>"; };
 		01C16292211DCD4A00708546 /* NotificationTestMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationTestMonitor.swift; path = "Utility Extensions/NotificationTestMonitor.swift"; sourceTree = "<group>"; };
+		01D253FA216A782900C5C244 /* UIViewHitTestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIViewHitTestExtensions.swift; path = "Utility Extensions/UIViewHitTestExtensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +273,7 @@
 				01B3B2E6201E25D100DBB071 /* RunLoopExtensions.swift */,
 				01B3B2E4201E25D100DBB071 /* UITableViewExtensions.swift */,
 				01B3B2E5201E25D100DBB071 /* UIViewExtensions.swift */,
+				01D253FA216A782900C5C244 /* UIViewHitTestExtensions.swift */,
 			);
 			name = "Utility Extensions";
 			sourceTree = "<group>";
@@ -381,6 +384,7 @@
 			files = (
 				01928DCA208BCBDD00F33D25 /* ToolbarViewController.swift in Sources */,
 				010B1B96201D904F00448B0E /* AppDelegate.swift in Sources */,
+				01D253FB216A782900C5C244 /* UIViewHitTestExtensions.swift in Sources */,
 				010B1B90201D904F00448B0E /* AuthenticationViewController.swift in Sources */,
 				010B1B98201D904F00448B0E /* ButtonsViewController.swift in Sources */,
 				010B1B9B201D904F00448B0E /* DateExtensions.swift in Sources */,
