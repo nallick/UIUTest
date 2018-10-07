@@ -8,13 +8,21 @@ import UIKit
 
 public extension UIAlertController
 {
+    /// Returns an action of the receiver with the specified title.
+    ///
+    /// - Parameter title: The title to match.
+    /// - Returns: The matching alert action (if any).
+	///
     public func action(withTitle title: String) -> UIAlertAction? {
-        guard let index = self.actions.index(where: {$0.title == title}) else { return nil }
-        return self.actions[index]
+		return self.actions.first(where: {$0.title == title})
     }
 
+	/// Returns an action of the receiver with the specified style.
+	///
+	/// - Parameter style: The style to match.
+	/// - Returns: The matching alert action (if any).
+	///
     public func action(withStyle style: UIAlertActionStyle) -> UIAlertAction? {
-        guard let index = self.actions.index(where: {$0.style == style}) else { return nil }
-        return self.actions[index]
+        return self.actions.first(where: {$0.style == style})
     }
 }

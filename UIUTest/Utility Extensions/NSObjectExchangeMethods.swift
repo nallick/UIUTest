@@ -11,10 +11,10 @@ public extension NSObject
     /// Exchange (i.e., swizzle) two methods of this class.
     ///
     /// - Parameters:
-    ///   - selector1: the selector of the first method
-    ///   - selector2: the selector of the second method
+    ///   - selector1: The selector of the first method.
+    ///   - selector2: The selector of the second method.
     ///
-    /// - Note: Swift class methods (i.e., not imported from Obj-C) my be declared `dynamic`.
+    /// - Note: Swift class methods (i.e., not imported from Obj-C) must be declared `dynamic`.
     ///
     public class func exchangeMethods(_ selector1: Selector, _ selector2: Selector) {
         let method1 = class_getInstanceMethod(self, selector1)

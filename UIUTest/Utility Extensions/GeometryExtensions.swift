@@ -8,6 +8,8 @@ import CoreGraphics
 
 public extension CGRect
 {
+    /// Returns the center point of the receiver.
+	///
     public var midPoint: CGPoint {
         return CGPoint(x: self.midX, y: self.midY)
     }
