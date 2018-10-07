@@ -8,6 +8,10 @@ import UIKit
 
 public extension UIStoryboardSegue
 {
+    /// Simulate the completion of the receiver.
+    ///
+    /// - Returns: The destination view controller.
+	///
     public func simulateCompletion() -> UIViewController {
         let result = self.destination
         UIApplication.shared.keyWindow?.rootViewController = result

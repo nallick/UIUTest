@@ -9,8 +9,12 @@ import XCTest
 
 public extension UIGestureRecognizer
 {
+	/// The associated object key for testableExpectation.
+	///
 	private static var testableExpectationKey = 0
 
+	/// The expectation currently being tested (if any).
+	///
 	public private(set) var testableExpectation: XCTestExpectation? {
 		get {
 			return self.associatedObject(forKey: &UIGestureRecognizer.testableExpectationKey) ?? nil
@@ -20,6 +24,8 @@ public extension UIGestureRecognizer
 		}
 	}
 
+	///	A gesture has been recognized. Fulfill any pending expectation.
+	///
 	@objc private func _testableGestureRecognized() {
 		if self.state == .recognized {
 			self.removeTarget(self, action: #selector(_testableGestureRecognized))
@@ -28,6 +34,10 @@ public extension UIGestureRecognizer
 		}
 	}
 
+	/// Create an XCTest expectation which will be fulfilled by a gesture recognition.
+	///
+	/// - Returns: An expectation for recognition.
+	///
 	public func expectRecognizedState() -> XCTestExpectation {
 		let expectation = XCTestExpectation(description: "UIGestureRecognizer Testable")
 
@@ -48,6 +58,12 @@ public extension UIGestureRecognizer
 
 public extension XCTestCase
 {
+	/// Wait for the recognized state of a gesture recognizer.
+	///
+	/// - Parameters:
+	///   - gestureRecognizer: The gesture recognizer to wait for.
+	///   - seconds: The wait timeout (in seconds).
+	///
 	public func waitForRecognizedState(of gestureRecognizer: UIGestureRecognizer, timeout seconds: TimeInterval = 0.1) {
 		let expectation = gestureRecognizer.expectRecognizedState()
 		self.wait(for: [expectation], timeout: seconds)
