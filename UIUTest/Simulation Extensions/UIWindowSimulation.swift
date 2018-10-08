@@ -8,6 +8,14 @@ import UIKit
 
 public extension UIWindow
 {
+	/// Returns the view a user touch at a point in the receiver will be sent to (if any).
+    ///
+	/// - Parameter location: The touch location in the receiver's local coordinates.
+	/// - Returns: The hit view.
+	///
+	/// - Note:
+	///		Windows with levels above the receiver will block touches within them.
+	///
     public func willHitView(at location: CGPoint) -> UIView? {
         guard let result = self.hitTest(location, with: nil) else { return nil }
 

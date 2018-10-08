@@ -8,6 +8,8 @@ import UIKit
 
 public extension UITextView
 {
+	/// Simulate a user touch in the receiver.
+	///
     public func simulateTouch() {
         if self.willRespondToUser && self.isEditable && self.delegate?.textViewShouldBeginEditing?(self) ?? true {
             self.becomeFirstResponder()
@@ -15,6 +17,10 @@ public extension UITextView
         }
     }
 
+	/// Simulate user typing into the receiver.
+	///
+	/// - Parameter string: The text to enter into the view (or nil to clear the view's text).
+	///
     public func simulateTyping(_ string: String?) {
         if self.isFirstResponder {
             let existingText = self.text ?? ""
@@ -31,6 +37,12 @@ public extension UITextView
         }
     }
 
+	/// Set the view text, send the appropriate delegate notifications and optionally update the selection.
+	///
+	/// - Parameters:
+	///   - string: The text to set (or nil to clear the field's text).
+	///   - selection: The new selection (or nil).
+	///
 	public func setTextAndNotify(_ string: String?, selection: NSRange? = nil) {
 		if string != self.text {
 			self.text = string
@@ -41,6 +53,10 @@ public extension UITextView
 		}
 	}
 
+	/// Insert text the view at the current selection, send the appropriate delegate notifications and update the selection.
+	///
+	/// - Parameter string: The text to insert.
+	///
 	public func insertTextAndNotify(_ string: String) {
 		if !string.isEmpty {
 			let newText = NSMutableString(string: self.text ?? "")

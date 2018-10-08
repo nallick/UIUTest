@@ -8,15 +8,24 @@ import UIKit
 
 public extension UICollectionView
 {
+    /// Allow any pending cells to load.
+	///
     public static func loadDataForTesting() {
-        RunLoop.current.singlePass()    // allow initialization
+        RunLoop.current.singlePass()
     }
 
+    /// Determine if the receiver will respond to user touches in the center of the view.
+	///
     public override var willRespondToUser: Bool {
         let hitView = self.touchWillHitView
         return hitView === self || self.contains(subview: hitView)
     }
 
+    /// Determine if the receiver will respond to user touches in the center of a specified item.
+    ///
+    /// - Parameter indexPath: The index path of the item to test.
+	/// - Returns: true if the receiver will respond to user touches; false otherwise.
+	///
     public func willRespondToUser(at indexPath: IndexPath) -> Bool {
         guard self.allowsSelection else { return false }
         guard let cell = self.cellForItem(at: indexPath) else { return false }
@@ -25,6 +34,11 @@ public extension UICollectionView
         return hitView === cell.contentView || cell.contentView.contains(subview: hitView)
     }
 
+	/// Returns the view that will respond to user touches in the center of a specified item (if any).
+	///
+	/// - Parameter indexPath: The index path of the item.
+	/// - Returns: The view that will respond to user touches.
+	///
     public func willRespondToUserInContentView(at indexPath: IndexPath) -> UIView? {
         guard let cell = self.cellForItem(at: indexPath) else { return nil }
         guard let layoutAttributes = self.layoutAttributesForItem(at: indexPath) else { return nil }
@@ -32,6 +46,10 @@ public extension UICollectionView
         return cell.contentView.contains(subview: hitView) ? hitView : nil
     }
 
+    /// Toggle the highlight state of a spacific item on and off and send the appropriate delegate notifications.
+    ///
+	/// - Parameter indexPath: The index path of the item.
+	///
     public func toggleItemHighlightAndNotify(at indexPath: IndexPath) {
         let delegate = self.delegate
         if delegate?.collectionView?(self, shouldHighlightItemAt: indexPath) ?? true {
@@ -43,10 +61,25 @@ public extension UICollectionView
         }
     }
 
+	/// Determine if a specified item is selected.
+	///
+	/// - Parameter indexPath: The index path of the item to test.
+	/// - Returns: true if the item is selected; false otherwise.
+	///
     public func itemIsSelected(at indexPath: IndexPath) -> Bool {
         return self.indexPathsForSelectedItems?.contains(indexPath) ?? false
     }
 
+ 	/// Select a spacific item and send the appropriate delegate notifications.
+	///
+	/// - Parameters:
+	///   - indexPath: The index path of the item.
+	///   - animated: Specifies if selection animations will be used.
+	///   - scrollPosition: The position to scroll to after selection.
+	///
+	/// - Note:
+	///		This mirrors UICollectionView.selectItem(at indexPath: IndexPath?, animated: Bool, scrollPosition: UICollectionView.ScrollPosition)
+	///
     public func selectItemAndNotify(at indexPath: IndexPath, animated: Bool, scrollPosition: UICollectionViewScrollPosition) {
         let delegate = self.delegate
         if delegate?.collectionView?(self, shouldSelectItemAt: indexPath) ?? true {
@@ -61,6 +94,15 @@ public extension UICollectionView
         }
     }
 
+	/// Deselect a spacific item and send the appropriate delegate notifications.
+	///
+	/// - Parameters:
+	///   - indexPath: The index path of the item.
+	///   - animated: Specifies if deselection animations will be used.
+	///
+	/// - Note:
+	///		This mirrors UICollectionView.deselectItem(at indexPath: IndexPath?, animated: Bool)
+	///
     public func deselectItemAndNotify(at indexPath: IndexPath, animated: Bool) {
         let delegate = self.delegate
         if delegate?.collectionView?(self, shouldDeselectItemAt: indexPath) ?? true {
@@ -71,6 +113,13 @@ public extension UICollectionView
         }
     }
 
+	/// Simulate a user touch an item in the receiver.
+	///
+	/// - Parameters:
+	///   - indexPath: The index path of the item.
+	///   - animated: Specifies if selection animations will be used.
+	/// - Returns: true if a touch was simulated; false if the item doesn't currently respond to user touches.
+	///
     @discardableResult public func simulateTouch(at indexPath: IndexPath, animated: Bool = true) -> Bool {
         if self.willRespondToUser(at: indexPath) {
             self.toggleItemHighlightAndNotify(at: indexPath)

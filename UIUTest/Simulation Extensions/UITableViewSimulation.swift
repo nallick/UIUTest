@@ -8,15 +8,24 @@ import UIKit
 
 public extension UITableView
 {
+	/// Allow any pending cells to load.
+	///
     public static func loadDataForTesting() {
-        RunLoop.current.singlePass()    // allow initialization
+        RunLoop.current.singlePass()
     }
 
+	/// Determine if the receiver will respond to user touches in the center of the view.
+	///
     public override var willRespondToUser: Bool {
         let hitView = self.touchWillHitView
         return hitView === self || self.contains(subview: hitView)
     }
 
+	/// Determine if the receiver will respond to user touches in the center of a specified cell.
+	///
+	/// - Parameter indexPath: The index path of the cell to test.
+	/// - Returns: The index path of the cell that will respond to user touches (if any).
+	///
     public func willRespondToUser(at indexPath: IndexPath) -> IndexPath? {
         guard self.currentlyAllowsSelection else { return nil }
 
@@ -32,6 +41,13 @@ public extension UITableView
         return delegate.tableView!(self, willSelectRowAt: indexPath)
     }
 
+	/// Determine if the receiver will respond to user touches in the center of the accessory view of a specified cell.
+	///
+	/// - Parameter indexPath: The index path of the cell to test.
+	/// - Returns: The cell that will respond to user touches (if any).
+	///
+	/// - Note: This uses private system API so should only be used in test targets.
+	///
     public func willRespondToUserInAccessory(at indexPath: IndexPath) -> UITableViewCell? {
         guard let cell = self.cellForRow(at: indexPath) else { return nil }
         guard var accessoryView = cell.actualAccessoryView else { return nil }
@@ -48,7 +64,13 @@ public extension UITableView
         return accessoryView.willRespondToUser ? cell : nil
     }
 
-    public func simulateTouch(at indexPath: IndexPath) {
+	/// Simulate a user touch a cell in the receiver.
+	///
+	/// - Parameter indexPath: The index path of the cell.
+	///
+	/// - Note: This uses private system API so should only be used in test targets.
+	///
+	public func simulateTouch(at indexPath: IndexPath) {
         if let indexPath = self.willRespondToUser(at: indexPath), let cell = self.cellForRow(at: indexPath) {
             let willSelectRow = !self.currentlyAllowsMultipleSelection || !self.cellIsSelected(at: indexPath)
             if willSelectRow {
@@ -63,6 +85,12 @@ public extension UITableView
         }
     }
 
+	/// Simulate a user touch the center of the accessory view of a cell in the receiver.
+	///
+	/// - Parameter indexPath: The index path of the cell.
+	///
+	/// - Note: This uses private system API so should only be used in test targets.
+	///
     public func simulateAccessoryTouch(at indexPath: IndexPath) {
         if let cell = self.willRespondToUserInAccessory(at: indexPath) {
             if cell.accessoryView == nil, let delegate = self.delegate, delegate.responds(to: #selector(UITableViewDelegate.tableView(_:accessoryButtonTappedForRowWith:))) {

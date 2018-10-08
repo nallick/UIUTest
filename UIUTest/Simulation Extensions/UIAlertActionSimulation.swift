@@ -8,6 +8,10 @@ import UIKit
 
 public extension UIAlertAction
 {
+	/// Simulate a user touch in the receiver.
+	///
+	/// - Note: This uses private system API so should only be used in test targets.
+	///
     public func simulateTouch() {
         if self.isEnabled {
             guard let handlerBlock = self.value(forKey: "handler") else { return }

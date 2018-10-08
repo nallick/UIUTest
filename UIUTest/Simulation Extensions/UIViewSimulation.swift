@@ -8,11 +8,15 @@ import UIKit
 
 public extension UIView
 {
+	/// Determine if the receiver will respond to user touches in the center of the view.
+	///
     @objc public var willRespondToUser: Bool {
         let hitView = self.touchWillHitView
         return hitView === self
     }
 
+    /// Returns the view a user touch in the center of the receiver will be sent to (if any).
+	///
     public var touchWillHitView: UIView? {
         guard let topView = self.topSuperview else { return nil }
         let viewCenter = self.superview!.convert(self.center, to: topView)
@@ -20,6 +24,11 @@ public extension UIView
 		return topView.hitTest(viewCenter, with: nil)
     }
 
+	/// Returns the view a user touch at a point in the receiver will be sent to (if any).
+    ///
+    /// - Parameter location: The touch location in the receiver's local coordinates.
+    /// - Returns: The hit view.
+	///
     public func touchWillHitView(at location: CGPoint) -> UIView? {
         guard let topView = self.topSuperview else { return nil }
         let topLocation = self.convert(location, to: topView)
@@ -27,7 +36,10 @@ public extension UIView
 		return topView.hitTest(topLocation, with: nil)
     }
 
+
+	/// Allow any pending animations a chance to complete.
+	///
 	public static func allowAnimation() {
-		RunLoop.current.singlePass()     // allow any animations a chance to complete
+		RunLoop.current.singlePass()
 	}
 }

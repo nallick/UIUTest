@@ -8,6 +8,8 @@ import UIKit
 
 public extension UIBarButtonItem
 {
+	/// Simulate a user touch in the receiver.
+	///
     public func simulateTouch() {
         if let target = self.target, let action = self.action, self.isEnabled {
             let _ = target.perform(action, with: self)
