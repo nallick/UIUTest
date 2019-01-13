@@ -1,7 +1,7 @@
 //
 //  main.swift
 //
-//  Copyright © 2017-2018 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2017-2019 Purgatory Design. Licensed under the MIT License.
 //
 
 import Foundation
@@ -15,7 +15,7 @@ class Application: UIApplication
 //    }
 }
 
-UIApplicationMain(
+_ = UIApplicationMain(
     CommandLine.argc,
     UnsafeMutableRawPointer(CommandLine.unsafeArgv)
         .bindMemory(
