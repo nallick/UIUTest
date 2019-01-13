@@ -17,7 +17,7 @@
 		010B1B99201D904F00448B0E /* DefaultAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B1B8C201D904F00448B0E /* DefaultAuthenticator.swift */; };
 		010B1B9A201D904F00448B0E /* SwitchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B1B8D201D904F00448B0E /* SwitchesViewController.swift */; };
 		010B1B9B201D904F00448B0E /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B1B8E201D904F00448B0E /* DateExtensions.swift */; };
-		010B1B9C201D904F00448B0E /* UITextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B1B8F201D904F00448B0E /* UITextFieldExtensions.swift */; };
+		010B1B9C201D904F00448B0E /* UITextFieldUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B1B8F201D904F00448B0E /* UITextFieldUtilities.swift */; };
 		010B1BB0201D91A900448B0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 010B1BAF201D91A900448B0E /* Assets.xcassets */; };
 		010B1BB9201D924E00448B0E /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B1BB1201D924E00448B0E /* DateExtensionTests.swift */; };
 		010B1BBA201D924E00448B0E /* AuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B1BB2201D924E00448B0E /* AuthenticationTests.swift */; };
@@ -64,6 +64,7 @@
 		01B3B2F3201E25D100DBB071 /* AlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3B2EB201E25D100DBB071 /* AlertControllerExtensions.swift */; };
 		01C16294211DCD7E00708546 /* NotificationTestMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C16292211DCD4A00708546 /* NotificationTestMonitor.swift */; };
 		01D253FB216A782900C5C244 /* UIViewHitTestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D253FA216A782900C5C244 /* UIViewHitTestExtensions.swift */; };
+		01F8F3AB21EBFDF100F670E8 /* UITextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8F3AA21EBFDF100F670E8 /* UITextFieldExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,7 +80,7 @@
 		010B1B8C201D904F00448B0E /* DefaultAuthenticator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultAuthenticator.swift; sourceTree = "<group>"; };
 		010B1B8D201D904F00448B0E /* SwitchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchesViewController.swift; sourceTree = "<group>"; };
 		010B1B8E201D904F00448B0E /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
-		010B1B8F201D904F00448B0E /* UITextFieldExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtensions.swift; sourceTree = "<group>"; };
+		010B1B8F201D904F00448B0E /* UITextFieldUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldUtilities.swift; sourceTree = "<group>"; };
 		010B1BA7201D914800448B0E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		010B1BAF201D91A900448B0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		010B1BB1201D924E00448B0E /* DateExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
@@ -128,6 +129,7 @@
 		01B3B2EB201E25D100DBB071 /* AlertControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertControllerExtensions.swift; path = "Utility Extensions/AlertControllerExtensions.swift"; sourceTree = "<group>"; };
 		01C16292211DCD4A00708546 /* NotificationTestMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationTestMonitor.swift; path = "Utility Extensions/NotificationTestMonitor.swift"; sourceTree = "<group>"; };
 		01D253FA216A782900C5C244 /* UIViewHitTestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIViewHitTestExtensions.swift; path = "Utility Extensions/UIViewHitTestExtensions.swift"; sourceTree = "<group>"; };
+		01F8F3AA21EBFDF100F670E8 /* UITextFieldExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UITextFieldExtensions.swift; path = "Utility Extensions/UITextFieldExtensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,7 +183,7 @@
 				010B1B8D201D904F00448B0E /* SwitchesViewController.swift */,
 				010B1B8A201D904E00448B0E /* TableViewController.swift */,
 				01928DC9208BCBDD00F33D25 /* ToolbarViewController.swift */,
-				010B1B8F201D904F00448B0E /* UITextFieldExtensions.swift */,
+				010B1B8F201D904F00448B0E /* UITextFieldUtilities.swift */,
 				010B1B88201D904E00448B0E /* UIViewControllerExtensions.swift */,
 			);
 			path = UIUTestExample;
@@ -274,6 +276,7 @@
 				01B3B2E8201E25D100DBB071 /* NSObjectExchangeMethods.swift */,
 				01B3B2E6201E25D100DBB071 /* RunLoopExtensions.swift */,
 				01B3B2E4201E25D100DBB071 /* UITableViewExtensions.swift */,
+				01F8F3AA21EBFDF100F670E8 /* UITextFieldExtensions.swift */,
 				01B3B2E5201E25D100DBB071 /* UIViewExtensions.swift */,
 				01D253FA216A782900C5C244 /* UIViewHitTestExtensions.swift */,
 				019A3E8A2190CCD20077775A /* XCTestCaseExtensions.swift */,
@@ -397,7 +400,8 @@
 				010B1B9A201D904F00448B0E /* SwitchesViewController.swift in Sources */,
 				010B1B97201D904F00448B0E /* TableViewController.swift in Sources */,
 				017DE95A210A3A2700D902E4 /* UIWindowTestable.swift in Sources */,
-				010B1B9C201D904F00448B0E /* UITextFieldExtensions.swift in Sources */,
+				01F8F3AB21EBFDF100F670E8 /* UITextFieldExtensions.swift in Sources */,
+				010B1B9C201D904F00448B0E /* UITextFieldUtilities.swift in Sources */,
 				010B1B95201D904F00448B0E /* UIViewControllerExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  UITextFieldExtensions.swift
+//  UITextFieldUtilities.swift
 //
 //  Copyright © 2018 Purgatory Design. Licensed under the MIT License.
 //
