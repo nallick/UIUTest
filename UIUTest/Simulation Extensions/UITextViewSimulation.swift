@@ -26,7 +26,7 @@ public extension UITextView
             let existingText = self.text ?? ""
             if let string = string, string != "" {
                 if self.delegate?.textView?(self, shouldChangeTextIn: self.selectedRange, replacementText: string) ?? true {
-                    self.insertTextAndNotify(string)
+                    self.insertText(string)
                 }
             }
             else {
