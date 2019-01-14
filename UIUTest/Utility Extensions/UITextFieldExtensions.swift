@@ -21,4 +21,14 @@ public extension UITextField
 		self.selectedTextRange = self.textRange(from: startPosition, to: endPosition)
 		self.insertText(string)
 	}
+
+	/// Insert text after setting the selection of the text to replace.
+	///
+	/// - Parameters:
+	///   - string: The text to enter into the field.
+	///   - range: The range of the text to replace, or the insertion point.
+	///
+	func insertOrReplaceText(_ string: String, in range: Range<Int>) {
+		self.insertOrReplaceText(string, at: range.lowerBound, length: range.count)
+	}
 }
