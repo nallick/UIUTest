@@ -16,7 +16,7 @@ public extension UIWindow
 	/// - Note:
 	///		Windows with levels above the receiver will block touches within them.
 	///
-    public func willHitView(at location: CGPoint) -> UIView? {
+    func willHitView(at location: CGPoint) -> UIView? {
         guard let result = self.hitTest(location, with: nil) else { return nil }
 
         let windowList = UIApplication.shared.windows

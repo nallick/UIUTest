@@ -8,19 +8,19 @@ import Foundation
 
 public extension Date
 {
-    public static var yesterday: Date {
+    static var yesterday: Date {
         return Date(timeIntervalSinceNow: -60.0*60.0*24.0)
     }
 
-    public static var today: Date {
+    static var today: Date {
         return Date()
     }
 
-    public static var tomorrow: Date {
+    static var tomorrow: Date {
         return Date(timeIntervalSinceNow: 60.0*60.0*24.0)
     }
 
-    public var dayOfWeek: String {
+    var dayOfWeek: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE"
         return dateFormatter.string(from: self)

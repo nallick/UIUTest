@@ -25,7 +25,7 @@ public extension NSObject
 	/// - Parameter key: The associated object key.
 	/// - Returns: The associated object.
     ///
-	public func associatedObject<T>(forKey key: UnsafeRawPointer) -> T? {
+	func associatedObject<T>(forKey key: UnsafeRawPointer) -> T? {
 		if let value = objc_getAssociatedObject(self, key) as? T {
 			return value
 		}
@@ -42,7 +42,7 @@ public extension NSObject
     ///   - key: The associated object key.
     ///   - policy: The object's Obj-C runtime policy.
     ///
-    public func setAssociatedObject<T>(_ value: T, forKey key: UnsafeRawPointer, policy: objc_AssociationPolicy) {
+    func setAssociatedObject<T>(_ value: T, forKey key: UnsafeRawPointer, policy: objc_AssociationPolicy) {
         if let objectValue = value as? NSObject {
             objc_setAssociatedObject(self, key, objectValue, policy)
         }
@@ -56,7 +56,7 @@ public extension NSObject
     /// - Parameters:
     ///   - key: The associated object key.
     ///
-    public func removeAssociatedObject(forKey key: UnsafeRawPointer) {
+    func removeAssociatedObject(forKey key: UnsafeRawPointer) {
         objc_setAssociatedObject(self, key, nil, .OBJC_ASSOCIATION_ASSIGN)
     }
 

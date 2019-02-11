@@ -10,7 +10,7 @@ public extension UIWindow
 {
     /// Remove all views from the receiver's root view controller.
 	///
-    public func removeViewsFromRootViewController() {
+    func removeViewsFromRootViewController() {
         if let rootViewController = self.rootViewController {
             if let presentedViewController = rootViewController.presentingViewController, !presentedViewController.isBeingDismissed {
                 rootViewController.dismiss(animated: false, completion: nil)

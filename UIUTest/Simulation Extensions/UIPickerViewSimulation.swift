@@ -10,7 +10,7 @@ public extension UIPickerView
 {
 	/// Determine if the receiver will respond to user touches in the center of the view.
 	///
-    public override var willRespondToUser: Bool {
+    override var willRespondToUser: Bool {
         let hitView = self.touchWillHitView
         return hitView === self || self.contains(subview: hitView)
     }
@@ -21,7 +21,7 @@ public extension UIPickerView
     ///   - row: The row to swipe to.
     ///   - component: The component to swipe to.
 	///
-    public func simulateSwipe(toRow row: Int, inComponent component: Int) {
+    func simulateSwipe(toRow row: Int, inComponent component: Int) {
         if self.willRespondToUser {
             self.selectRowAndNotify(row, inComponent: component, animated: false)
         }
@@ -37,7 +37,7 @@ public extension UIPickerView
 	/// - Note:
 	///		This mirrors UIPickerView.selectRow(_ row: Int, inComponent component: Int, animated: Bool)
 	///
-    public func selectRowAndNotify(_ row: Int, inComponent component: Int, animated: Bool) {
+    func selectRowAndNotify(_ row: Int, inComponent component: Int, animated: Bool) {
         if row != self.selectedRow(inComponent: component) {
             self.selectRow(row, inComponent: component, animated: animated)
             self.delegate?.pickerView?(self, didSelectRow: row, inComponent: component)

@@ -15,7 +15,7 @@ public extension UIGestureRecognizer
 
 	/// The expectation currently being tested (if any).
 	///
-	public private(set) var testableExpectation: XCTestExpectation? {
+	private(set) var testableExpectation: XCTestExpectation? {
 		get {
 			return self.associatedObject(forKey: &UIGestureRecognizer.testableExpectationKey) ?? nil
 		}
@@ -38,7 +38,7 @@ public extension UIGestureRecognizer
 	///
 	/// - Returns: An expectation for recognition.
 	///
-	public func expectRecognizedState() -> XCTestExpectation {
+	func expectRecognizedState() -> XCTestExpectation {
 		let expectation = XCTestExpectation(description: "UIGestureRecognizer Testable")
 
 		guard self.isEnabled else {
@@ -64,7 +64,7 @@ public extension XCTestCase
 	///   - gestureRecognizer: The gesture recognizer to wait for.
 	///   - seconds: The wait timeout (in seconds).
 	///
-	public func waitForRecognizedState(of gestureRecognizer: UIGestureRecognizer, timeout seconds: TimeInterval = 0.1) {
+	func waitForRecognizedState(of gestureRecognizer: UIGestureRecognizer, timeout seconds: TimeInterval = 0.1) {
 		let expectation = gestureRecognizer.expectRecognizedState()
 		self.wait(for: [expectation], timeout: seconds)
 	}

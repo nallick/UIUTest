@@ -10,13 +10,13 @@ public extension UICollectionView
 {
     /// Allow any pending cells to load.
 	///
-    public static func loadDataForTesting() {
+    static func loadDataForTesting() {
         RunLoop.current.singlePass()
     }
 
     /// Determine if the receiver will respond to user touches in the center of the view.
 	///
-    public override var willRespondToUser: Bool {
+    override var willRespondToUser: Bool {
         let hitView = self.touchWillHitView
         return hitView === self || self.contains(subview: hitView)
     }
@@ -26,7 +26,7 @@ public extension UICollectionView
     /// - Parameter indexPath: The index path of the item to test.
 	/// - Returns: true if the receiver will respond to user touches; false otherwise.
 	///
-    public func willRespondToUser(at indexPath: IndexPath) -> Bool {
+    func willRespondToUser(at indexPath: IndexPath) -> Bool {
         guard self.allowsSelection else { return false }
         guard let cell = self.cellForItem(at: indexPath) else { return false }
         guard let layoutAttributes = self.layoutAttributesForItem(at: indexPath) else { return false }
@@ -39,7 +39,7 @@ public extension UICollectionView
 	/// - Parameter indexPath: The index path of the item.
 	/// - Returns: The view that will respond to user touches.
 	///
-    public func willRespondToUserInContentView(at indexPath: IndexPath) -> UIView? {
+    func willRespondToUserInContentView(at indexPath: IndexPath) -> UIView? {
         guard let cell = self.cellForItem(at: indexPath) else { return nil }
         guard let layoutAttributes = self.layoutAttributesForItem(at: indexPath) else { return nil }
         guard let hitView = self.touchWillHitView(at: layoutAttributes.center) else { return nil }
@@ -50,7 +50,7 @@ public extension UICollectionView
     ///
 	/// - Parameter indexPath: The index path of the item.
 	///
-    public func toggleItemHighlightAndNotify(at indexPath: IndexPath) {
+    func toggleItemHighlightAndNotify(at indexPath: IndexPath) {
         let delegate = self.delegate
         if delegate?.collectionView?(self, shouldHighlightItemAt: indexPath) ?? true {
             let cell = self.cellForItem(at: indexPath)
@@ -66,7 +66,7 @@ public extension UICollectionView
 	/// - Parameter indexPath: The index path of the item to test.
 	/// - Returns: true if the item is selected; false otherwise.
 	///
-    public func itemIsSelected(at indexPath: IndexPath) -> Bool {
+    func itemIsSelected(at indexPath: IndexPath) -> Bool {
         return self.indexPathsForSelectedItems?.contains(indexPath) ?? false
     }
 
@@ -80,7 +80,7 @@ public extension UICollectionView
 	/// - Note:
 	///		This mirrors UICollectionView.selectItem(at indexPath: IndexPath?, animated: Bool, scrollPosition: UICollectionView.ScrollPosition)
 	///
-    public func selectItemAndNotify(at indexPath: IndexPath, animated: Bool, scrollPosition: UICollectionViewScrollPosition) {
+	func selectItemAndNotify(at indexPath: IndexPath, animated: Bool, scrollPosition: UICollectionView.ScrollPosition) {
         let delegate = self.delegate
         if delegate?.collectionView?(self, shouldSelectItemAt: indexPath) ?? true {
 			if !self.allowsMultipleSelection, let originalSelection = self.indexPathsForSelectedItems?.first {
@@ -103,7 +103,7 @@ public extension UICollectionView
 	/// - Note:
 	///		This mirrors UICollectionView.deselectItem(at indexPath: IndexPath?, animated: Bool)
 	///
-    public func deselectItemAndNotify(at indexPath: IndexPath, animated: Bool) {
+    func deselectItemAndNotify(at indexPath: IndexPath, animated: Bool) {
         let delegate = self.delegate
         if delegate?.collectionView?(self, shouldDeselectItemAt: indexPath) ?? true {
             self.deselectItem(at: indexPath, animated: animated)
@@ -120,14 +120,14 @@ public extension UICollectionView
 	///   - animated: Specifies if selection animations will be used.
 	/// - Returns: true if a touch was simulated; false if the item doesn't currently respond to user touches.
 	///
-    @discardableResult public func simulateTouch(at indexPath: IndexPath, animated: Bool = true) -> Bool {
+    @discardableResult func simulateTouch(at indexPath: IndexPath, animated: Bool = true) -> Bool {
         if self.willRespondToUser(at: indexPath) {
             self.toggleItemHighlightAndNotify(at: indexPath)
             if self.allowsMultipleSelection && self.itemIsSelected(at: indexPath) {
                 self.deselectItemAndNotify(at: indexPath, animated: animated)
             }
             else {
-                self.selectItemAndNotify(at: indexPath, animated: animated, scrollPosition: UICollectionViewScrollPosition(rawValue: 0))
+				self.selectItemAndNotify(at: indexPath, animated: animated, scrollPosition: UICollectionView.ScrollPosition(rawValue: 0))
             }
 
             return true

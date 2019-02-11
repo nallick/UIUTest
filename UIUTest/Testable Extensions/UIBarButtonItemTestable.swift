@@ -12,9 +12,9 @@ public extension UIBarButtonItem
 	///
 	/// - Note: This uses private system API so should only be used in test targets.
 	///
-	public var systemItemStyle: UIBarButtonSystemItem? {
+	var systemItemStyle: UIBarButtonItem.SystemItem? {
 		guard (self.value(forKey: "isSystemItem") as? Bool) == true else { return nil }
 		guard let result = self.value(forKey: "systemItem") as? Int else { return nil }
-		return UIBarButtonSystemItem(rawValue: result)
+		return UIBarButtonItem.SystemItem(rawValue: result)
 	}
 }

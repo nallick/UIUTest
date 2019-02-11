@@ -10,13 +10,13 @@ public extension UITableView
 {
     /// Specifies if the receiver currently allows selection.
 	///
-    public var currentlyAllowsSelection: Bool {
+    var currentlyAllowsSelection: Bool {
         return self.isEditing ? self.allowsSelectionDuringEditing : self.allowsSelection
     }
 
 	/// Specifies if the receiver currently allows multiiple selection.
 	///
-    public var currentlyAllowsMultipleSelection: Bool {
+    var currentlyAllowsMultipleSelection: Bool {
         return self.isEditing ? self.allowsMultipleSelectionDuringEditing : self.allowsMultipleSelection
     }
 
@@ -25,7 +25,7 @@ public extension UITableView
     /// - Parameter indexPath: The index path of the cell to test.
 	/// - Returns: true if the specified cell is selected; false otherwise.
 	///
-    public func cellIsSelected(at indexPath: IndexPath) -> Bool {
+    func cellIsSelected(at indexPath: IndexPath) -> Bool {
         return self.indexPathsForSelectedRows?.contains(indexPath) ?? false
     }
 
@@ -39,7 +39,7 @@ public extension UITableView
 	/// - Note:
 	///		This mirrors UITableView.selectRow(at indexPath: IndexPath?, animated: Bool, scrollPosition: UITableView.ScrollPosition)
 	///
-    public func selectRowAndNotify(at indexPath: IndexPath?, animated: Bool, scrollPosition: UITableViewScrollPosition) {
+	func selectRowAndNotify(at indexPath: IndexPath?, animated: Bool, scrollPosition: UITableView.ScrollPosition) {
         if (indexPath == nil || !self.currentlyAllowsMultipleSelection), let indexPathsForSelectedRows = self.indexPathsForSelectedRows {
             var changed = false
             for selectedIndexPath in indexPathsForSelectedRows {
@@ -52,7 +52,7 @@ public extension UITableView
                 }
             }
             if changed {
-                NotificationCenter.default.post(Notification(name: NSNotification.Name.UITableViewSelectionDidChange, object: self))
+				NotificationCenter.default.post(Notification(name: UITableView.selectionDidChangeNotification, object: self))
             }
         }
 
@@ -61,7 +61,7 @@ public extension UITableView
             if let delegate = self.delegate {
                 delegate.tableView?(self, didSelectRowAt: indexPath)
             }
-            NotificationCenter.default.post(Notification(name: NSNotification.Name.UITableViewSelectionDidChange, object: self))
+            NotificationCenter.default.post(Notification(name: UITableView.selectionDidChangeNotification, object: self))
         }
     }
 
@@ -74,13 +74,13 @@ public extension UITableView
 	/// - Note:
 	///		This mirrors UITableView.deselectRow(at indexPath: IndexPath, animated: Bool)
 	///
-    public func deselectRowAndNotify(at indexPath: IndexPath, animated: Bool) {
+    func deselectRowAndNotify(at indexPath: IndexPath, animated: Bool) {
         if self.cellIsSelected(at: indexPath) {
             self.deselectRow(at: indexPath, animated: animated)
             if let delegate = self.delegate {
                 delegate.tableView?(self, didDeselectRowAt: indexPath)
             }
-            NotificationCenter.default.post(Notification(name: NSNotification.Name.UITableViewSelectionDidChange, object: self))
+			NotificationCenter.default.post(Notification(name: UITableView.selectionDidChangeNotification, object: self))
         }
     }
 }

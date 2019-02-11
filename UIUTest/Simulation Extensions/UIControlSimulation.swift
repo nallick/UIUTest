@@ -12,7 +12,7 @@ public extension UIControl
     ///
     /// - Parameter event: The event to simulate if the control responds to user touches.
 	///
-    @objc public func simulateTouch(for event: UIControlEvents = .touchUpInside) {
+	@objc func simulateTouch(for event: UIControl.Event = .touchUpInside) {
         if self.willRespondToUser {
             self.sendActions(for: event)
         }

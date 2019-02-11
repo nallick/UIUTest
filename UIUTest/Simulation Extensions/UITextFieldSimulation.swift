@@ -10,7 +10,7 @@ public extension UITextField
 {
 	/// Returns true if the receiver's clear button is currently visible; false otherwise.
 	///
-    public var clearButtonIsVisible: Bool {
+    var clearButtonIsVisible: Bool {
         switch self.clearButtonMode {
             case .never:
                 return false
@@ -27,7 +27,7 @@ public extension UITextField
 	///
 	/// - Parameter event: The event to simulate if the field responds to user touches.
 	///
-    public override func simulateTouch(for event: UIControlEvents = .touchUpInside) {
+    override func simulateTouch(for event: UIControl.Event = .touchUpInside) {
         if self.willRespondToUser {
             self.sendActions(for: event)
 
@@ -42,7 +42,7 @@ public extension UITextField
     ///
     /// - Parameter string: The text to enter into the field (or nil to clear the field's text).
 	///
-    public func simulateTyping(_ string: String?) {
+    func simulateTyping(_ string: String?) {
         if self.isFirstResponder {
             let existingText = self.text ?? ""
             if let string = string, string != "" {
@@ -60,7 +60,7 @@ public extension UITextField
 
     /// Simulate a user tap on the receiver's clear button.
 	///
-    public func simulateClearButton() {
+    func simulateClearButton() {
         if self.clearButtonIsVisible && self.delegate?.textFieldShouldClear?(self) ?? true {
             self.text = nil
         }
@@ -68,7 +68,7 @@ public extension UITextField
 
 	/// Simulate a user tap on the keyboard's return key.
 	///
-    public func simulateReturnKey() {
+    func simulateReturnKey() {
         if self.delegate?.textFieldShouldReturn?(self) ?? true {
             self.sendActions(for: .primaryActionTriggered)
         }
@@ -76,7 +76,7 @@ public extension UITextField
 
 	/// Simulate a user tap on the keyboard's return key asynchronously.
 	///
-    public func simulateReturnKeyAsync() {
+    func simulateReturnKeyAsync() {
         DispatchQueue.main.async {
             self.simulateReturnKey()
         }
@@ -86,11 +86,11 @@ public extension UITextField
     ///
 	/// - Parameter string: The text to set (or nil to clear the field's text).
 	///
-    public func setTextAndNotify(_ string: String?) {
+    func setTextAndNotify(_ string: String?) {
 		if string != self.text {
 			self.text = string
 			self.sendActions(for: .editingChanged)
-			NotificationCenter.default.post(Notification(name: NSNotification.Name.UITextFieldTextDidChange, object: self))
+			NotificationCenter.default.post(Notification(name: UITextField.textDidChangeNotification, object: self))
 		}
     }
 }

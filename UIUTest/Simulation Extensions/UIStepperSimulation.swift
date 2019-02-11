@@ -10,7 +10,7 @@ public extension UIStepper
 {
 	/// Returns the bounds of the receiver's decrement segment.
 	///
-    public var boundsForDecrement: CGRect {
+    var boundsForDecrement: CGRect {
         var bounds = self.bounds
         bounds.size.width *= 0.5
 
@@ -19,7 +19,7 @@ public extension UIStepper
 
     /// Returns the bounds of the receiver's increment segment.
 	///
-    public var boundsForIncrement: CGRect {
+    var boundsForIncrement: CGRect {
         var bounds = self.bounds
         bounds.size.width *= 0.5
         bounds.origin.x += bounds.size.width
@@ -29,27 +29,27 @@ public extension UIStepper
 
 	/// Determine if the receiver will respond to user touches in the center of the decrement segment.
 	///
-    public var willRespondToUserInDecrement: Bool {
+    var willRespondToUserInDecrement: Bool {
         let hitView = self.touchWillHitView(at: boundsForDecrement.midPoint)
         return hitView === self
     }
 
 	/// Determine if the receiver will respond to user touches in the center of the increment segment.
 	///
-    public var willRespondToUserInIncrement: Bool {
+    var willRespondToUserInIncrement: Bool {
         let hitView = self.touchWillHitView(at: boundsForIncrement.midPoint)
         return hitView === self
     }
 
 	/// Decrement the stepper value by one step and send the appropriate actions.
 	///
-    public func decrementAndNotify() {
+    func decrementAndNotify() {
         self.setValueAndNotify(self.value - self.stepValue)
     }
 
 	/// Increment the stepper value by one step and send the appropriate actions.
 	///
-    public func incrementAndNotify() {
+    func incrementAndNotify() {
         self.setValueAndNotify(self.value + self.stepValue)
     }
 
@@ -57,7 +57,7 @@ public extension UIStepper
 	///
 	/// - Parameter value: The new stepper value.
 	///
-    public func setValueAndNotify(_ value: Double) {
+    func setValueAndNotify(_ value: Double) {
         let oldValue = self.value
         self.value = value
         if self.value != oldValue {
@@ -67,7 +67,7 @@ public extension UIStepper
 
 	/// Simulate a user touch in the decrement segment of the receiver.
 	///
-    public func simulateTouchInDecrement() {
+    func simulateTouchInDecrement() {
         if self.willRespondToUserInDecrement {
             self.decrementAndNotify()
         }
@@ -75,7 +75,7 @@ public extension UIStepper
 
 	/// Simulate a user touch in the decrement segment of the receiver.
 	///
-    public func simulateTouchInIncrement() {
+    func simulateTouchInIncrement() {
         if self.willRespondToUserInIncrement {
             self.incrementAndNotify()
         }

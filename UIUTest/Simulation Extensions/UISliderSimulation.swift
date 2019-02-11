@@ -12,7 +12,7 @@ public extension UISlider
     ///
     /// - Parameter value: The value to swipe to.
 	///
-    public func simulateSwipe(toValue value: Float) {
+    func simulateSwipe(toValue value: Float) {
         if self.willRespondToUser {
             self.setValueAndNotify(value)
         }
@@ -22,7 +22,7 @@ public extension UISlider
 	///
 	/// - Parameter value: The new slider value.
 	///
-    public func setValueAndNotify(_ value: Float) {
+    func setValueAndNotify(_ value: Float) {
         let oldValue = self.value
         self.value = value
         if self.value != oldValue {

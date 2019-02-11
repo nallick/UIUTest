@@ -10,7 +10,7 @@ public extension UIView
 {
 	/// Returns the view controller that owns the receiver (if any).
 	///
-    public var viewController: UIViewController? {
+    var viewController: UIViewController? {
         var responder: UIResponder? = self
         while responder != nil {
             responder = responder!.next
@@ -25,7 +25,7 @@ public extension UIView
 	///
 	/// - Note:	Normally this is a window.
 	///
-	public var topSuperview: UIView? {
+	var topSuperview: UIView? {
 		guard var result = self.superview else { return nil }
 		while let nextSuperview = result.superview {
 			result = nextSuperview
@@ -39,7 +39,7 @@ public extension UIView
     /// - Parameter subview: The view to test.
 	/// - Returns: true if the specified view is in the receiver's view hierarchy; false otherwise.
 	///
-    public func contains(subview: UIView?) -> Bool {
+    func contains(subview: UIView?) -> Bool {
         var testView = subview?.superview
         while testView != nil {
             if testView! === self { return true }
@@ -54,7 +54,7 @@ public extension UIView
     /// - Parameter type: The type of the subview to find.
     /// - Returns: The first subview of the specified type (of any).
 	///
-    public func subview(ofType type: UIView.Type) -> UIView? {
+    func subview(ofType type: UIView.Type) -> UIView? {
         return self.subviews.first(where: { $0.isKind(of: type) })
     }
 
@@ -63,7 +63,7 @@ public extension UIView
 	/// - Parameter type: The type of the subview to find.
 	/// - Returns: The first superview of the specified type (of any).
 	///
-    public func superview<T>(ofType type: T.Type) -> T? {
+    func superview<T>(ofType type: T.Type) -> T? {
         return self.superview as? T ?? self.superview.flatMap { $0.superview(ofType: type) }
     }
 }

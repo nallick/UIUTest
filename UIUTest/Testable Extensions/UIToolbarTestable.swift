@@ -12,7 +12,7 @@ public extension UIToolbar
 	///
 	/// - Note: This uses private system API so should only be used in test targets.
 	///
-	public var contentView: UIView? {
+	var contentView: UIView? {
 		return self.subviews.first(where: { String(describing: type(of: $0)) == "_UIToolbarContentView" })
 	}
 
@@ -20,14 +20,14 @@ public extension UIToolbar
 	///
 	/// - Note: This uses private system API so should only be used in test targets.
 	///
-	public var buttonBarStackView: UIStackView? {
+	var buttonBarStackView: UIStackView? {
 		guard let contentView = self.contentView else { return nil }
 		return contentView.subview(ofType: UIStackView.self) as? UIStackView
 	}
 
 	/// Allow the receiver's items to load.
 	///
-	public func loadItems() {
+	func loadItems() {
 		RunLoop.current.singlePass()
 	}
 
@@ -38,7 +38,7 @@ public extension UIToolbar
 	///
 	/// - Note: This uses private system API so should only be used in test targets.
 	///
-	public func viewForItem(at index: Int) -> UIView? {
+	func viewForItem(at index: Int) -> UIView? {
 		guard let buttonBarStackView = self.buttonBarStackView,
 			index >= 0, index < buttonBarStackView.arrangedSubviews.count else { return nil }
 		return buttonBarStackView.arrangedSubviews[index]
@@ -48,7 +48,7 @@ public extension UIToolbar
 	///
 	/// - Parameter index: The toolbar item index.
 	///
-	public func simulateTouchInItem(at index: Int) {
+	func simulateTouchInItem(at index: Int) {
 		guard let itemView = self.viewForItem(at: index) else { return }
 		if itemView.willRespondToUser, let item = self.items?[index] {
 			item.simulateTouch()

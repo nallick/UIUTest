@@ -10,7 +10,7 @@ public extension UIDatePicker
 {
 	/// Determine if the receiver will respond to user touches in the center of the view.
 	///
-    public override var willRespondToUser: Bool {
+    override var willRespondToUser: Bool {
         let hitView = self.touchWillHitView
         return hitView === self || self.contains(subview: hitView)
     }
@@ -19,7 +19,7 @@ public extension UIDatePicker
     ///
     /// - Parameter date: The date to swipe to.
 	///
-    public func simulateSwipe(toDate date: Date) {
+    func simulateSwipe(toDate date: Date) {
         if self.willRespondToUser {
             self.setDateAndNotify(date, animated: false)
         }
@@ -34,7 +34,7 @@ public extension UIDatePicker
 	/// - Note:
 	///		This mirrors UIDatePicker.setDate(_ date: Date, animated: Bool)
 	///
-    public func setDateAndNotify(_ date: Date, animated: Bool) {
+    func setDateAndNotify(_ date: Date, animated: Bool) {
         if date != self.date {
             self.setDate(date, animated: animated)
             self.sendActions(for: .valueChanged)

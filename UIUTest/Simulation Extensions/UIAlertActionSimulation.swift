@@ -12,7 +12,7 @@ public extension UIAlertAction
 	///
 	/// - Note: This uses private system API so should only be used in test targets.
 	///
-    public func simulateTouch() {
+    func simulateTouch() {
         if self.isEnabled {
             guard let handlerBlock = self.value(forKey: "handler") else { return }
             let handlerPtr = UnsafeRawPointer(Unmanaged<AnyObject>.passUnretained(handlerBlock as AnyObject).toOpaque())

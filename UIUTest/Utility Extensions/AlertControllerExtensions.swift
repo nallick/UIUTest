@@ -13,7 +13,7 @@ public extension UIAlertController
     /// - Parameter title: The title to match.
     /// - Returns: The matching alert action (if any).
 	///
-    public func action(withTitle title: String) -> UIAlertAction? {
+    func action(withTitle title: String) -> UIAlertAction? {
 		return self.actions.first(where: {$0.title == title})
     }
 
@@ -22,7 +22,7 @@ public extension UIAlertController
 	/// - Parameter style: The style to match.
 	/// - Returns: The matching alert action (if any).
 	///
-    public func action(withStyle style: UIAlertActionStyle) -> UIAlertAction? {
+	func action(withStyle style: UIAlertAction.Style) -> UIAlertAction? {
         return self.actions.first(where: {$0.style == style})
     }
 }

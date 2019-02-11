@@ -10,7 +10,7 @@ public extension UIView
 {
 	/// Returns a string containing the value of the hex pointer to the receiver.
 	///
-	public var pointerDescription: String {
+	var pointerDescription: String {
 		return "\(Unmanaged.passUnretained(self).toOpaque())"
 	}
 
@@ -19,7 +19,7 @@ public extension UIView
 	/// - Parameter point: A point specified in the receiver's local coordinate system.
 	/// - Returns: The description string.
 	///
-	public func hitTestDescription(at point: CGPoint) -> String {
+	func hitTestDescription(at point: CGPoint) -> String {
 		let pointInside = self.point(inside: point, with: nil)
 		let hitTest = self.hitTest(point, with: nil)
 		return "<\(type(of: self)): \(self.pointerDescription); point = \(point.debugDescription); frame = \(self.frame.debugDescription); tag = \(self.tag); pointInside = \(pointInside); hitTest = \(hitTest?.pointerDescription ?? "nil")>"
@@ -30,7 +30,7 @@ public extension UIView
 	/// - Parameter point: A point specified in the receiver's local coordinate system.
 	/// - Returns: The description string.
 	///
-	public func recursiveHitTestDescription(at point: CGPoint) -> String {
+	func recursiveHitTestDescription(at point: CGPoint) -> String {
 		var result = ""
 		self.recursiveHitTestDescription(&result, at: point, level: 0)
 		return result
@@ -40,7 +40,7 @@ public extension UIView
 	///
 	/// - Parameter point: A point specified in the receiver's local coordinate system.
 	///
-	public func printRecursiveHitTestDescription(at point: CGPoint) {
+	func printRecursiveHitTestDescription(at point: CGPoint) {
 		self.recursiveHitTestDescription(at: point)
 			.split(separator: "\n")
 			.forEach({ print($0) })

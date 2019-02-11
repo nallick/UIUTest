@@ -15,7 +15,7 @@ public extension XCTestCase
 	///   - seconds: the wait timeout
 	///   - description: the expectation description
 	///
-	public func flushDispatchQueue(_ dispatchQueue: DispatchQueue = DispatchQueue.main, timeout seconds: TimeInterval = 0.1, description: String = "Wait for DispatchQueue") {
+	func flushDispatchQueue(_ dispatchQueue: DispatchQueue = DispatchQueue.main, timeout seconds: TimeInterval = 0.1, description: String = "Wait for DispatchQueue") {
 		let expectation = self.expectation(description: description)
 		dispatchQueue.async { expectation.fulfill() }
 		self.wait(for: [expectation], timeout: seconds)

@@ -12,7 +12,7 @@ public extension UIStoryboardSegue
     ///
     /// - Returns: The destination view controller.
 	///
-    public func simulateCompletion() -> UIViewController {
+    func simulateCompletion() -> UIViewController {
         let result = self.destination
         UIApplication.shared.keyWindow?.rootViewController = result
         result.loadViewIfNeeded()

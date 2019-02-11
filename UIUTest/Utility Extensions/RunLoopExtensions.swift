@@ -12,7 +12,7 @@ public extension RunLoop
     ///
     /// - Parameter mode: The run loop mode.
 	///
-    public func singlePass(forMode mode: RunLoopMode = .defaultRunLoopMode) {
+	func singlePass(forMode mode: RunLoop.Mode = .default) {
         let _ = self.limitDate(forMode: mode)
     }
 }

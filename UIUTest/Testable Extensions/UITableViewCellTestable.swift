@@ -12,7 +12,7 @@ public extension UITableViewCell
 	///
 	/// - Note: This uses private system API so should only be used in test targets.
 	///
-    public var accessoryActionSegueIdentifier: String? {
+    var accessoryActionSegueIdentifier: String? {
         let template = self.value(forKey: "accessoryActionSegueTemplate") as AnyObject?
         return template?.value(forKey: "identifier") as? String
     }
@@ -21,7 +21,7 @@ public extension UITableViewCell
 	///
 	/// - Note: This uses private system API so should only be used in test targets.
 	///
-    public var selectionSegueIdentifier: String? {
+    var selectionSegueIdentifier: String? {
         let template = self.value(forKey: "selectionSegueTemplate") as AnyObject?
         return template?.value(forKey: "identifier") as? String
     }
@@ -30,7 +30,7 @@ public extension UITableViewCell
 	///
 	/// - Note: This uses private system API so should only be used in test targets.
 	///
-    public var actualAccessoryView: UIView? {
+    var actualAccessoryView: UIView? {
         if let accessoryView = self.accessoryView { return accessoryView }
         if let defaultAccessoryView = self.value(forKey: "_defaultAccessoryView") as? UIView { return defaultAccessoryView }
         return nil

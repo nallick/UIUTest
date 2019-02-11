@@ -16,7 +16,7 @@ public extension NSObject
     ///
     /// - Note: Swift class methods (i.e., not imported from Obj-C) must be declared `dynamic`.
     ///
-    public class func exchangeMethods(_ selector1: Selector, _ selector2: Selector) {
+    class func exchangeMethods(_ selector1: Selector, _ selector2: Selector) {
         let method1 = class_getInstanceMethod(self, selector1)
         let method2 = class_getInstanceMethod(self, selector2)
         method_exchangeImplementations(method1!, method2!)

@@ -18,7 +18,7 @@ public extension UIViewController
 
 	/// Returns true if the receiver has been dismissed; false otherwise.
 	///
-    public var hasBeenDismissed: Bool {
+    var hasBeenDismissed: Bool {
         get {
             return self.associatedObject(forKey: &UIViewController.hasBeenDismissedKey) ?? false
         }
@@ -29,7 +29,7 @@ public extension UIViewController
 
 	/// Returns the view controller most recently presented by the receiver (if any).
 	///
-    public var mostRecentlyPresentedViewController: UIViewController? {
+    var mostRecentlyPresentedViewController: UIViewController? {
         get {
             return self.associatedObject(forKey: &UIViewController.recentPresentedViewControllerKey) ?? nil
         }
@@ -40,7 +40,7 @@ public extension UIViewController
 
 	/// Specifies if the receiver blocks the performance of all segues.
 	///
-    public var blocksAllSegues: Bool {
+    var blocksAllSegues: Bool {
         get {
             return self.associatedObject(forKey: &UIViewController.blocksAllSeguesKey) ?? false
         }
@@ -51,7 +51,7 @@ public extension UIViewController
 
 	/// Returns the identifier of the receiver's most recently performed segue (if any).
 	///
-    public var mostRecentlyPerformedSegueIdentifier: String? {
+    var mostRecentlyPerformedSegueIdentifier: String? {
         get {
             return self.associatedObject(forKey: &UIViewController.recentSegueIdentifierKey)
         }
@@ -62,7 +62,7 @@ public extension UIViewController
 
 	/// Returns the receiver's most recently performed segue (if any).
 	///
-    public var mostRecentlyPerformedSegue: UIStoryboardSegue? {
+    var mostRecentlyPerformedSegue: UIStoryboardSegue? {
         get {
             return self.associatedObject(forKey: &UIViewController.recentSegueValueKey)
         }
@@ -75,7 +75,7 @@ public extension UIViewController
 	///
 	/// - Note: Call this during test setup to use these extensions.
 	///
-   public static func initializeTestable() {
+   static func initializeTestable() {
         UIViewController.classInitialized   // reference to ensure initialization is called once and only once
     }
 
@@ -83,7 +83,7 @@ public extension UIViewController
 	///
 	/// - Note: Call this during test tear down when using these extensions.
 	///
-    public static func flushPendingTestArtifacts() {
+    static func flushPendingTestArtifacts() {
         UIApplication.shared.keyWindow?.removeViewsFromRootViewController()
         RunLoop.current.singlePass()
     }
@@ -98,7 +98,7 @@ public extension UIViewController
 	///   - configure: An optional configuration closure called before UIViewController.viewDidLoad().
 	/// - Returns: The loaded view controller.
 	///
-	public static func loadFromStoryboard<T>(identifier: String? = nil, storyboard name: String = "Main", bundle: Bundle = Bundle.main, forNavigation: Bool = false, configure: ((T) -> Void)? = nil) -> T? where T: UIViewController {
+	static func loadFromStoryboard<T>(identifier: String? = nil, storyboard name: String = "Main", bundle: Bundle = Bundle.main, forNavigation: Bool = false, configure: ((T) -> Void)? = nil) -> T? where T: UIViewController {
         var viewController: UIViewController?
 
         let storyboard = UIStoryboard(name: name, bundle: bundle)

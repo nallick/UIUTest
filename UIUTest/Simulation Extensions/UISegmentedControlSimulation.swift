@@ -13,7 +13,7 @@ public extension UISegmentedControl
     /// - Parameter segment: The segment index.
     /// - Returns: The segment width.
 	///
-    public func actualWidthForSegment(at segment: Int) -> CGFloat {
+    func actualWidthForSegment(at segment: Int) -> CGFloat {
         let width = self.widthForSegment(at: segment)
         return (width != 0.0) ? width : self.frame.size.width/CGFloat(self.numberOfSegments)
     }
@@ -23,7 +23,7 @@ public extension UISegmentedControl
     /// - Parameter segment: The segment index.
     /// - Returns: The segment bounds.
 	///
-    public func boundsForSegment(at segment: Int) -> CGRect {
+    func boundsForSegment(at segment: Int) -> CGRect {
         var bounds = self.bounds
         bounds.size.width = self.actualWidthForSegment(at: segment)
 
@@ -41,7 +41,7 @@ public extension UISegmentedControl
 	/// - Parameter segment: The segment index.
 	/// - Returns: true if the receiver will respond to user touches in the segment; false othewise.
 	///
-    public func willRespondToUserInSegment(at segment: Int) -> Bool {
+    func willRespondToUserInSegment(at segment: Int) -> Bool {
         guard self.isEnabledForSegment(at: segment) else { return false }
         let segmentLocation = self.boundsForSegment(at: segment).midPoint
         let hitView = self.touchWillHitView(at: segmentLocation)
@@ -54,7 +54,7 @@ public extension UISegmentedControl
     ///   - segment: The segment index.
     ///   - event: The event to simulate if the control responds to user touches.
 	///
-    public func simulateTouchInSegment(at segment: Int, for event: UIControlEvents = .valueChanged) {
+	func simulateTouchInSegment(at segment: Int, for event: UIControl.Event = .valueChanged) {
         if self.selectedSegmentIndex != segment && self.willRespondToUserInSegment(at: segment) {
             self.selectedSegmentIndex = segment
             self.sendActions(for: event)
