@@ -5,8 +5,8 @@
 //
 
 import XCTest
-import UIUTestExample
 import UIUTest
+import UIUTestExample
 
 class ButtonsViewControllerTests: XCTestCase
 {
@@ -78,7 +78,7 @@ class ButtonsViewControllerTests: XCTestCase
         let view = viewController.view!
         let label = view.viewWithAccessibilityIdentifier("Label") as! UILabel
         let collectionView = view.viewWithAccessibilityIdentifier("ButtonCollection") as! UICollectionView
-        collectionView.loadDataForTesting()
+        UICollectionView.loadDataForTesting()
 
         let testIndex1 = IndexPath(item: 0, section: 0)
         collectionView.simulateTouch(at: testIndex1)
@@ -96,7 +96,7 @@ class ButtonsViewControllerTests: XCTestCase
 		let view = viewController.view!
 		let label = view.viewWithAccessibilityIdentifier("Label") as! UILabel
 		let collectionView = view.viewWithAccessibilityIdentifier("ButtonCollection") as! UICollectionView
-		collectionView.loadDataForTesting()
+		UICollectionView.loadDataForTesting()
 
 		let testIndex1 = IndexPath(item: 0, section: 0)
 		collectionView.simulateTouch(at: testIndex1)
@@ -135,7 +135,7 @@ class ButtonsViewControllerTests: XCTestCase
 		let label = view.viewWithAccessibilityIdentifier("Label") as! UILabel
 		let segmentedControl = view.viewWithAccessibilityIdentifier("CountMethodSegment") as! UISegmentedControl
 		let collectionView = view.viewWithAccessibilityIdentifier("ButtonCollection") as! UICollectionView
-		collectionView.loadDataForTesting()
+		UICollectionView.loadDataForTesting()
 
 		let testIndex10 = IndexPath(item: 9, section: 0)
 		collectionView.simulateTouch(at: testIndex10)

@@ -6,7 +6,6 @@
 
 import XCTest
 import UIUTestExample
-import UIUTest
 
 class DateExtensionTests: XCTestCase
 {

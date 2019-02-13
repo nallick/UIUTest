@@ -8,7 +8,6 @@
 
 import XCTest
 import UIUTestExample
-import UIUTest
 
 class MiscellaneousTests: XCTestCase
 {

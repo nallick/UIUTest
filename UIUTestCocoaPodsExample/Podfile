@@ -9,8 +9,7 @@ target 'UIUTestExample' do
 
   target 'UIUTestExampleTests' do
     inherit! :search_paths
-    pod 'UIUTest'
+	pod 'UIUTest'
     # Pods for testing
   end
-
 end
