@@ -8,9 +8,18 @@
 
 import Foundation
 import CucumberSwift
+import UIUTest
 
 extension Cucumber: StepImplementation {
+	public var bundle: Bundle {
+		return Bundle(for: CucumberTestBundleLocation.self)
+	}
+
     public func setupSteps() {
-        setupAuthenticationTests()
+		UIViewController.initializeTestable()
+
+		setupAuthenticationTests()
     }
 }
+
+private class CucumberTestBundleLocation {}

@@ -1,6 +1,0 @@
-framework module CucumberSwift {
-  umbrella header "CucumberSwift-umbrella.h"
-
-  export *
-  module * { export * }
-}

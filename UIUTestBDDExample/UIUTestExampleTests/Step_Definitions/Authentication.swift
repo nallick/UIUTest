@@ -33,8 +33,6 @@ extension Cucumber {
         var authenticateButton: UIButton!
         var invalidCredentialsLabel: UILabel!
 
-		UIViewController.initializeTestable()
-
         MatchAll("^I am not logged in$") { _, _ in
             viewController = (UIViewController.loadFromStoryboard(identifier: "Authentication") as! AuthenticationViewController)
             let view = viewController.view!
