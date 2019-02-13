@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'UIUTest'
-    s.version          = '0.0.2'
+    s.version          = '1.0.0'
     s.summary          = 'Unit Testing For the User Interface.'
 
     s.description      = <<-DESC
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
     s.source           = { :git => 'https://github.com/nallick/UIUTest.git', :tag => s.version.to_s }
   
     s.ios.deployment_target = '9.0'
-    s.swift_version = '4.0'
+    s.swift_version = '4.2'
   
     s.source_files = 'UIUTest/**/*.{swift,h,m}'
 
