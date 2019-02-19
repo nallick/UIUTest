@@ -100,6 +100,7 @@ public extension UIViewController
 	///
 	static func loadFromStoryboard<T>(identifier: String? = nil, storyboard name: String = "Main", bundle: Bundle = Bundle.main, forNavigation: Bool = false, configure: ((T) -> Void)? = nil) -> T? where T: UIViewController {
         var viewController: UIViewController?
+        var notifyViewAppearance = false
 
         let storyboard = UIStoryboard(name: name, bundle: bundle)
         if let identifier = identifier {
@@ -114,6 +115,7 @@ public extension UIViewController
         }
         else if forNavigation && viewController != nil {
             let _ = UINavigationController(rootViewController: viewController!)
+            notifyViewAppearance = true
         }
 
         guard let result = viewController as? T else { return nil }
@@ -125,6 +127,11 @@ public extension UIViewController
         window?.rootViewController = result
         result.loadViewIfNeeded()
         result.view.layoutIfNeeded()
+
+        if notifyViewAppearance {
+            result.viewWillAppear(false)
+            result.viewDidAppear(false)
+        }
 
         CATransaction.flush()   // flush pending CoreAnimation operations to display the new view controller
 
