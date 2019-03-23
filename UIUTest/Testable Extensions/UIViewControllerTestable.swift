@@ -1,20 +1,23 @@
 //
 //  UIViewControllerTestable.swift
 //
-//  Copyright © 2017-2018 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2017-2019 Purgatory Design. Licensed under the MIT License.
 //
 
 import UIKit
 
 public extension UIViewController
 {
+	typealias FinalizePreparationForSegue = (UIStoryboardSegue, Any?) -> Void
+
 	/// The associated object keys for testable extensions.
 	///
     private static var hasBeenDismissedKey = 0
     private static var recentPresentedViewControllerKey = 0
     private static var blocksAllSeguesKey = 0
     private static var recentSegueIdentifierKey = 0
-    private static var recentSegueValueKey = 0
+	private static var recentSegueValueKey = 0
+	private static var finalizePreparationForSegueKey = 0
 
 	/// Returns true if the receiver has been dismissed; false otherwise.
 	///
@@ -70,6 +73,26 @@ public extension UIViewController
             self.setAssociatedObject(newValue, forKey: &UIViewController.recentSegueValueKey, policy: .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
+
+	/// Returns the receiver's segue preparation finalization closure (if any).
+	///
+	/// - Note: This closure will be called immediately after prepare(for:sender).
+	///			For example, use this to prevent unwanted live activity in the segue's destination view controller.
+	///
+	var finalizePreparationForSegue: FinalizePreparationForSegue? {
+		get {
+			let boxedClosure: FinalizePreparationForSegueBox? = self.associatedObject(forKey: &UIViewController.finalizePreparationForSegueKey)
+			return boxedClosure?.closure
+		}
+		set {
+			if let closure = newValue {
+				let boxedClosure = FinalizePreparationForSegueBox(closure)
+				self.setAssociatedObject(boxedClosure, forKey: &UIViewController.finalizePreparationForSegueKey, policy: .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+			} else {
+				self.removeAssociatedObject(forKey: &UIViewController.finalizePreparationForSegueKey)
+			}
+		}
+	}
 
     /// Initialize the testable extensions of UIViewController.
 	///
@@ -143,9 +166,8 @@ public extension UIViewController
     @objc func substitute_prepare(for segue: UIStoryboardSegue, sender: Any?) {
         self.mostRecentlyPerformedSegue = segue
         self.mostRecentlyPerformedSegueIdentifier = segue.identifier
-        if !self.blocksAllSegues {
-            self.substitute_prepare(for: segue, sender: sender)
-        }
+        if !self.blocksAllSegues { self.substitute_prepare(for: segue, sender: sender) }
+		self.finalizePreparationForSegue?(segue, sender)
     }
 
 	/// An alternate method to be swizzled with UIViewController.present().
@@ -181,11 +203,16 @@ public extension UIViewController
 
 	/// Initialize the testable extensions of UIViewController. This singleton is only executed once.
 	///
-    private static let classInitialized: () = {
+    private static let classInitialized: Void = {
         UIViewController.self.exchangeMethods(#selector(dismiss), #selector(substitute_dismiss))
         UIViewController.self.exchangeMethods(#selector(prepare), #selector(substitute_prepare))
         UIViewController.self.exchangeMethods(#selector(present), #selector(substitute_present))
         UIViewController.self.exchangeMethods(#selector(performSegue), #selector(substitute_performSegue))
         UIViewController.self.exchangeMethods(#selector(shouldPerformSegue), #selector(substitute_shouldPerformSegue))
     }()
+
+	private class FinalizePreparationForSegueBox {
+		let closure: FinalizePreparationForSegue
+		init(_ closure: @escaping FinalizePreparationForSegue) { self.closure = closure }
+	}
 }

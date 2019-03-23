@@ -1,7 +1,7 @@
 //
 //  InfoViewControllerTests.swift
 //
-//  Copyright © 2017-2018 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2017-2019 Purgatory Design. Licensed under the MIT License.
 //
 
 import XCTest
@@ -72,7 +72,7 @@ class InfoViewControllerTests: XCTestCase
         XCTAssertEqual(dayOfWeekLabel.text, tomorrow.dayOfWeek)
     }
 
-	func testGestureTogglesIconVisibility() {
+	func testGestureTogglesIconVisibilityViaExpectations() {
 		let infoLabel = view.viewWithAccessibilityIdentifier("Info") as! UILabel
 		let iconLabel = view.viewWithAccessibilityIdentifier("Icon") as! UILabel
 		let gestureRecognizer = infoLabel.gestureRecognizers?.first { $0 is UILongPressGestureRecognizer }
@@ -85,6 +85,22 @@ class InfoViewControllerTests: XCTestCase
 		XCTAssertFalse(iconLabel.isHidden)
 
 		self.waitForRecognizedState(of: gestureRecognizer!)
+		XCTAssertTrue(iconLabel.isHidden)
+	}
+
+	func testGestureTogglesIconVisibilityViaSimulation() {
+		let infoLabel = view.viewWithAccessibilityIdentifier("Info") as! UILabel
+		let iconLabel = view.viewWithAccessibilityIdentifier("Icon") as! UILabel
+		let gestureRecognizer = infoLabel.gestureRecognizers?.first { $0 is UILongPressGestureRecognizer }
+
+		XCTAssertTrue(iconLabel.isHidden)
+		XCTAssertEqual(gestureRecognizer?.state, .possible)
+		XCTAssertTrue(gestureRecognizer!.isEnabled)
+
+		gestureRecognizer?.simulateRecognition()
+		XCTAssertFalse(iconLabel.isHidden)
+
+		gestureRecognizer?.simulateRecognition()
 		XCTAssertTrue(iconLabel.isHidden)
 	}
 }
