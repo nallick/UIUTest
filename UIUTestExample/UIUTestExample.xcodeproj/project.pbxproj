@@ -28,6 +28,7 @@
 		010B1BC0201D924E00448B0E /* MiscellaneousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B1BB8201D924E00448B0E /* MiscellaneousTests.swift */; };
 		014D41082235F1CF00FC0C18 /* UINavigationControllerTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014D41062235F11800FC0C18 /* UINavigationControllerTestable.swift */; };
 		014D41122246BCBE00FC0C18 /* NSObjectTestable.m in Sources */ = {isa = PBXBuildFile; fileRef = 014D41112246BCBE00FC0C18 /* NSObjectTestable.m */; };
+		014D411422480F4200FC0C18 /* UIResponderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014D411322480F4200FC0C18 /* UIResponderExtensions.swift */; };
 		017DE95A210A3A2700D902E4 /* UIWindowTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DE959210A3A2600D902E4 /* UIWindowTestable.swift */; };
 		017DE95D210B51E900D902E4 /* UITextViewSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DE95B210A3B4600D902E4 /* UITextViewSimulation.swift */; };
 		017DE962210CEA9D00D902E4 /* UIGestureRecognizerTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017DE960210CE81B00D902E4 /* UIGestureRecognizerTestable.swift */; };
@@ -97,6 +98,7 @@
 		014D41062235F11800FC0C18 /* UINavigationControllerTestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UINavigationControllerTestable.swift; path = "Testable Extensions/UINavigationControllerTestable.swift"; sourceTree = "<group>"; };
 		014D41102246BCBE00FC0C18 /* NSObjectTestable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NSObjectTestable.h; path = "Testable Extensions/NSObjectTestable.h"; sourceTree = "<group>"; };
 		014D41112246BCBE00FC0C18 /* NSObjectTestable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NSObjectTestable.m; path = "Testable Extensions/NSObjectTestable.m"; sourceTree = "<group>"; };
+		014D411322480F4200FC0C18 /* UIResponderExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIResponderExtensions.swift; path = "Utility Extensions/UIResponderExtensions.swift"; sourceTree = "<group>"; };
 		017DE959210A3A2600D902E4 /* UIWindowTestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIWindowTestable.swift; path = "Testable Extensions/UIWindowTestable.swift"; sourceTree = "<group>"; };
 		017DE95B210A3B4600D902E4 /* UITextViewSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITextViewSimulation.swift; path = "Simulation Extensions/UITextViewSimulation.swift"; sourceTree = "<group>"; };
 		017DE960210CE81B00D902E4 /* UIGestureRecognizerTestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIGestureRecognizerTestable.swift; path = "Testable Extensions/UIGestureRecognizerTestable.swift"; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 				01B3B2EA201E25D100DBB071 /* NSObjectAssociatedObject.swift */,
 				01B3B2E8201E25D100DBB071 /* NSObjectExchangeMethods.swift */,
 				01B3B2E6201E25D100DBB071 /* RunLoopExtensions.swift */,
+				014D411322480F4200FC0C18 /* UIResponderExtensions.swift */,
 				01B3B2E4201E25D100DBB071 /* UITableViewExtensions.swift */,
 				01F8F3AA21EBFDF100F670E8 /* UITextFieldExtensions.swift */,
 				01B3B2E5201E25D100DBB071 /* UIViewExtensions.swift */,
@@ -455,6 +458,7 @@
 				017DE95D210B51E900D902E4 /* UITextViewSimulation.swift in Sources */,
 				01B3B2EC201E25D100DBB071 /* UITableViewExtensions.swift in Sources */,
 				01B3B2D4201E254F00DBB071 /* UITableViewSimulation.swift in Sources */,
+				014D411422480F4200FC0C18 /* UIResponderExtensions.swift in Sources */,
 				01B3B2DB201E254F00DBB071 /* UITextFieldSimulation.swift in Sources */,
 				01B3B2E0201E259F00DBB071 /* UITableViewCellTestable.swift in Sources */,
 				01928DD9208D36DA00F33D25 /* UIToolbarTestable.swift in Sources */,
