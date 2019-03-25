@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import UIUTest
 import UIUTestExample
 
 class MiscellaneousTests: XCTestCase
