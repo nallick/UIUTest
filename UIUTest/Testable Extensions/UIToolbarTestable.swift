@@ -22,7 +22,7 @@ public extension UIToolbar
 	///
 	var buttonBarStackView: UIStackView? {
 		guard let contentView = self.contentView else { return nil }
-		return contentView.subview(ofType: UIStackView.self) as? UIStackView
+		return contentView.subview(ofType: UIStackView.self)
 	}
 
 	/// Allow the receiver's items to load.

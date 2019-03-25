@@ -26,16 +26,22 @@
 		010B1BBD201D924E00448B0E /* ButtonsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B1BB5201D924E00448B0E /* ButtonsViewControllerTests.swift */; };
 		010B1BBE201D924E00448B0E /* TableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B1BB6201D924E00448B0E /* TableViewControllerTests.swift */; };
 		010B1BC0201D924E00448B0E /* MiscellaneousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B1BB8201D924E00448B0E /* MiscellaneousTests.swift */; };
+		014D415222492A9500FC0C18 /* UIUTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014D415022492A7F00FC0C18 /* UIUTest.framework */; };
 		01928DCA208BCBDD00F33D25 /* ToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01928DC9208BCBDD00F33D25 /* ToolbarViewController.swift */; };
 		01928DCC208BE0C600F33D25 /* TabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01928DCB208BE0C600F33D25 /* TabBarControllerTests.swift */; };
 		01928DCE208BE54B00F33D25 /* ToolbarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01928DCD208BE54B00F33D25 /* ToolbarViewControllerTests.swift */; };
 		01B3B2AF201E209500DBB071 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B3B2AE201E209500DBB071 /* LaunchScreen.storyboard */; };
 		01B3B2B1201E20EA00DBB071 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B3B2B0201E20EA00DBB071 /* Main.storyboard */; };
-		ADB0164C2248164800BA3787 /* UIUTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB0164B2248164800BA3787 /* UIUTest.framework */; };
-		ADB0164D2248164800BA3787 /* UIUTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ADB0164B2248164800BA3787 /* UIUTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		014D414F22492A7F00FC0C18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 014D414B22492A7F00FC0C18 /* UIUTest.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = ADB015E52248125100BA3787;
+			remoteInfo = UIUTest;
+		};
 		ADB016B222481A3200BA3787 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 010B1B58201D8F8E00448B0E /* Project object */;
@@ -52,7 +58,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				ADB0164D2248164800BA3787 /* UIUTest.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,12 +88,12 @@
 		010B1BB6201D924E00448B0E /* TableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerTests.swift; sourceTree = "<group>"; };
 		010B1BB7201D924E00448B0E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		010B1BB8201D924E00448B0E /* MiscellaneousTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiscellaneousTests.swift; sourceTree = "<group>"; };
+		014D414B22492A7F00FC0C18 /* UIUTest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UIUTest.xcodeproj; path = ../UIUTest/UIUTest.xcodeproj; sourceTree = "<group>"; };
 		01928DC9208BCBDD00F33D25 /* ToolbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarViewController.swift; sourceTree = "<group>"; };
 		01928DCB208BE0C600F33D25 /* TabBarControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerTests.swift; sourceTree = "<group>"; };
 		01928DCD208BE54B00F33D25 /* ToolbarViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarViewControllerTests.swift; sourceTree = "<group>"; };
 		01B3B2AE201E209500DBB071 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01B3B2B0201E20EA00DBB071 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		ADB0164B2248164800BA3787 /* UIUTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UIUTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +101,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADB0164C2248164800BA3787 /* UIUTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				014D415222492A9500FC0C18 /* UIUTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,11 +118,11 @@
 		010B1B57201D8F8E00448B0E = {
 			isa = PBXGroup;
 			children = (
-				ADB0164B2248164800BA3787 /* UIUTest.framework */,
 				010B1B62201D8F8E00448B0E /* UIUTestExample */,
 				01B3B2A5201D9D7A00DBB071 /* Resources */,
 				010B1B77201D8F8E00448B0E /* UIUTestExampleTests */,
 				010B1B61201D8F8E00448B0E /* Products */,
+				014D415122492A9500FC0C18 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +169,22 @@
 				010B1BB7201D924E00448B0E /* Info.plist */,
 			);
 			path = UIUTestExampleTests;
+			sourceTree = "<group>";
+		};
+		014D414C22492A7F00FC0C18 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				014D415022492A7F00FC0C18 /* UIUTest.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		014D415122492A9500FC0C18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				014D414B22492A7F00FC0C18 /* UIUTest.xcodeproj */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		01B3B2A5201D9D7A00DBB071 /* Resources */ = {
@@ -251,6 +272,12 @@
 			mainGroup = 010B1B57201D8F8E00448B0E;
 			productRefGroup = 010B1B61201D8F8E00448B0E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 014D414C22492A7F00FC0C18 /* Products */;
+					ProjectRef = 014D414B22492A7F00FC0C18 /* UIUTest.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				010B1B5F201D8F8E00448B0E /* UIUTestExample */,
@@ -258,6 +285,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		014D415022492A7F00FC0C18 /* UIUTest.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = UIUTest.framework;
+			remoteRef = 014D414F22492A7F00FC0C18 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		010B1B5E201D8F8E00448B0E /* Resources */ = {
@@ -489,7 +526,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PurgatoryDesign.UIUTestExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "../UIUTest/Testable Extensions/NSObjectTestable.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -512,7 +548,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PurgatoryDesign.UIUTestExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "../UIUTest/Testable Extensions/NSObjectTestable.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIUTestExample.app/UIUTestExample";

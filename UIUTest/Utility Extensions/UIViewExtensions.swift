@@ -19,7 +19,7 @@ public extension UIView
 	/// - Note:	This doesn't cover the case where the receiver is clipped by a superview (e.g., it is scrolled out of view).
 	///
 	var isVisible: Bool {
-		return (self.isHidden || self.alpha == 0.0) ? false : self.superview?.isVisible ?? true
+		return !self.isHidden && self.alpha > 0.0 && self.superview?.isVisible != false
 	}
 
 	/// Returns the view controller that owns the receiver (if any).

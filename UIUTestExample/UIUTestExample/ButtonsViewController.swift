@@ -94,9 +94,6 @@ public class ButtonsViewController: UIViewController, UICollectionViewDelegate, 
     }
 
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		let x = self.navigationController?.backButton
-		print(x)
-		x?.sendActions(for: .touchUpInside)
 		let newValue = indexPath.item + 1
 		if newValue == self.labelValue {
 			self.collectionView.deselectItem(at: indexPath, animated: true)
