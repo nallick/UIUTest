@@ -6,7 +6,7 @@
 
 import UIKit
 
-public extension UIViewController
+@nonobjc public extension UIViewController
 {
 	typealias FinalizePreparationForSegue = (UIStoryboardSegue, Any?) -> Void
 

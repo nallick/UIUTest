@@ -1,12 +1,12 @@
 //
 //  UIBarButtonItemTestable.swift
 //
-//  Copyright © 2018 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2018-2019 Purgatory Design. Licensed under the MIT License.
 //
 
 import UIKit
 
-public extension UIBarButtonItem
+@nonobjc public extension UIBarButtonItem
 {
 	/// Returns the system item style of the receiver (if any).
 	///

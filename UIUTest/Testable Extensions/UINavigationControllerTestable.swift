@@ -6,7 +6,7 @@
 
 import UIKit
 
-public extension UINavigationController
+@nonobjc public extension UINavigationController
 {
 	/// Returns the current back button of the navigation bar (if any).
 	///

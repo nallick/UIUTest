@@ -1,12 +1,12 @@
 //
 //  UITableViewCellTestable.swift
 //
-//  Copyright © 2017-2018 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2017-2019 Purgatory Design. Licensed under the MIT License.
 //
 
 import UIKit
 
-public extension UITableViewCell
+@nonobjc public extension UITableViewCell
 {
     /// Returns the identifier of the receiver's accessory action segue.
 	///

@@ -1,12 +1,12 @@
 //
 //  UIToolbarTestable.swift
 //
-//  Copyright © 2018 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2018-2019 Purgatory Design. Licensed under the MIT License.
 //
 
 import UIKit
 
-public extension UIToolbar
+@nonobjc public extension UIToolbar
 {
 	/// Returns the receiver's content view (if any).
 	///

@@ -1,12 +1,12 @@
 //
 //  XCTestCaseExtensions.swift
 //
-//  Copyright © 2018 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2018-2019 Purgatory Design. Licensed under the MIT License.
 //
 
 import XCTest
 
-public extension XCTestCase
+@nonobjc public extension XCTestCase
 {
 	/// Wait for all closures on a DispatchQueue to be dispatched.
 	///

@@ -6,7 +6,7 @@
 
 import UIKit
 
-public extension UIResponder
+@nonobjc public extension UIResponder
 {
 	/// Returns the next responder in the receiver's responder chain which is a kind of a specific type.
 	///

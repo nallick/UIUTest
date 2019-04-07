@@ -6,7 +6,7 @@
 
 import UIKit
 
-public extension UITextField
+@nonobjc public extension UITextField
 {
 	/// Insert text after setting the selection of the text to replace.
 	///

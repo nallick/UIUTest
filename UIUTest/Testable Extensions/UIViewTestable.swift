@@ -6,7 +6,7 @@
 
 import UIKit
 
-public extension UIView
+@nonobjc public extension UIView
 {
     /// A description of this view and all of its subviews.
     ///

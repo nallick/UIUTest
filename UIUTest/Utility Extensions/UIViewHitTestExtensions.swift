@@ -1,12 +1,12 @@
 //
 //  UIViewHitTestExtensions.swift
 //
-//  Copyright © 2018 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2018-2019 Purgatory Design. Licensed under the MIT License.
 //
 
 import UIKit
 
-public extension UIView
+@nonobjc public extension UIView
 {
 	/// Returns a string containing the value of the hex pointer to the receiver.
 	///

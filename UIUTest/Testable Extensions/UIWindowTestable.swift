@@ -1,12 +1,12 @@
 //
 //  UIWindowTestable.swift
 //
-//  Copyright © 2018 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2018-2019 Purgatory Design. Licensed under the MIT License.
 //
 
 import UIKit
 
-public extension UIWindow
+@nonobjc public extension UIWindow
 {
     /// Remove all views from the receiver's root view controller.
 	///

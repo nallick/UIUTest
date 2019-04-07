@@ -1,12 +1,12 @@
 //
 //  UIStepperSimulation.swift
 //
-//  Copyright © 2017-2018 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2017-2019 Purgatory Design. Licensed under the MIT License.
 //
 
 import UIKit
 
-public extension UIStepper
+@nonobjc public extension UIStepper
 {
 	/// Returns the bounds of the receiver's decrement segment.
 	///

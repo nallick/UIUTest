@@ -1,12 +1,12 @@
 //
 //  UIWindowSimulation.swift
 //
-//  Copyright © 2017-2018 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2017-2019 Purgatory Design. Licensed under the MIT License.
 //
 
 import UIKit
 
-public extension UIWindow
+@nonobjc public extension UIWindow
 {
 	/// Returns the view a user touch at a point in the receiver will be sent to (if any).
     ///

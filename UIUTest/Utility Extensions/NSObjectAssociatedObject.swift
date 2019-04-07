@@ -1,7 +1,7 @@
 //
 //  NSObjectAssociatedObject.swift
 //
-//  Copyright © 2017-2018 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2017-2019 Purgatory Design. Licensed under the MIT License.
 //
 //  Based on Stack Overflow post from HepaKKes: http://stackoverflow.com/a/29662565/8047
 //
@@ -18,7 +18,7 @@ final class LiftedValue<T>
 	}
 }
 
-public extension NSObject
+@nonobjc public extension NSObject
 {
 	/// Get an associated object from this object.
 	///

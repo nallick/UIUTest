@@ -6,7 +6,7 @@
 
 import UIKit
 
-public extension UIView
+@nonobjc public extension UIView
 {
 	/// Returns true if the receiver isn't hidden.
 	///
@@ -24,12 +24,12 @@ public extension UIView
 
 	/// Returns the view controller that owns the receiver (if any).
 	///
-    var viewController: UIViewController? {
-        return self.nextResponder {
-            guard let viewController = $0 as? UIViewController else { return false }
-            return viewController.view === self || viewController.view.contains(subview: self) == true
-        } as? UIViewController
-    }
+	var viewController: UIViewController? {
+		return self.nextResponder {
+			guard let viewController = $0 as? UIViewController else { return false }
+			return viewController.view === self || viewController.view.contains(subview: self) == true
+			} as? UIViewController
+	}
 
 	/// Returns the topmost superview of the receiver in it's view hierarchy (if any).
 	///
@@ -39,23 +39,23 @@ public extension UIView
 		return self.superview { $0.superview == nil }
 	}
 
-    /// Specifies if a view is a subview in the receiver's view hierarchy.
-    ///
-    /// - Parameter subview: The view to test.
+	/// Specifies if a view is a subview in the receiver's view hierarchy.
+	///
+	/// - Parameter subview: The view to test.
 	/// - Returns: true if the specified view is in the receiver's view hierarchy; false otherwise.
 	///
-    func contains(subview: UIView?) -> Bool {
+	func contains(subview: UIView?) -> Bool {
 		return subview?.superview(where: { $0 === self }) != nil
-    }
+	}
 
 	/// Returns the first view in the receiver's superview hierarchy which is a kind of a specific type.
 	///
 	/// - Parameter type: The type of the subview to find.
 	/// - Returns: The first superview of the specified type (if any).
 	///
-    func superview<T>(ofType type: T.Type) -> T? {
-        return self.superview as? T ?? self.superview.flatMap { $0.superview(ofType: type) }
-    }
+	func superview<T>(ofType type: T.Type) -> T? {
+		return self.superview as? T ?? self.superview.flatMap { $0.superview(ofType: type) }
+	}
 
 	/// Returns the first view in the receiver's subview hierarchy which is a kind of a specific type.
 	///

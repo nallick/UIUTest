@@ -1,12 +1,12 @@
 //
 //  UISliderSimulation.swift
 //
-//  Copyright © 2017-2018 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2017-2019 Purgatory Design. Licensed under the MIT License.
 //
 
 import UIKit
 
-public extension UISlider
+@nonobjc public extension UISlider
 {
 	/// Simulate a user swipe in the receiver to a specific value.
     ///

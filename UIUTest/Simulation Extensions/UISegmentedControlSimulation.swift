@@ -1,12 +1,12 @@
 //
 //  UISegmentedControlSimulation.swift
 //
-//  Copyright © 2017-2018 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2017-2019 Purgatory Design. Licensed under the MIT License.
 //
 
 import UIKit
 
-public extension UISegmentedControl
+@nonobjc public extension UISegmentedControl
 {
     /// Returns the width of a specified segment of the receiver, calculating the value if necessary.
     ///

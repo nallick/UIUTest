@@ -1,12 +1,12 @@
 //
 //  NSObjectExchangeMethods.swift
 //
-//  Copyright © 2017-2018 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2017-2019 Purgatory Design. Licensed under the MIT License.
 //
 
 import Foundation
 
-public extension NSObject
+@nonobjc public extension NSObject
 {
     /// Exchange (i.e., swizzle) two methods of this class.
     ///

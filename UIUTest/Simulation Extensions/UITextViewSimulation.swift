@@ -1,12 +1,12 @@
 //
 //  UITextViewSimulation.swift
 //
-//  Copyright © 2018 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2018-2019 Purgatory Design. Licensed under the MIT License.
 //
 
 import UIKit
 
-public extension UITextView
+@nonobjc public extension UITextView
 {
 	/// Simulate a user touch in the receiver.
 	///

@@ -7,7 +7,7 @@
 import UIKit.UIGestureRecognizerSubclass
 import XCTest
 
-public extension UIGestureRecognizer
+@nonobjc public extension UIGestureRecognizer
 {
 	private typealias TargetActionPair = (target: AnyObject, action: Selector)
 
@@ -124,7 +124,7 @@ public extension UIGestureRecognizer
 	}()
 }
 
-public extension XCTestCase
+@nonobjc public extension XCTestCase
 {
 	/// Wait for the recognized state of a gesture recognizer.
 	///

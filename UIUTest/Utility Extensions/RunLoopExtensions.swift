@@ -1,12 +1,12 @@
 //
 //  RunLoopExtensions.swift
 //
-//  Copyright © 2017-2018 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2017-2019 Purgatory Design. Licensed under the MIT License.
 //
 
 import Foundation
 
-public extension RunLoop
+@nonobjc public extension RunLoop
 {
     /// Make a single pass through the run loop.
     ///

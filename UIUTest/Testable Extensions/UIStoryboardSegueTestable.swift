@@ -1,12 +1,12 @@
 //
 //  UIStoryboardSegueTestable.swift
 //
-//  Copyright © 2017-2018 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2017-2019 Purgatory Design. Licensed under the MIT License.
 //
 
 import UIKit
 
-public extension UIStoryboardSegue
+@nonobjc public extension UIStoryboardSegue
 {
     /// Simulate the completion of the receiver.
     ///

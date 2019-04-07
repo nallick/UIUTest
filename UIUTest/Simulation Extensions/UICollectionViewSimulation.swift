@@ -1,12 +1,12 @@
 //
 //  UICollectionViewSimulation.swift
 //
-//  Copyright © 2017-2018 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2017-2019 Purgatory Design. Licensed under the MIT License.
 //
 
 import UIKit
 
-public extension UICollectionView
+@nonobjc public extension UICollectionView
 {
     /// Allow any pending cells to load.
 	///
