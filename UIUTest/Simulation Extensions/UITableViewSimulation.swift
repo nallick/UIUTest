@@ -102,4 +102,33 @@ public extension UITableView
             }
         }
     }
+
+	/// Simulate a user invoking an edit operation on a cell in the receiver.
+	///
+	/// - Parameters:
+	///   - style: The edit operation style.
+	///   - indexPath: The index path of the cell.
+	///
+	func simulateEdit(_ style: UITableViewCell.EditingStyle, rowAt indexPath: IndexPath) {
+		guard self.isEditing, let cell = self.cellForRow(at: indexPath), cell.isEditing,
+			let dataSource = self.dataSource, dataSource.tableView?(self, canEditRowAt: indexPath) != false,
+			style == self.delegate?.tableView?(self, editingStyleForRowAt: indexPath) ?? .delete
+			else { return }
+		dataSource.tableView?(self, commit: style, forRowAt: indexPath)
+	}
+
+	/// Simulate a user dragging a cell in the receiver to invoke an edit move operation.
+	///
+	/// - Parameters:
+	///   - sourceIndexPath: The index path of the cell to move.
+	///   - destinationIndexPath: The index path of the cell after the move.
+	///
+	func simulateEdit(moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+		guard self.isEditing, let cell = self.cellForRow(at: sourceIndexPath), cell.isEditing,
+			let dataSource = self.dataSource, dataSource.responds(to: #selector(UITableViewDataSource.tableView(_:moveRowAt:to:))),
+			dataSource.tableView?(self, canEditRowAt: sourceIndexPath) != false, dataSource.tableView?(self, canMoveRowAt: sourceIndexPath) != false
+			else { return }
+		dataSource.tableView?(self, moveRowAt: sourceIndexPath, to: destinationIndexPath)
+		self.moveRow(at: sourceIndexPath, to: destinationIndexPath)
+	}
 }
