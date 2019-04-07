@@ -11,7 +11,7 @@ public extension UITextView
 	/// Simulate a user touch in the receiver.
 	///
     func simulateTouch() {
-        if self.willRespondToUser && self.isEditable && self.delegate?.textViewShouldBeginEditing?(self) ?? true {
+        if self.willRespondToUser && self.isEditable && self.delegate?.textViewShouldBeginEditing?(self) != false {
             self.becomeFirstResponder()
 			self.selectedRange = NSRange(location: self.text.count, length: 0)
         }
@@ -25,12 +25,12 @@ public extension UITextView
         if self.isFirstResponder {
             let existingText = self.text ?? ""
             if let string = string, string != "" {
-                if self.delegate?.textView?(self, shouldChangeTextIn: self.selectedRange, replacementText: string) ?? true {
+                if self.delegate?.textView?(self, shouldChangeTextIn: self.selectedRange, replacementText: string) != false {
                     self.insertText(string)
                 }
             }
             else {
-                if existingText != "" && self.delegate?.textView?(self, shouldChangeTextIn: NSRange(location: 0, length: existingText.count), replacementText: "") ?? true {
+                if existingText != "" && self.delegate?.textView?(self, shouldChangeTextIn: NSRange(location: 0, length: existingText.count), replacementText: "") != false {
 					self.setTextAndNotify(nil, selection: NSRange(location: 0, length: 0))
                 }
             }

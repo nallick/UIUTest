@@ -23,7 +23,7 @@ public extension UIViewController
 	///
     var hasBeenDismissed: Bool {
         get {
-            return self.associatedObject(forKey: &UIViewController.hasBeenDismissedKey) ?? false
+            return self.associatedObject(forKey: &UIViewController.hasBeenDismissedKey) == true
         }
         set {
             self.setAssociatedObject(newValue, forKey: &UIViewController.hasBeenDismissedKey, policy: .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -45,7 +45,7 @@ public extension UIViewController
 	///
     var blocksAllSegues: Bool {
         get {
-            return self.associatedObject(forKey: &UIViewController.blocksAllSeguesKey) ?? false
+            return self.associatedObject(forKey: &UIViewController.blocksAllSeguesKey) == true
         }
         set {
             self.setAssociatedObject(newValue, forKey: &UIViewController.blocksAllSeguesKey, policy: .OBJC_ASSOCIATION_RETAIN_NONATOMIC)

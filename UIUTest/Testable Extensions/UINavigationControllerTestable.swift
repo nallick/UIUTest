@@ -14,7 +14,7 @@ public extension UINavigationController
 		let backButtonView = self.navigationBar.subview(deep: true) {
 			guard class_respondsToSelector(type(of: $0), Selector(("isBackButton"))) else { return false }
 			let isBack = $0.value(forKey: "isBackButton") as? Bool
-			return isBack ?? false
+			return isBack == true
 		}
 
 		return backButtonView as? UIControl

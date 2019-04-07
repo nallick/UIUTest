@@ -17,7 +17,7 @@ public extension UIBarButtonItemGroup
 	///
     func itemWithAccessibilityIdentifier(_ identifier: String, where inclusionTest: ((UIBarButtonItem) -> Bool)? = nil) -> UIBarButtonItem? {
         for item in self.barButtonItems {
-            if item.accessibilityIdentifier == identifier && (inclusionTest?(item) ?? true) {
+            if item.accessibilityIdentifier == identifier && (inclusionTest?(item) != false) {
                 return item
             }
         }
@@ -34,7 +34,7 @@ public extension UIBarButtonItemGroup
 	///
 	func itemWithAccessibilityLabel(_ label: String, where inclusionTest: ((UIBarButtonItem) -> Bool)? = nil) -> UIBarButtonItem? {
 		for item in self.barButtonItems {
-			if item.accessibilityLabel == label && (inclusionTest?(item) ?? true) {
+			if item.accessibilityLabel == label && (inclusionTest?(item) != false) {
 				return item
 			}
 		}
@@ -55,7 +55,7 @@ public extension UITabBar
 	func itemWithAccessibilityIdentifier(_ identifier: String, where inclusionTest: ((UITabBarItem) -> Bool)? = nil) -> UITabBarItem? {
 		if let items = self.items {
 			for item in items {
-				if item.accessibilityIdentifier == identifier && (inclusionTest?(item) ?? true) {
+				if item.accessibilityIdentifier == identifier && (inclusionTest?(item) != false) {
 					return item
 				}
 			}
@@ -74,7 +74,7 @@ public extension UITabBar
 	func itemWithAccessibilityLabel(_ label: String, where inclusionTest: ((UITabBarItem) -> Bool)? = nil) -> UITabBarItem? {
 		if let items = self.items {
 			for item in items {
-				if item.accessibilityLabel == label && (inclusionTest?(item) ?? true) {
+				if item.accessibilityLabel == label && (inclusionTest?(item) != false) {
 					return item
 				}
 			}
@@ -96,7 +96,7 @@ public extension UIToolbar
     func itemWithAccessibilityIdentifier(_ identifier: String, where inclusionTest: ((UIBarButtonItem) -> Bool)? = nil) -> UIBarButtonItem? {
         if let items = self.items {
             for item in items {
-                if item.accessibilityIdentifier == identifier && (inclusionTest?(item) ?? true) {
+                if item.accessibilityIdentifier == identifier && (inclusionTest?(item) != false) {
                     return item
                 }
             }
@@ -115,7 +115,7 @@ public extension UIToolbar
 	func itemWithAccessibilityLabel(_ label: String, where inclusionTest: ((UIBarButtonItem) -> Bool)? = nil) -> UIBarButtonItem? {
 		if let items = self.items {
 			for item in items {
-				if item.accessibilityLabel == label && (inclusionTest?(item) ?? true) {
+				if item.accessibilityLabel == label && (inclusionTest?(item) != false) {
 					return item
 				}
 			}
@@ -135,7 +135,7 @@ public extension UIView
 	/// - Returns: The receiver or matching subview (if any).
 	///
     func viewWithAccessibilityIdentifier(_ identifier: String, where inclusionTest: ((UIView) -> Bool)? = nil) -> UIView? {
-        if self.accessibilityIdentifier == identifier && (inclusionTest?(self) ?? true) {
+        if self.accessibilityIdentifier == identifier && (inclusionTest?(self) != false) {
             return self
         }
 
@@ -156,7 +156,7 @@ public extension UIView
 	/// - Returns: The receiver or matching subview (if any).
 	///
 	func viewWithAccessibilityLabel(_ label: String, where inclusionTest: ((UIView) -> Bool)? = nil) -> UIView? {
-		if self.accessibilityLabel == label && (inclusionTest?(self) ?? true) {
+		if self.accessibilityLabel == label && (inclusionTest?(self) != false) {
 			return self
 		}
 

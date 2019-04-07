@@ -52,7 +52,7 @@ public extension UICollectionView
 	///
     func toggleItemHighlightAndNotify(at indexPath: IndexPath) {
         let delegate = self.delegate
-        if delegate?.collectionView?(self, shouldHighlightItemAt: indexPath) ?? true {
+        if delegate?.collectionView?(self, shouldHighlightItemAt: indexPath) != false {
             let cell = self.cellForItem(at: indexPath)
             cell?.isHighlighted = true
             delegate?.collectionView?(self, didHighlightItemAt: indexPath)
@@ -67,7 +67,7 @@ public extension UICollectionView
 	/// - Returns: true if the item is selected; false otherwise.
 	///
     func itemIsSelected(at indexPath: IndexPath) -> Bool {
-        return self.indexPathsForSelectedItems?.contains(indexPath) ?? false
+        return self.indexPathsForSelectedItems?.contains(indexPath) == true
     }
 
  	/// Select a spacific item and send the appropriate delegate notifications.
@@ -82,7 +82,7 @@ public extension UICollectionView
 	///
 	func selectItemAndNotify(at indexPath: IndexPath, animated: Bool, scrollPosition: UICollectionView.ScrollPosition) {
         let delegate = self.delegate
-        if delegate?.collectionView?(self, shouldSelectItemAt: indexPath) ?? true {
+        if delegate?.collectionView?(self, shouldSelectItemAt: indexPath) != false {
 			if !self.allowsMultipleSelection, let originalSelection = self.indexPathsForSelectedItems?.first {
 				self.deselectItem(at: originalSelection, animated: animated)
 				delegate?.collectionView?(self, didDeselectItemAt: originalSelection)
@@ -105,7 +105,7 @@ public extension UICollectionView
 	///
     func deselectItemAndNotify(at indexPath: IndexPath, animated: Bool) {
         let delegate = self.delegate
-        if delegate?.collectionView?(self, shouldDeselectItemAt: indexPath) ?? true {
+        if delegate?.collectionView?(self, shouldDeselectItemAt: indexPath) != false {
             self.deselectItem(at: indexPath, animated: animated)
             if !self.itemIsSelected(at: indexPath) {
                 delegate?.collectionView?(self, didDeselectItemAt: indexPath)

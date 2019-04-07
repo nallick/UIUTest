@@ -26,7 +26,7 @@ public extension UITableView
 	/// - Returns: true if the specified cell is selected; false otherwise.
 	///
     func cellIsSelected(at indexPath: IndexPath) -> Bool {
-        return self.indexPathsForSelectedRows?.contains(indexPath) ?? false
+        return self.indexPathsForSelectedRows?.contains(indexPath) == true
     }
 
     /// Select a row and perform the notifications as if the selection was performed interactively rather than programatically.

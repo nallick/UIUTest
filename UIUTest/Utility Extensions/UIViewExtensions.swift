@@ -25,7 +25,7 @@ public extension UIView
 	/// Returns the view controller that owns the receiver (if any).
 	///
     var viewController: UIViewController? {
-		return self.nextResponder(where: { ($0 as? UIViewController)?.view.contains(self) ?? false }) as? UIViewController
+		return self.nextResponder(where: { ($0 as? UIViewController)?.view.contains(self) == true }) as? UIViewController
     }
 
 	/// Returns the topmost superview of the receiver in it's view hierarchy (if any).

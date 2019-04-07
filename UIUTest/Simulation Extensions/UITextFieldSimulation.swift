@@ -46,12 +46,12 @@ public extension UITextField
         if self.isFirstResponder {
             let existingText = self.text ?? ""
             if let string = string, string != "" {
-                if self.delegate?.textField?(self, shouldChangeCharactersIn: NSRange(location: existingText.count, length: 0), replacementString: string) ?? true {
+                if self.delegate?.textField?(self, shouldChangeCharactersIn: NSRange(location: existingText.count, length: 0), replacementString: string) != false {
                     self.setTextAndNotify(existingText + string)
                 }
             }
             else {
-                if existingText != "" && self.delegate?.textField?(self, shouldChangeCharactersIn: NSRange(location: 0, length: existingText.count), replacementString: "") ?? true {
+                if existingText != "" && self.delegate?.textField?(self, shouldChangeCharactersIn: NSRange(location: 0, length: existingText.count), replacementString: "") != false {
                     self.setTextAndNotify(nil)
                 }
             }
@@ -61,7 +61,7 @@ public extension UITextField
     /// Simulate a user tap on the receiver's clear button.
 	///
     func simulateClearButton() {
-        if self.clearButtonIsVisible && self.delegate?.textFieldShouldClear?(self) ?? true {
+        if self.clearButtonIsVisible && self.delegate?.textFieldShouldClear?(self) != false {
             self.text = nil
         }
     }
@@ -69,7 +69,7 @@ public extension UITextField
 	/// Simulate a user tap on the keyboard's return key.
 	///
     func simulateReturnKey() {
-        if self.delegate?.textFieldShouldReturn?(self) ?? true {
+        if self.delegate?.textFieldShouldReturn?(self) != false {
             self.sendActions(for: .primaryActionTriggered)
         }
     }
