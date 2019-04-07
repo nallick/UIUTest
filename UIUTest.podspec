@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'UIUTest'
-    s.version          = '1.2.1'
+    s.version          = '1.3.0'
     s.summary          = 'Unit Testing For the User Interface.'
 
     s.description      = <<-DESC
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
     s.source           = { :git => 'https://github.com/nallick/UIUTest.git', :tag => s.version.to_s }
   
     s.ios.deployment_target = '9.0'
-    s.swift_version = '4.2'
+    s.swift_version = '5.0'
   
     s.source_files = 'UIUTest/**/*.{swift,h,m}'
     s.public_header_files = 'UIUTest/**/*.h'
@@ -22,4 +22,3 @@ Pod::Spec.new do |s|
       'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "$(PLATFORM_DIR)/Developer/Library/Frameworks"',
     }
 end
-  

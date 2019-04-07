@@ -20,7 +20,9 @@ import UIKit
                 return !self.isFirstResponder
             case .always:
                 return true
-        }
+			@unknown default:
+				return false
+		}
     }
 
 	/// Simulate a user touch in the receiver.
