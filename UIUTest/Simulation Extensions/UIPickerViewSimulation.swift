@@ -10,7 +10,7 @@ import UIKit
 {
 	/// Determine if the receiver will respond to user touches in the center of the view.
 	///
-    override var willRespondToUser: Bool {
+    @objc override var willRespondToUser: Bool {
         let hitView = self.touchWillHitView
         return hitView === self || self.contains(subview: hitView)
     }

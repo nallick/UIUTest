@@ -27,7 +27,7 @@ import UIKit
 	///
 	/// - Parameter event: The event to simulate if the field responds to user touches.
 	///
-    override func simulateTouch(for event: UIControl.Event = .touchUpInside) {
+    @objc override func simulateTouch(for event: UIControl.Event = .touchUpInside) {
         if self.willRespondToUser {
             self.sendActions(for: event)
 

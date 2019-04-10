@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = 'UIUTest'
-    s.version          = '1.2.1'
+    s.version          = '1.2.2'
     s.summary          = 'Unit Testing For the User Interface.'
 
     s.description      = <<-DESC
