@@ -10,7 +10,7 @@ import UIKit
 {
 	/// Determine if the receiver will respond to user touches in the center of the view.
 	///
-    override var willRespondToUser: Bool {
+    @objc override var willRespondToUser: Bool {
         let hitView = self.touchWillHitView
         return hitView === self || self.contains(subview: hitView)
     }
@@ -19,7 +19,7 @@ import UIKit
 	///
 	/// - Parameter event: The event to simulate if the switch responds to user touches.
 	///
-	override func simulateTouch(for event: UIControl.Event = .valueChanged) {
+	@objc override func simulateTouch(for event: UIControl.Event = .valueChanged) {
         if self.willRespondToUser {
             if event == .valueChanged { self.isOn = !self.isOn }
             self.sendActions(for: event)
