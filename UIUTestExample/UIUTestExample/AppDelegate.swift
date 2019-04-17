@@ -6,12 +6,11 @@
 
 import UIKit
 
-//@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate
+open class AppDelegate: UIResponder, UIApplicationDelegate
 {
-    var window: UIWindow?
+    public var window: UIWindow?
 
-	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+	open func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         AuthenticationViewController.defaultAuthenticator = DefaultAuthenticator()
         return true
     }

@@ -26,6 +26,7 @@
 		010B1BBD201D924E00448B0E /* ButtonsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B1BB5201D924E00448B0E /* ButtonsViewControllerTests.swift */; };
 		010B1BBE201D924E00448B0E /* TableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B1BB6201D924E00448B0E /* TableViewControllerTests.swift */; };
 		010B1BC0201D924E00448B0E /* MiscellaneousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 010B1BB8201D924E00448B0E /* MiscellaneousTests.swift */; };
+		013FBF152267B8B50012A5FF /* AppDelegateTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013FBF142267B8B50012A5FF /* AppDelegateTest.swift */; };
 		014D415222492A9500FC0C18 /* UIUTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014D415022492A7F00FC0C18 /* UIUTest.framework */; };
 		01928DCA208BCBDD00F33D25 /* ToolbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01928DC9208BCBDD00F33D25 /* ToolbarViewController.swift */; };
 		01928DCC208BE0C600F33D25 /* TabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01928DCB208BE0C600F33D25 /* TabBarControllerTests.swift */; };
@@ -88,6 +89,7 @@
 		010B1BB6201D924E00448B0E /* TableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerTests.swift; sourceTree = "<group>"; };
 		010B1BB7201D924E00448B0E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		010B1BB8201D924E00448B0E /* MiscellaneousTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiscellaneousTests.swift; sourceTree = "<group>"; };
+		013FBF142267B8B50012A5FF /* AppDelegateTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTest.swift; sourceTree = "<group>"; };
 		014D414B22492A7F00FC0C18 /* UIUTest.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UIUTest.xcodeproj; path = ../UIUTest/UIUTest.xcodeproj; sourceTree = "<group>"; };
 		01928DC9208BCBDD00F33D25 /* ToolbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarViewController.swift; sourceTree = "<group>"; };
 		01928DCB208BE0C600F33D25 /* TabBarControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerTests.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		010B1B77201D8F8E00448B0E /* UIUTestExampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				013FBF142267B8B50012A5FF /* AppDelegateTest.swift */,
 				010B1BB2201D924E00448B0E /* AuthenticationTests.swift */,
 				010B1BB5201D924E00448B0E /* ButtonsViewControllerTests.swift */,
 				010B1BB1201D924E00448B0E /* DateExtensionTests.swift */,
@@ -340,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				013FBF152267B8B50012A5FF /* AppDelegateTest.swift in Sources */,
 				010B1BBA201D924E00448B0E /* AuthenticationTests.swift in Sources */,
 				010B1BBD201D924E00448B0E /* ButtonsViewControllerTests.swift in Sources */,
 				010B1BB9201D924E00448B0E /* DateExtensionTests.swift in Sources */,
