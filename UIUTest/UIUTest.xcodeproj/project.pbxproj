@@ -48,6 +48,8 @@
 		ADB0169F2248180D00BA3787 /* NSObjectExchangeMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016792248180D00BA3787 /* NSObjectExchangeMethods.swift */; };
 		ADB016A02248180D00BA3787 /* AccessibilityIdentifierExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB0167A2248180D00BA3787 /* AccessibilityIdentifierExtensions.swift */; };
 		ADB016A72248197500BA3787 /* UIUTest.h in Headers */ = {isa = PBXBuildFile; fileRef = ADB016A32248197500BA3787 /* UIUTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADC33366229F1DE600242CBF /* MKMapViewSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC33365229F1DE600242CBF /* MKMapViewSimulation.swift */; };
+		ADC3336B229F665200242CBF /* MKMapViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC3336A229F665200242CBF /* MKMapViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +96,8 @@
 		ADB0167A2248180D00BA3787 /* AccessibilityIdentifierExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifierExtensions.swift; sourceTree = "<group>"; };
 		ADB016A32248197500BA3787 /* UIUTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUTest.h; sourceTree = "<group>"; };
 		ADB016A62248197500BA3787 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADC33365229F1DE600242CBF /* MKMapViewSimulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewSimulation.swift; sourceTree = "<group>"; };
+		ADC3336A229F665200242CBF /* MKMapViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +193,7 @@
 				ADB016612248180D00BA3787 /* UITextViewSimulation.swift */,
 				ADB0166C2248180D00BA3787 /* UIViewSimulation.swift */,
 				ADB016672248180D00BA3787 /* UIWindowSimulation.swift */,
+				ADC33365229F1DE600242CBF /* MKMapViewSimulation.swift */,
 			);
 			path = "Simulation Extensions";
 			sourceTree = SOURCE_ROOT;
@@ -209,6 +214,7 @@
 				ADB016772248180D00BA3787 /* UIViewExtensions.swift */,
 				ADB016732248180D00BA3787 /* UIViewHitTestExtensions.swift */,
 				ADB016722248180D00BA3787 /* XCTestCaseExtensions.swift */,
+				ADC3336A229F665200242CBF /* MKMapViewExtensions.swift */,
 			);
 			path = "Utility Extensions";
 			sourceTree = SOURCE_ROOT;
@@ -322,11 +328,13 @@
 				ADB016852248180D00BA3787 /* UIViewControllerTestable.swift in Sources */,
 				ADB016862248180D00BA3787 /* UICollectionViewSimulation.swift in Sources */,
 				ADB0168B2248180D00BA3787 /* UITableViewSimulation.swift in Sources */,
+				ADC3336B229F665200242CBF /* MKMapViewExtensions.swift in Sources */,
 				ADB016922248180D00BA3787 /* UIAlertActionSimulation.swift in Sources */,
 				ADB016832248180D00BA3787 /* UIToolbarTestable.swift in Sources */,
 				014D412022491F0C00FC0C18 /* NSObjectTestable.m in Sources */,
 				ADB0169A2248180D00BA3787 /* RunLoopExtensions.swift in Sources */,
 				ADB0169F2248180D00BA3787 /* NSObjectExchangeMethods.swift in Sources */,
+				ADC33366229F1DE600242CBF /* MKMapViewSimulation.swift in Sources */,
 				ADB016902248180D00BA3787 /* UIDatePickerSimulation.swift in Sources */,
 				ADB016892248180D00BA3787 /* UIStepperSimulation.swift in Sources */,
 				ADB016882248180D00BA3787 /* UITextViewSimulation.swift in Sources */,

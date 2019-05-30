@@ -33,6 +33,8 @@
 		01928DCE208BE54B00F33D25 /* ToolbarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01928DCD208BE54B00F33D25 /* ToolbarViewControllerTests.swift */; };
 		01B3B2AF201E209500DBB071 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B3B2AE201E209500DBB071 /* LaunchScreen.storyboard */; };
 		01B3B2B1201E20EA00DBB071 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B3B2B0201E20EA00DBB071 /* Main.storyboard */; };
+		ADC33360229D822B00242CBF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC3335F229D822B00242CBF /* MapViewController.swift */; };
+		ADC33363229D85AC00242CBF /* MapViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC33362229D85AC00242CBF /* MapViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,8 @@
 		01928DCD208BE54B00F33D25 /* ToolbarViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarViewControllerTests.swift; sourceTree = "<group>"; };
 		01B3B2AE201E209500DBB071 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01B3B2B0201E20EA00DBB071 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		ADC3335F229D822B00242CBF /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		ADC33362229D85AC00242CBF /* MapViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,7 @@
 				01928DC9208BCBDD00F33D25 /* ToolbarViewController.swift */,
 				010B1B8F201D904F00448B0E /* UITextFieldUtilities.swift */,
 				010B1B88201D904E00448B0E /* UIViewControllerExtensions.swift */,
+				ADC3335F229D822B00242CBF /* MapViewController.swift */,
 			);
 			path = UIUTestExample;
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 				01928DCB208BE0C600F33D25 /* TabBarControllerTests.swift */,
 				010B1BB6201D924E00448B0E /* TableViewControllerTests.swift */,
 				01928DCD208BE54B00F33D25 /* ToolbarViewControllerTests.swift */,
+				ADC33362229D85AC00242CBF /* MapViewControllerTests.swift */,
 				010B1BB7201D924E00448B0E /* Info.plist */,
 			);
 			path = UIUTestExampleTests;
@@ -330,6 +336,7 @@
 				010B1B9B201D904F00448B0E /* DateExtensions.swift in Sources */,
 				010B1B99201D904F00448B0E /* DefaultAuthenticator.swift in Sources */,
 				010B1B91201D904F00448B0E /* InfoViewController.swift in Sources */,
+				ADC33360229D822B00242CBF /* MapViewController.swift in Sources */,
 				010B1B93201D904F00448B0E /* main.swift in Sources */,
 				010B1B9A201D904F00448B0E /* SwitchesViewController.swift in Sources */,
 				010B1B97201D904F00448B0E /* TableViewController.swift in Sources */,
@@ -351,6 +358,7 @@
 				010B1BC0201D924E00448B0E /* MiscellaneousTests.swift in Sources */,
 				010B1BBC201D924E00448B0E /* SwitchesViewControllerTests.swift in Sources */,
 				01928DCC208BE0C600F33D25 /* TabBarControllerTests.swift in Sources */,
+				ADC33363229D85AC00242CBF /* MapViewControllerTests.swift in Sources */,
 				010B1BBE201D924E00448B0E /* TableViewControllerTests.swift in Sources */,
 				01928DCE208BE54B00F33D25 /* ToolbarViewControllerTests.swift in Sources */,
 			);
