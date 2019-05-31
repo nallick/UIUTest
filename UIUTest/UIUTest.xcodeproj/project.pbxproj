@@ -178,6 +178,7 @@
 		ADB0165E2248180D00BA3787 /* Simulation Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				ADC33365229F1DE600242CBF /* MKMapViewSimulation.swift */,
 				ADB0166B2248180D00BA3787 /* UIAlertActionSimulation.swift */,
 				ADB016602248180D00BA3787 /* UIBarButtonItemSimulation.swift */,
 				ADB0165F2248180D00BA3787 /* UICollectionViewSimulation.swift */,
@@ -193,7 +194,6 @@
 				ADB016612248180D00BA3787 /* UITextViewSimulation.swift */,
 				ADB0166C2248180D00BA3787 /* UIViewSimulation.swift */,
 				ADB016672248180D00BA3787 /* UIWindowSimulation.swift */,
-				ADC33365229F1DE600242CBF /* MKMapViewSimulation.swift */,
 			);
 			path = "Simulation Extensions";
 			sourceTree = SOURCE_ROOT;
@@ -204,6 +204,7 @@
 				ADB0167A2248180D00BA3787 /* AccessibilityIdentifierExtensions.swift */,
 				ADB016702248180D00BA3787 /* AlertControllerExtensions.swift */,
 				ADB016762248180D00BA3787 /* GeometryExtensions.swift */,
+				ADC3336A229F665200242CBF /* MKMapViewExtensions.swift */,
 				ADB016782248180D00BA3787 /* NotificationTestMonitor.swift */,
 				ADB016752248180D00BA3787 /* NSObjectAssociatedObject.swift */,
 				ADB016792248180D00BA3787 /* NSObjectExchangeMethods.swift */,
@@ -214,7 +215,6 @@
 				ADB016772248180D00BA3787 /* UIViewExtensions.swift */,
 				ADB016732248180D00BA3787 /* UIViewHitTestExtensions.swift */,
 				ADB016722248180D00BA3787 /* XCTestCaseExtensions.swift */,
-				ADC3336A229F665200242CBF /* MKMapViewExtensions.swift */,
 			);
 			path = "Utility Extensions";
 			sourceTree = SOURCE_ROOT;

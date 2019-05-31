@@ -1,9 +1,8 @@
 //
 //  MKMapViewExtensions.swift
-//  UIUTest
 //
 //  Created by Tyler Thompson on 5/29/19.
-//  Copyright © 2019 Purgatory Design. All rights reserved.
+//  Copyright © 2019 Purgatory Design. Licensed under the MIT License.
 //
 
 import Foundation
@@ -35,7 +34,7 @@ import MapKit
     /// - Note:
     ///        This mirrors MKMapView.selectAnnotation(_ annotation: MKAnnotation?, animated: Bool)
     ///
-    func selectAnnotationAndNotify(_ annotation:MKAnnotation, animated:Bool) {
+    func selectAnnotationAndNotify(_ annotation: MKAnnotation, animated: Bool) {
         guard let view = self.view(for: annotation) else { return }
         self.selectAnnotation(annotation, animated: animated)
         self.delegate?.mapView?(self, didSelect: view)
@@ -50,7 +49,7 @@ import MapKit
     /// - Note:
     ///        This mirrors MKMapView.deselectAnnotation(_ annotation: MKAnnotation?, animated: Bool)
     ///
-    func deselectAnnotationAndNotify(_ annotation:MKAnnotation, animated:Bool) {
+    func deselectAnnotationAndNotify(_ annotation: MKAnnotation, animated: Bool) {
         guard let view = self.view(for: annotation) else { return }
         self.deselectAnnotation(annotation, animated: animated)
         self.delegate?.mapView?(self, didDeselect: view)
