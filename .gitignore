@@ -2,6 +2,7 @@
 /.build
 /Packages
 /*.xcodeproj
+/UIUTest_Examples
 UIUTest/UIUTest.xcodeproj/project.xcworkspace/xcuserdata/*
 UIUTestExample/UIUTestExample.xcodeproj/project.xcworkspace/xcuserdata/*
 UIUTestExample/UIUTestExample.xcodeproj/xcuserdata/*
