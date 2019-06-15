@@ -7,6 +7,10 @@
 import UIKit.UIGestureRecognizerSubclass
 import XCTest
 
+#if canImport(UIUTest_ObjC)
+import UIUTest_ObjC
+#endif
+
 @nonobjc public extension UIGestureRecognizer
 {
 	private typealias TargetActionPair = (target: AnyObject, action: Selector)
