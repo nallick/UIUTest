@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
     s.ios.deployment_target = '9.0'
     s.swift_version = '5.0'
   
-    s.source_files = 'UIUTest/**/*.{swift,h,m}'
-    s.public_header_files = 'UIUTest/**/*.h'
+    s.source_files = 'Sources/**/*.{swift,h,m}'
+    s.public_header_files = 'Sources/**/*.h'
     s.framework = "XCTest"
     s.pod_target_xcconfig = {
       'FRAMEWORK_SEARCH_PATHS' => '$(inherited) "$(PLATFORM_DIR)/Developer/Library/Frameworks"',
