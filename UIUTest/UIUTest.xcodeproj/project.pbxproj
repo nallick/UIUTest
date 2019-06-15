@@ -7,97 +7,97 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		014D411A224918B500FC0C18 /* UIResponderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014D4119224918B500FC0C18 /* UIResponderExtensions.swift */; };
-		014D412022491F0C00FC0C18 /* NSObjectTestable.m in Sources */ = {isa = PBXBuildFile; fileRef = 014D411E22491F0C00FC0C18 /* NSObjectTestable.m */; };
-		014D41222249200A00FC0C18 /* NSObjectTestable.h in Headers */ = {isa = PBXBuildFile; fileRef = 014D411F22491F0C00FC0C18 /* NSObjectTestable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01A5D39622B580B4003F519C /* NSObjectTestable.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D36822B580B4003F519C /* NSObjectTestable.m */; };
+		01A5D39722B580B4003F519C /* NSObjectTestable.h in Headers */ = {isa = PBXBuildFile; fileRef = 01A5D36A22B580B4003F519C /* NSObjectTestable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01A5D39822B580B4003F519C /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D36D22B580B4003F519C /* UITableViewExtensions.swift */; };
+		01A5D39922B580B4003F519C /* AlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D36E22B580B4003F519C /* AlertControllerExtensions.swift */; };
+		01A5D39A22B580B4003F519C /* UITextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D36F22B580B4003F519C /* UITextFieldExtensions.swift */; };
+		01A5D39B22B580B4003F519C /* XCTestCaseExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D37022B580B4003F519C /* XCTestCaseExtensions.swift */; };
+		01A5D39C22B580B4003F519C /* UIViewHitTestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D37122B580B4003F519C /* UIViewHitTestExtensions.swift */; };
+		01A5D39D22B580B4003F519C /* RunLoopExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D37222B580B4003F519C /* RunLoopExtensions.swift */; };
+		01A5D39E22B580B4003F519C /* NSObjectAssociatedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D37322B580B4003F519C /* NSObjectAssociatedObject.swift */; };
+		01A5D39F22B580B4003F519C /* GeometryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D37422B580B4003F519C /* GeometryExtensions.swift */; };
+		01A5D3A022B580B4003F519C /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D37522B580B4003F519C /* UIViewExtensions.swift */; };
+		01A5D3A122B580B4003F519C /* MKMapViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D37622B580B4003F519C /* MKMapViewExtensions.swift */; };
+		01A5D3A222B580B4003F519C /* NotificationTestMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D37722B580B4003F519C /* NotificationTestMonitor.swift */; };
+		01A5D3A322B580B4003F519C /* NSObjectExchangeMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D37822B580B4003F519C /* NSObjectExchangeMethods.swift */; };
+		01A5D3A422B580B4003F519C /* AccessibilityIdentifierExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D37922B580B4003F519C /* AccessibilityIdentifierExtensions.swift */; };
+		01A5D3A522B580B4003F519C /* UIResponderExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D37A22B580B4003F519C /* UIResponderExtensions.swift */; };
+		01A5D3A622B580B4003F519C /* UIGestureRecognizerTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D37C22B580B4003F519C /* UIGestureRecognizerTestable.swift */; };
+		01A5D3A722B580B4003F519C /* UINavigationControllerTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D37D22B580B4003F519C /* UINavigationControllerTestable.swift */; };
+		01A5D3A822B580B4003F519C /* UIWindowTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D37E22B580B4003F519C /* UIWindowTestable.swift */; };
+		01A5D3A922B580B4003F519C /* UIBarButtonItemTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D37F22B580B4003F519C /* UIBarButtonItemTestable.swift */; };
+		01A5D3AA22B580B4003F519C /* UIViewTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D38022B580B4003F519C /* UIViewTestable.swift */; };
+		01A5D3AB22B580B4003F519C /* UIStoryboardSegueTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D38122B580B4003F519C /* UIStoryboardSegueTestable.swift */; };
+		01A5D3AC22B580B4003F519C /* UIToolbarTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D38222B580B4003F519C /* UIToolbarTestable.swift */; };
+		01A5D3AD22B580B4003F519C /* UITableViewCellTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D38322B580B4003F519C /* UITableViewCellTestable.swift */; };
+		01A5D3AE22B580B4003F519C /* UIViewControllerTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D38422B580B4003F519C /* UIViewControllerTestable.swift */; };
+		01A5D3AF22B580B4003F519C /* UICollectionViewSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D38622B580B4003F519C /* UICollectionViewSimulation.swift */; };
+		01A5D3B022B580B4003F519C /* UIBarButtonItemSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D38722B580B4003F519C /* UIBarButtonItemSimulation.swift */; };
+		01A5D3B122B580B4003F519C /* UITextViewSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D38822B580B4003F519C /* UITextViewSimulation.swift */; };
+		01A5D3B222B580B4003F519C /* UIStepperSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D38922B580B4003F519C /* UIStepperSimulation.swift */; };
+		01A5D3B322B580B4003F519C /* UISegmentedControlSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D38A22B580B4003F519C /* UISegmentedControlSimulation.swift */; };
+		01A5D3B422B580B4003F519C /* UITableViewSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D38B22B580B4003F519C /* UITableViewSimulation.swift */; };
+		01A5D3B522B580B4003F519C /* UITextFieldSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D38C22B580B4003F519C /* UITextFieldSimulation.swift */; };
+		01A5D3B622B580B4003F519C /* UIPickerViewSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D38D22B580B4003F519C /* UIPickerViewSimulation.swift */; };
+		01A5D3B722B580B4003F519C /* UIWindowSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D38E22B580B4003F519C /* UIWindowSimulation.swift */; };
+		01A5D3B822B580B4003F519C /* UISwitchSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D38F22B580B4003F519C /* UISwitchSimulation.swift */; };
+		01A5D3B922B580B4003F519C /* UIDatePickerSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D39022B580B4003F519C /* UIDatePickerSimulation.swift */; };
+		01A5D3BA22B580B4003F519C /* UISliderSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D39122B580B4003F519C /* UISliderSimulation.swift */; };
+		01A5D3BB22B580B4003F519C /* UIAlertActionSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D39222B580B4003F519C /* UIAlertActionSimulation.swift */; };
+		01A5D3BC22B580B4003F519C /* MKMapViewSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D39322B580B4003F519C /* MKMapViewSimulation.swift */; };
+		01A5D3BD22B580B4003F519C /* UIViewSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D39422B580B4003F519C /* UIViewSimulation.swift */; };
+		01A5D3BE22B580B4003F519C /* UIControlSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D39522B580B4003F519C /* UIControlSimulation.swift */; };
 		ADB01641224812F700BA3787 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB01640224812F700BA3787 /* XCTest.framework */; };
-		ADB0167B2248180D00BA3787 /* UIGestureRecognizerTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016532248180D00BA3787 /* UIGestureRecognizerTestable.swift */; };
-		ADB0167C2248180D00BA3787 /* UINavigationControllerTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016542248180D00BA3787 /* UINavigationControllerTestable.swift */; };
-		ADB0167E2248180D00BA3787 /* UIWindowTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016562248180D00BA3787 /* UIWindowTestable.swift */; };
-		ADB0167F2248180D00BA3787 /* UIBarButtonItemTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016572248180D00BA3787 /* UIBarButtonItemTestable.swift */; };
-		ADB016802248180D00BA3787 /* UIViewTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016582248180D00BA3787 /* UIViewTestable.swift */; };
-		ADB016822248180D00BA3787 /* UIStoryboardSegueTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB0165A2248180D00BA3787 /* UIStoryboardSegueTestable.swift */; };
-		ADB016832248180D00BA3787 /* UIToolbarTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB0165B2248180D00BA3787 /* UIToolbarTestable.swift */; };
-		ADB016842248180D00BA3787 /* UITableViewCellTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB0165C2248180D00BA3787 /* UITableViewCellTestable.swift */; };
-		ADB016852248180D00BA3787 /* UIViewControllerTestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB0165D2248180D00BA3787 /* UIViewControllerTestable.swift */; };
-		ADB016862248180D00BA3787 /* UICollectionViewSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB0165F2248180D00BA3787 /* UICollectionViewSimulation.swift */; };
-		ADB016872248180D00BA3787 /* UIBarButtonItemSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016602248180D00BA3787 /* UIBarButtonItemSimulation.swift */; };
-		ADB016882248180D00BA3787 /* UITextViewSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016612248180D00BA3787 /* UITextViewSimulation.swift */; };
-		ADB016892248180D00BA3787 /* UIStepperSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016622248180D00BA3787 /* UIStepperSimulation.swift */; };
-		ADB0168A2248180D00BA3787 /* UISegmentedControlSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016632248180D00BA3787 /* UISegmentedControlSimulation.swift */; };
-		ADB0168B2248180D00BA3787 /* UITableViewSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016642248180D00BA3787 /* UITableViewSimulation.swift */; };
-		ADB0168C2248180D00BA3787 /* UITextFieldSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016652248180D00BA3787 /* UITextFieldSimulation.swift */; };
-		ADB0168D2248180D00BA3787 /* UIPickerViewSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016662248180D00BA3787 /* UIPickerViewSimulation.swift */; };
-		ADB0168E2248180D00BA3787 /* UIWindowSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016672248180D00BA3787 /* UIWindowSimulation.swift */; };
-		ADB0168F2248180D00BA3787 /* UISwitchSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016682248180D00BA3787 /* UISwitchSimulation.swift */; };
-		ADB016902248180D00BA3787 /* UIDatePickerSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016692248180D00BA3787 /* UIDatePickerSimulation.swift */; };
-		ADB016912248180D00BA3787 /* UISliderSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB0166A2248180D00BA3787 /* UISliderSimulation.swift */; };
-		ADB016922248180D00BA3787 /* UIAlertActionSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB0166B2248180D00BA3787 /* UIAlertActionSimulation.swift */; };
-		ADB016932248180D00BA3787 /* UIViewSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB0166C2248180D00BA3787 /* UIViewSimulation.swift */; };
-		ADB016942248180D00BA3787 /* UIControlSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB0166D2248180D00BA3787 /* UIControlSimulation.swift */; };
-		ADB016952248180D00BA3787 /* UITableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB0166F2248180D00BA3787 /* UITableViewExtensions.swift */; };
-		ADB016962248180D00BA3787 /* AlertControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016702248180D00BA3787 /* AlertControllerExtensions.swift */; };
-		ADB016972248180D00BA3787 /* UITextFieldExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016712248180D00BA3787 /* UITextFieldExtensions.swift */; };
-		ADB016982248180D00BA3787 /* XCTestCaseExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016722248180D00BA3787 /* XCTestCaseExtensions.swift */; };
-		ADB016992248180D00BA3787 /* UIViewHitTestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016732248180D00BA3787 /* UIViewHitTestExtensions.swift */; };
-		ADB0169A2248180D00BA3787 /* RunLoopExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016742248180D00BA3787 /* RunLoopExtensions.swift */; };
-		ADB0169B2248180D00BA3787 /* NSObjectAssociatedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016752248180D00BA3787 /* NSObjectAssociatedObject.swift */; };
-		ADB0169C2248180D00BA3787 /* GeometryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016762248180D00BA3787 /* GeometryExtensions.swift */; };
-		ADB0169D2248180D00BA3787 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016772248180D00BA3787 /* UIViewExtensions.swift */; };
-		ADB0169E2248180D00BA3787 /* NotificationTestMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016782248180D00BA3787 /* NotificationTestMonitor.swift */; };
-		ADB0169F2248180D00BA3787 /* NSObjectExchangeMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB016792248180D00BA3787 /* NSObjectExchangeMethods.swift */; };
-		ADB016A02248180D00BA3787 /* AccessibilityIdentifierExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB0167A2248180D00BA3787 /* AccessibilityIdentifierExtensions.swift */; };
 		ADB016A72248197500BA3787 /* UIUTest.h in Headers */ = {isa = PBXBuildFile; fileRef = ADB016A32248197500BA3787 /* UIUTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ADC33366229F1DE600242CBF /* MKMapViewSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC33365229F1DE600242CBF /* MKMapViewSimulation.swift */; };
-		ADC3336B229F665200242CBF /* MKMapViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC3336A229F665200242CBF /* MKMapViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		014D4119224918B500FC0C18 /* UIResponderExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIResponderExtensions.swift; sourceTree = "<group>"; };
-		014D411E22491F0C00FC0C18 /* NSObjectTestable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectTestable.m; sourceTree = "<group>"; };
-		014D411F22491F0C00FC0C18 /* NSObjectTestable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectTestable.h; sourceTree = "<group>"; };
+		01A5D36822B580B4003F519C /* NSObjectTestable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectTestable.m; sourceTree = "<group>"; };
+		01A5D36A22B580B4003F519C /* NSObjectTestable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectTestable.h; sourceTree = "<group>"; };
+		01A5D36D22B580B4003F519C /* UITableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
+		01A5D36E22B580B4003F519C /* AlertControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertControllerExtensions.swift; sourceTree = "<group>"; };
+		01A5D36F22B580B4003F519C /* UITextFieldExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtensions.swift; sourceTree = "<group>"; };
+		01A5D37022B580B4003F519C /* XCTestCaseExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestCaseExtensions.swift; sourceTree = "<group>"; };
+		01A5D37122B580B4003F519C /* UIViewHitTestExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewHitTestExtensions.swift; sourceTree = "<group>"; };
+		01A5D37222B580B4003F519C /* RunLoopExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunLoopExtensions.swift; sourceTree = "<group>"; };
+		01A5D37322B580B4003F519C /* NSObjectAssociatedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectAssociatedObject.swift; sourceTree = "<group>"; };
+		01A5D37422B580B4003F519C /* GeometryExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeometryExtensions.swift; sourceTree = "<group>"; };
+		01A5D37522B580B4003F519C /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		01A5D37622B580B4003F519C /* MKMapViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKMapViewExtensions.swift; sourceTree = "<group>"; };
+		01A5D37722B580B4003F519C /* NotificationTestMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTestMonitor.swift; sourceTree = "<group>"; };
+		01A5D37822B580B4003F519C /* NSObjectExchangeMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExchangeMethods.swift; sourceTree = "<group>"; };
+		01A5D37922B580B4003F519C /* AccessibilityIdentifierExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifierExtensions.swift; sourceTree = "<group>"; };
+		01A5D37A22B580B4003F519C /* UIResponderExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIResponderExtensions.swift; sourceTree = "<group>"; };
+		01A5D37C22B580B4003F519C /* UIGestureRecognizerTestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGestureRecognizerTestable.swift; sourceTree = "<group>"; };
+		01A5D37D22B580B4003F519C /* UINavigationControllerTestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationControllerTestable.swift; sourceTree = "<group>"; };
+		01A5D37E22B580B4003F519C /* UIWindowTestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindowTestable.swift; sourceTree = "<group>"; };
+		01A5D37F22B580B4003F519C /* UIBarButtonItemTestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemTestable.swift; sourceTree = "<group>"; };
+		01A5D38022B580B4003F519C /* UIViewTestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewTestable.swift; sourceTree = "<group>"; };
+		01A5D38122B580B4003F519C /* UIStoryboardSegueTestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboardSegueTestable.swift; sourceTree = "<group>"; };
+		01A5D38222B580B4003F519C /* UIToolbarTestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIToolbarTestable.swift; sourceTree = "<group>"; };
+		01A5D38322B580B4003F519C /* UITableViewCellTestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellTestable.swift; sourceTree = "<group>"; };
+		01A5D38422B580B4003F519C /* UIViewControllerTestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerTestable.swift; sourceTree = "<group>"; };
+		01A5D38622B580B4003F519C /* UICollectionViewSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewSimulation.swift; sourceTree = "<group>"; };
+		01A5D38722B580B4003F519C /* UIBarButtonItemSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemSimulation.swift; sourceTree = "<group>"; };
+		01A5D38822B580B4003F519C /* UITextViewSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewSimulation.swift; sourceTree = "<group>"; };
+		01A5D38922B580B4003F519C /* UIStepperSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStepperSimulation.swift; sourceTree = "<group>"; };
+		01A5D38A22B580B4003F519C /* UISegmentedControlSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISegmentedControlSimulation.swift; sourceTree = "<group>"; };
+		01A5D38B22B580B4003F519C /* UITableViewSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewSimulation.swift; sourceTree = "<group>"; };
+		01A5D38C22B580B4003F519C /* UITextFieldSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldSimulation.swift; sourceTree = "<group>"; };
+		01A5D38D22B580B4003F519C /* UIPickerViewSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPickerViewSimulation.swift; sourceTree = "<group>"; };
+		01A5D38E22B580B4003F519C /* UIWindowSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindowSimulation.swift; sourceTree = "<group>"; };
+		01A5D38F22B580B4003F519C /* UISwitchSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitchSimulation.swift; sourceTree = "<group>"; };
+		01A5D39022B580B4003F519C /* UIDatePickerSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDatePickerSimulation.swift; sourceTree = "<group>"; };
+		01A5D39122B580B4003F519C /* UISliderSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISliderSimulation.swift; sourceTree = "<group>"; };
+		01A5D39222B580B4003F519C /* UIAlertActionSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertActionSimulation.swift; sourceTree = "<group>"; };
+		01A5D39322B580B4003F519C /* MKMapViewSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKMapViewSimulation.swift; sourceTree = "<group>"; };
+		01A5D39422B580B4003F519C /* UIViewSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewSimulation.swift; sourceTree = "<group>"; };
+		01A5D39522B580B4003F519C /* UIControlSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlSimulation.swift; sourceTree = "<group>"; };
 		ADB015E52248125100BA3787 /* UIUTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIUTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADB01640224812F700BA3787 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		ADB016532248180D00BA3787 /* UIGestureRecognizerTestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIGestureRecognizerTestable.swift; sourceTree = "<group>"; };
-		ADB016542248180D00BA3787 /* UINavigationControllerTestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationControllerTestable.swift; sourceTree = "<group>"; };
-		ADB016562248180D00BA3787 /* UIWindowTestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindowTestable.swift; sourceTree = "<group>"; };
-		ADB016572248180D00BA3787 /* UIBarButtonItemTestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemTestable.swift; sourceTree = "<group>"; };
-		ADB016582248180D00BA3787 /* UIViewTestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewTestable.swift; sourceTree = "<group>"; };
-		ADB0165A2248180D00BA3787 /* UIStoryboardSegueTestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboardSegueTestable.swift; sourceTree = "<group>"; };
-		ADB0165B2248180D00BA3787 /* UIToolbarTestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIToolbarTestable.swift; sourceTree = "<group>"; };
-		ADB0165C2248180D00BA3787 /* UITableViewCellTestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellTestable.swift; sourceTree = "<group>"; };
-		ADB0165D2248180D00BA3787 /* UIViewControllerTestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerTestable.swift; sourceTree = "<group>"; };
-		ADB0165F2248180D00BA3787 /* UICollectionViewSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewSimulation.swift; sourceTree = "<group>"; };
-		ADB016602248180D00BA3787 /* UIBarButtonItemSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemSimulation.swift; sourceTree = "<group>"; };
-		ADB016612248180D00BA3787 /* UITextViewSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewSimulation.swift; sourceTree = "<group>"; };
-		ADB016622248180D00BA3787 /* UIStepperSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStepperSimulation.swift; sourceTree = "<group>"; };
-		ADB016632248180D00BA3787 /* UISegmentedControlSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISegmentedControlSimulation.swift; sourceTree = "<group>"; };
-		ADB016642248180D00BA3787 /* UITableViewSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewSimulation.swift; sourceTree = "<group>"; };
-		ADB016652248180D00BA3787 /* UITextFieldSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldSimulation.swift; sourceTree = "<group>"; };
-		ADB016662248180D00BA3787 /* UIPickerViewSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPickerViewSimulation.swift; sourceTree = "<group>"; };
-		ADB016672248180D00BA3787 /* UIWindowSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindowSimulation.swift; sourceTree = "<group>"; };
-		ADB016682248180D00BA3787 /* UISwitchSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISwitchSimulation.swift; sourceTree = "<group>"; };
-		ADB016692248180D00BA3787 /* UIDatePickerSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDatePickerSimulation.swift; sourceTree = "<group>"; };
-		ADB0166A2248180D00BA3787 /* UISliderSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISliderSimulation.swift; sourceTree = "<group>"; };
-		ADB0166B2248180D00BA3787 /* UIAlertActionSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertActionSimulation.swift; sourceTree = "<group>"; };
-		ADB0166C2248180D00BA3787 /* UIViewSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewSimulation.swift; sourceTree = "<group>"; };
-		ADB0166D2248180D00BA3787 /* UIControlSimulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIControlSimulation.swift; sourceTree = "<group>"; };
-		ADB0166F2248180D00BA3787 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtensions.swift; sourceTree = "<group>"; };
-		ADB016702248180D00BA3787 /* AlertControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertControllerExtensions.swift; sourceTree = "<group>"; };
-		ADB016712248180D00BA3787 /* UITextFieldExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtensions.swift; sourceTree = "<group>"; };
-		ADB016722248180D00BA3787 /* XCTestCaseExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestCaseExtensions.swift; sourceTree = "<group>"; };
-		ADB016732248180D00BA3787 /* UIViewHitTestExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewHitTestExtensions.swift; sourceTree = "<group>"; };
-		ADB016742248180D00BA3787 /* RunLoopExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunLoopExtensions.swift; sourceTree = "<group>"; };
-		ADB016752248180D00BA3787 /* NSObjectAssociatedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectAssociatedObject.swift; sourceTree = "<group>"; };
-		ADB016762248180D00BA3787 /* GeometryExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeometryExtensions.swift; sourceTree = "<group>"; };
-		ADB016772248180D00BA3787 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
-		ADB016782248180D00BA3787 /* NotificationTestMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTestMonitor.swift; sourceTree = "<group>"; };
-		ADB016792248180D00BA3787 /* NSObjectExchangeMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObjectExchangeMethods.swift; sourceTree = "<group>"; };
-		ADB0167A2248180D00BA3787 /* AccessibilityIdentifierExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifierExtensions.swift; sourceTree = "<group>"; };
 		ADB016A32248197500BA3787 /* UIUTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUTest.h; sourceTree = "<group>"; };
 		ADB016A62248197500BA3787 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ADC33365229F1DE600242CBF /* MKMapViewSimulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewSimulation.swift; sourceTree = "<group>"; };
-		ADC3336A229F665200242CBF /* MKMapViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,14 +112,102 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		014D411D22491F0C00FC0C18 /* Obj-C Support */ = {
+		01A5D36622B580B4003F519C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				014D411F22491F0C00FC0C18 /* NSObjectTestable.h */,
-				014D411E22491F0C00FC0C18 /* NSObjectTestable.m */,
+				01A5D36722B580B4003F519C /* Obj-C Support */,
+				01A5D36B22B580B4003F519C /* Swift */,
+			);
+			name = Sources;
+			path = ../Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		01A5D36722B580B4003F519C /* Obj-C Support */ = {
+			isa = PBXGroup;
+			children = (
+				01A5D36822B580B4003F519C /* NSObjectTestable.m */,
+				01A5D36922B580B4003F519C /* include */,
 			);
 			path = "Obj-C Support";
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
+		};
+		01A5D36922B580B4003F519C /* include */ = {
+			isa = PBXGroup;
+			children = (
+				01A5D36A22B580B4003F519C /* NSObjectTestable.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		01A5D36B22B580B4003F519C /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				01A5D38522B580B4003F519C /* Simulation Extensions */,
+				01A5D37B22B580B4003F519C /* Testable Extensions */,
+				01A5D36C22B580B4003F519C /* Utility Extensions */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
+		01A5D36C22B580B4003F519C /* Utility Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				01A5D37922B580B4003F519C /* AccessibilityIdentifierExtensions.swift */,
+				01A5D36E22B580B4003F519C /* AlertControllerExtensions.swift */,
+				01A5D37422B580B4003F519C /* GeometryExtensions.swift */,
+				01A5D37622B580B4003F519C /* MKMapViewExtensions.swift */,
+				01A5D37722B580B4003F519C /* NotificationTestMonitor.swift */,
+				01A5D37322B580B4003F519C /* NSObjectAssociatedObject.swift */,
+				01A5D37822B580B4003F519C /* NSObjectExchangeMethods.swift */,
+				01A5D37222B580B4003F519C /* RunLoopExtensions.swift */,
+				01A5D37A22B580B4003F519C /* UIResponderExtensions.swift */,
+				01A5D36D22B580B4003F519C /* UITableViewExtensions.swift */,
+				01A5D36F22B580B4003F519C /* UITextFieldExtensions.swift */,
+				01A5D37522B580B4003F519C /* UIViewExtensions.swift */,
+				01A5D37122B580B4003F519C /* UIViewHitTestExtensions.swift */,
+				01A5D37022B580B4003F519C /* XCTestCaseExtensions.swift */,
+			);
+			path = "Utility Extensions";
+			sourceTree = "<group>";
+		};
+		01A5D37B22B580B4003F519C /* Testable Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				01A5D37F22B580B4003F519C /* UIBarButtonItemTestable.swift */,
+				01A5D37C22B580B4003F519C /* UIGestureRecognizerTestable.swift */,
+				01A5D37D22B580B4003F519C /* UINavigationControllerTestable.swift */,
+				01A5D38122B580B4003F519C /* UIStoryboardSegueTestable.swift */,
+				01A5D38322B580B4003F519C /* UITableViewCellTestable.swift */,
+				01A5D38222B580B4003F519C /* UIToolbarTestable.swift */,
+				01A5D38422B580B4003F519C /* UIViewControllerTestable.swift */,
+				01A5D38022B580B4003F519C /* UIViewTestable.swift */,
+				01A5D37E22B580B4003F519C /* UIWindowTestable.swift */,
+			);
+			path = "Testable Extensions";
+			sourceTree = "<group>";
+		};
+		01A5D38522B580B4003F519C /* Simulation Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				01A5D39322B580B4003F519C /* MKMapViewSimulation.swift */,
+				01A5D39222B580B4003F519C /* UIAlertActionSimulation.swift */,
+				01A5D38722B580B4003F519C /* UIBarButtonItemSimulation.swift */,
+				01A5D38622B580B4003F519C /* UICollectionViewSimulation.swift */,
+				01A5D39522B580B4003F519C /* UIControlSimulation.swift */,
+				01A5D39022B580B4003F519C /* UIDatePickerSimulation.swift */,
+				01A5D38D22B580B4003F519C /* UIPickerViewSimulation.swift */,
+				01A5D38A22B580B4003F519C /* UISegmentedControlSimulation.swift */,
+				01A5D39122B580B4003F519C /* UISliderSimulation.swift */,
+				01A5D38922B580B4003F519C /* UIStepperSimulation.swift */,
+				01A5D38F22B580B4003F519C /* UISwitchSimulation.swift */,
+				01A5D38B22B580B4003F519C /* UITableViewSimulation.swift */,
+				01A5D38C22B580B4003F519C /* UITextFieldSimulation.swift */,
+				01A5D38822B580B4003F519C /* UITextViewSimulation.swift */,
+				01A5D39422B580B4003F519C /* UIViewSimulation.swift */,
+				01A5D38E22B580B4003F519C /* UIWindowSimulation.swift */,
+			);
+			path = "Simulation Extensions";
+			sourceTree = "<group>";
 		};
 		ADB015DB2248125100BA3787 = {
 			isa = PBXGroup;
@@ -141,12 +229,9 @@
 		ADB015E72248125100BA3787 /* UIUTest */ = {
 			isa = PBXGroup;
 			children = (
+				01A5D36622B580B4003F519C /* Sources */,
 				ADB016A32248197500BA3787 /* UIUTest.h */,
 				ADB016A62248197500BA3787 /* Info.plist */,
-				014D411D22491F0C00FC0C18 /* Obj-C Support */,
-				ADB0165E2248180D00BA3787 /* Simulation Extensions */,
-				ADB016522248180D00BA3787 /* Testable Extensions */,
-				ADB0166E2248180D00BA3787 /* Utility Extensions */,
 			);
 			path = UIUTest;
 			sourceTree = "<group>";
@@ -159,66 +244,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		ADB016522248180D00BA3787 /* Testable Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				ADB016572248180D00BA3787 /* UIBarButtonItemTestable.swift */,
-				ADB016532248180D00BA3787 /* UIGestureRecognizerTestable.swift */,
-				ADB016542248180D00BA3787 /* UINavigationControllerTestable.swift */,
-				ADB0165A2248180D00BA3787 /* UIStoryboardSegueTestable.swift */,
-				ADB0165C2248180D00BA3787 /* UITableViewCellTestable.swift */,
-				ADB0165B2248180D00BA3787 /* UIToolbarTestable.swift */,
-				ADB0165D2248180D00BA3787 /* UIViewControllerTestable.swift */,
-				ADB016582248180D00BA3787 /* UIViewTestable.swift */,
-				ADB016562248180D00BA3787 /* UIWindowTestable.swift */,
-			);
-			path = "Testable Extensions";
-			sourceTree = SOURCE_ROOT;
-		};
-		ADB0165E2248180D00BA3787 /* Simulation Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				ADC33365229F1DE600242CBF /* MKMapViewSimulation.swift */,
-				ADB0166B2248180D00BA3787 /* UIAlertActionSimulation.swift */,
-				ADB016602248180D00BA3787 /* UIBarButtonItemSimulation.swift */,
-				ADB0165F2248180D00BA3787 /* UICollectionViewSimulation.swift */,
-				ADB0166D2248180D00BA3787 /* UIControlSimulation.swift */,
-				ADB016692248180D00BA3787 /* UIDatePickerSimulation.swift */,
-				ADB016662248180D00BA3787 /* UIPickerViewSimulation.swift */,
-				ADB016632248180D00BA3787 /* UISegmentedControlSimulation.swift */,
-				ADB0166A2248180D00BA3787 /* UISliderSimulation.swift */,
-				ADB016622248180D00BA3787 /* UIStepperSimulation.swift */,
-				ADB016682248180D00BA3787 /* UISwitchSimulation.swift */,
-				ADB016642248180D00BA3787 /* UITableViewSimulation.swift */,
-				ADB016652248180D00BA3787 /* UITextFieldSimulation.swift */,
-				ADB016612248180D00BA3787 /* UITextViewSimulation.swift */,
-				ADB0166C2248180D00BA3787 /* UIViewSimulation.swift */,
-				ADB016672248180D00BA3787 /* UIWindowSimulation.swift */,
-			);
-			path = "Simulation Extensions";
-			sourceTree = SOURCE_ROOT;
-		};
-		ADB0166E2248180D00BA3787 /* Utility Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				ADB0167A2248180D00BA3787 /* AccessibilityIdentifierExtensions.swift */,
-				ADB016702248180D00BA3787 /* AlertControllerExtensions.swift */,
-				ADB016762248180D00BA3787 /* GeometryExtensions.swift */,
-				ADC3336A229F665200242CBF /* MKMapViewExtensions.swift */,
-				ADB016782248180D00BA3787 /* NotificationTestMonitor.swift */,
-				ADB016752248180D00BA3787 /* NSObjectAssociatedObject.swift */,
-				ADB016792248180D00BA3787 /* NSObjectExchangeMethods.swift */,
-				ADB016742248180D00BA3787 /* RunLoopExtensions.swift */,
-				014D4119224918B500FC0C18 /* UIResponderExtensions.swift */,
-				ADB0166F2248180D00BA3787 /* UITableViewExtensions.swift */,
-				ADB016712248180D00BA3787 /* UITextFieldExtensions.swift */,
-				ADB016772248180D00BA3787 /* UIViewExtensions.swift */,
-				ADB016732248180D00BA3787 /* UIViewHitTestExtensions.swift */,
-				ADB016722248180D00BA3787 /* XCTestCaseExtensions.swift */,
-			);
-			path = "Utility Extensions";
-			sourceTree = SOURCE_ROOT;
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -226,8 +251,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01A5D39722B580B4003F519C /* NSObjectTestable.h in Headers */,
 				ADB016A72248197500BA3787 /* UIUTest.h in Headers */,
-				014D41222249200A00FC0C18 /* NSObjectTestable.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,46 +324,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADB0168F2248180D00BA3787 /* UISwitchSimulation.swift in Sources */,
-				ADB0168C2248180D00BA3787 /* UITextFieldSimulation.swift in Sources */,
-				ADB016952248180D00BA3787 /* UITableViewExtensions.swift in Sources */,
-				ADB016842248180D00BA3787 /* UITableViewCellTestable.swift in Sources */,
-				ADB0169E2248180D00BA3787 /* NotificationTestMonitor.swift in Sources */,
-				ADB016972248180D00BA3787 /* UITextFieldExtensions.swift in Sources */,
-				ADB016962248180D00BA3787 /* AlertControllerExtensions.swift in Sources */,
-				ADB0167B2248180D00BA3787 /* UIGestureRecognizerTestable.swift in Sources */,
-				ADB0169B2248180D00BA3787 /* NSObjectAssociatedObject.swift in Sources */,
-				ADB016982248180D00BA3787 /* XCTestCaseExtensions.swift in Sources */,
-				ADB0168A2248180D00BA3787 /* UISegmentedControlSimulation.swift in Sources */,
-				ADB0169C2248180D00BA3787 /* GeometryExtensions.swift in Sources */,
-				ADB0168E2248180D00BA3787 /* UIWindowSimulation.swift in Sources */,
-				ADB016932248180D00BA3787 /* UIViewSimulation.swift in Sources */,
-				ADB016A02248180D00BA3787 /* AccessibilityIdentifierExtensions.swift in Sources */,
-				ADB0169D2248180D00BA3787 /* UIViewExtensions.swift in Sources */,
-				ADB016992248180D00BA3787 /* UIViewHitTestExtensions.swift in Sources */,
-				ADB016822248180D00BA3787 /* UIStoryboardSegueTestable.swift in Sources */,
-				ADB0167C2248180D00BA3787 /* UINavigationControllerTestable.swift in Sources */,
-				ADB016912248180D00BA3787 /* UISliderSimulation.swift in Sources */,
-				ADB016872248180D00BA3787 /* UIBarButtonItemSimulation.swift in Sources */,
-				ADB0167F2248180D00BA3787 /* UIBarButtonItemTestable.swift in Sources */,
-				ADB016942248180D00BA3787 /* UIControlSimulation.swift in Sources */,
-				014D411A224918B500FC0C18 /* UIResponderExtensions.swift in Sources */,
-				ADB016802248180D00BA3787 /* UIViewTestable.swift in Sources */,
-				ADB0167E2248180D00BA3787 /* UIWindowTestable.swift in Sources */,
-				ADB016852248180D00BA3787 /* UIViewControllerTestable.swift in Sources */,
-				ADB016862248180D00BA3787 /* UICollectionViewSimulation.swift in Sources */,
-				ADB0168B2248180D00BA3787 /* UITableViewSimulation.swift in Sources */,
-				ADC3336B229F665200242CBF /* MKMapViewExtensions.swift in Sources */,
-				ADB016922248180D00BA3787 /* UIAlertActionSimulation.swift in Sources */,
-				ADB016832248180D00BA3787 /* UIToolbarTestable.swift in Sources */,
-				014D412022491F0C00FC0C18 /* NSObjectTestable.m in Sources */,
-				ADB0169A2248180D00BA3787 /* RunLoopExtensions.swift in Sources */,
-				ADB0169F2248180D00BA3787 /* NSObjectExchangeMethods.swift in Sources */,
-				ADC33366229F1DE600242CBF /* MKMapViewSimulation.swift in Sources */,
-				ADB016902248180D00BA3787 /* UIDatePickerSimulation.swift in Sources */,
-				ADB016892248180D00BA3787 /* UIStepperSimulation.swift in Sources */,
-				ADB016882248180D00BA3787 /* UITextViewSimulation.swift in Sources */,
-				ADB0168D2248180D00BA3787 /* UIPickerViewSimulation.swift in Sources */,
+				01A5D39E22B580B4003F519C /* NSObjectAssociatedObject.swift in Sources */,
+				01A5D3A122B580B4003F519C /* MKMapViewExtensions.swift in Sources */,
+				01A5D3B322B580B4003F519C /* UISegmentedControlSimulation.swift in Sources */,
+				01A5D3AE22B580B4003F519C /* UIViewControllerTestable.swift in Sources */,
+				01A5D3AB22B580B4003F519C /* UIStoryboardSegueTestable.swift in Sources */,
+				01A5D3AD22B580B4003F519C /* UITableViewCellTestable.swift in Sources */,
+				01A5D3A322B580B4003F519C /* NSObjectExchangeMethods.swift in Sources */,
+				01A5D3A422B580B4003F519C /* AccessibilityIdentifierExtensions.swift in Sources */,
+				01A5D3BE22B580B4003F519C /* UIControlSimulation.swift in Sources */,
+				01A5D39C22B580B4003F519C /* UIViewHitTestExtensions.swift in Sources */,
+				01A5D3A222B580B4003F519C /* NotificationTestMonitor.swift in Sources */,
+				01A5D3B922B580B4003F519C /* UIDatePickerSimulation.swift in Sources */,
+				01A5D39B22B580B4003F519C /* XCTestCaseExtensions.swift in Sources */,
+				01A5D3BC22B580B4003F519C /* MKMapViewSimulation.swift in Sources */,
+				01A5D3B722B580B4003F519C /* UIWindowSimulation.swift in Sources */,
+				01A5D39622B580B4003F519C /* NSObjectTestable.m in Sources */,
+				01A5D39A22B580B4003F519C /* UITextFieldExtensions.swift in Sources */,
+				01A5D3B122B580B4003F519C /* UITextViewSimulation.swift in Sources */,
+				01A5D3AF22B580B4003F519C /* UICollectionViewSimulation.swift in Sources */,
+				01A5D39F22B580B4003F519C /* GeometryExtensions.swift in Sources */,
+				01A5D3AC22B580B4003F519C /* UIToolbarTestable.swift in Sources */,
+				01A5D3A022B580B4003F519C /* UIViewExtensions.swift in Sources */,
+				01A5D3A922B580B4003F519C /* UIBarButtonItemTestable.swift in Sources */,
+				01A5D3B622B580B4003F519C /* UIPickerViewSimulation.swift in Sources */,
+				01A5D39822B580B4003F519C /* UITableViewExtensions.swift in Sources */,
+				01A5D3B822B580B4003F519C /* UISwitchSimulation.swift in Sources */,
+				01A5D39922B580B4003F519C /* AlertControllerExtensions.swift in Sources */,
+				01A5D3BB22B580B4003F519C /* UIAlertActionSimulation.swift in Sources */,
+				01A5D3BA22B580B4003F519C /* UISliderSimulation.swift in Sources */,
+				01A5D39D22B580B4003F519C /* RunLoopExtensions.swift in Sources */,
+				01A5D3A722B580B4003F519C /* UINavigationControllerTestable.swift in Sources */,
+				01A5D3AA22B580B4003F519C /* UIViewTestable.swift in Sources */,
+				01A5D3B522B580B4003F519C /* UITextFieldSimulation.swift in Sources */,
+				01A5D3A822B580B4003F519C /* UIWindowTestable.swift in Sources */,
+				01A5D3B022B580B4003F519C /* UIBarButtonItemSimulation.swift in Sources */,
+				01A5D3BD22B580B4003F519C /* UIViewSimulation.swift in Sources */,
+				01A5D3B422B580B4003F519C /* UITableViewSimulation.swift in Sources */,
+				01A5D3A522B580B4003F519C /* UIResponderExtensions.swift in Sources */,
+				01A5D3B222B580B4003F519C /* UIStepperSimulation.swift in Sources */,
+				01A5D3A622B580B4003F519C /* UIGestureRecognizerTestable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,8 +504,8 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				HEADER_SEARCH_PATHS = (
-					"../Obj-C",
-					Support,
+					"../Sources/Obj-C",
+					Support/include,
 				);
 				INFOPLIST_FILE = UIUTest/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -509,8 +534,8 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_SEARCH_PATHS = "$(PLATFORM_DIR)/Developer/Library/Frameworks";
 				HEADER_SEARCH_PATHS = (
-					"../Obj-C",
-					Support,
+					"../Sources/Obj-C",
+					Support/include,
 				);
 				INFOPLIST_FILE = UIUTest/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

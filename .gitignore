@@ -1,4 +1,7 @@
 .DS_Store
+/.build
+/Packages
+/*.xcodeproj
 UIUTest/UIUTest.xcodeproj/project.xcworkspace/xcuserdata/*
 UIUTestExample/UIUTestExample.xcodeproj/project.xcworkspace/xcuserdata/*
 UIUTestExample/UIUTestExample.xcodeproj/xcuserdata/*
@@ -9,4 +12,3 @@ UIUTestCocoaPodsExample/UIUTestExample.xcodeproj/xcuserdata/*
 UIUTestCocoaPodsExample/UIUTestExample.xcodeproj/project.xcworkspace/xcuserdata/*
 UIUTestCocoaPodsExample/UIUTestExample.xcworkspace/xcuserdata/*
 Presentation/*
-

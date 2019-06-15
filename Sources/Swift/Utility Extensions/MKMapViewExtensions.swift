@@ -16,16 +16,16 @@ import MapKit
         return self.isUserInteractionEnabled
     }
     
-    /// Determine if the specified annotation is currently selected.
+    /// Determine if a selected annotation exists at a map location.
     ///
-    /// - Parameter indexPath: The index path of the cell to test.
-    /// - Returns: true if the specified cell is selected; false otherwise.
+    /// - Parameter location: The CLLocationCoordinate2D of the annotation to test.
+    /// - Returns: true if the annotation exists and is selected; false otherwise.
     ///
     func annotationIsSelected(at location: CLLocationCoordinate2D) -> Bool {
         return self.selectedAnnotations.contains { $0.coordinate.latitude == location.latitude && $0.coordinate.longitude == location.longitude }
     }
     
-    /// Select a row and perform the delegate operations as if the selection was performed interactively rather than programatically.
+    /// Select an annotation and perform the delegate operations as if the selection was performed interactively rather than programatically.
     ///
     /// - Parameters:
     ///   - annotation: The annotation to select.
@@ -40,7 +40,7 @@ import MapKit
         self.delegate?.mapView?(self, didSelect: view)
     }
 
-    /// Deselect a row and perform the delegate operations as if the selection was performed interactively rather than programatically.
+    /// Deselect an annotation and perform the delegate operations as if the selection was performed interactively rather than programatically.
     ///
     /// - Parameters:
     ///   - annotation: The annotation to deselect.

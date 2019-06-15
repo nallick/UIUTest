@@ -6,43 +6,6 @@
 
 import UIKit
 
-public extension UIView
-{
-	func superview(where predicate: @escaping (UIView) -> Bool) -> UIView? {
-		guard let superview = self.superview else { return nil }
-		if predicate(superview) { return superview }
-		return self.superview.flatMap { $0.superview(where: predicate) }
-	}
-
-	func subview(deep: Bool = false, where predicate: @escaping (UIView) -> Bool) -> UIView? {
-		if deep {
-			for subview in self.subviews {
-				if predicate(subview) { return subview }
-				let result = subview.subview(deep: true, where: predicate)
-				if let _ = result { return result }
-			}
-
-			return nil
-		}
-
-		return self.subviews.first(where: { predicate($0) })
-	}
-}
-public extension UINavigationController
-{
-	/// Returns the current back button of the navigation bar (if any).
-	///
-	var backButton: UIControl? {
-		let backView = self.navigationBar.subview(deep: true) {
-			guard class_respondsToSelector(type(of: $0), Selector(("isBackButton"))) else { return false }
-			let isBack = $0.value(forKey: "isBackButton") as? Bool
-			return isBack ?? false
-		}
-
-		return backView as? UIControl
-	}
-}
-
 public class ButtonsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource
 {
     @IBOutlet private var numberLabel: UILabel!
