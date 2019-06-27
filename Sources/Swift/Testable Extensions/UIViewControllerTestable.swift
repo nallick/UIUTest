@@ -94,6 +94,38 @@ import UIKit
 		}
 	}
 
+    /// Loads the receiver for testing.
+    ///
+    /// - Parameters:
+    ///   - forNavigation: Specifies if the receiver is to be embedded in a navigation controller.
+    ///   - configure: An optional configuration closure called before UIViewController.viewDidLoad().
+    /// - Returns: The receiver, or nil if the receiver doesn't conform to the requested type.
+    ///
+    @discardableResult func loadForTesting<T>(forNavigation: Bool = false, configure: ((T) -> Void)? = nil) -> T? where T: UIViewController {
+        guard let result = self as? T else { return nil }
+
+        if forNavigation {
+            _ = UINavigationController(rootViewController: self)
+        }
+
+        let window = UIApplication.shared.keyWindow
+        window?.removeViewsFromRootViewController()
+
+        configure?(result)
+        window?.rootViewController = result
+        result.loadViewIfNeeded()
+        result.view.layoutIfNeeded()
+
+        if forNavigation {
+            result.viewWillAppear(false)
+            result.viewDidAppear(false)
+        }
+
+        CATransaction.flush()   // flush pending CoreAnimation operations to display the new view controller
+
+        return result
+    }
+
     /// Initialize the testable extensions of UIViewController.
 	///
 	/// - Note: Call this during test setup to use these extensions.
@@ -123,7 +155,7 @@ import UIKit
 	///
 	static func loadFromStoryboard<T>(identifier: String? = nil, storyboard name: String = "Main", bundle: Bundle = Bundle.main, forNavigation: Bool = false, configure: ((T) -> Void)? = nil) -> T? where T: UIViewController {
         var viewController: UIViewController?
-        var notifyViewAppearance = false
+        var createNavigationController = false
 
         let storyboard = UIStoryboard(name: name, bundle: bundle)
         if let identifier = identifier {
@@ -136,29 +168,11 @@ import UIKit
         if let navigationController = viewController as? UINavigationController, let topViewController = navigationController.topViewController {
             viewController = topViewController
         }
-        else if forNavigation && viewController != nil {
-            let _ = UINavigationController(rootViewController: viewController!)
-            notifyViewAppearance = true
+        else {
+            createNavigationController = forNavigation
         }
 
-        guard let result = viewController as? T else { return nil }
-
-        let window = UIApplication.shared.keyWindow
-        window?.removeViewsFromRootViewController()
-
-        configure?(result)
-        window?.rootViewController = result
-        result.loadViewIfNeeded()
-        result.view.layoutIfNeeded()
-
-        if notifyViewAppearance {
-            result.viewWillAppear(false)
-            result.viewDidAppear(false)
-        }
-
-        CATransaction.flush()   // flush pending CoreAnimation operations to display the new view controller
-
-        return result
+        return viewController?.loadForTesting(forNavigation: createNavigationController, configure: configure)
     }
 
     /// An alternate method to be swizzled with UIViewController.dismiss().
