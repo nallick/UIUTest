@@ -8,13 +8,6 @@ import UIKit
 
 @nonobjc public extension UITextView
 {
-    /// Determine if the receiver will respond to user touches in the center of the view.
-    ///
-    @objc override var willRespondToUser: Bool {
-        let hitView = self.touchWillHitView
-        return hitView === self || self.contains(subview: hitView) || hitView?.contains(subview: self) ?? false
-    }
-    
 	/// Simulate a user touch in the receiver.
 	///
     func simulateTouch() {
