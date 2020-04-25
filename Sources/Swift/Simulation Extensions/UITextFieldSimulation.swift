@@ -8,13 +8,6 @@ import UIKit
 
 @nonobjc public extension UITextField
 {
-    /// Determine if the receiver will respond to user touches in the center of the view.
-    ///
-    @objc override var willRespondToUser: Bool {
-        let hitView = self.touchWillHitView
-        return hitView === self || self.contains(subview: hitView) || hitView?.contains(subview: self) ?? false
-    }
-    
 	/// Returns true if the receiver's clear button is currently visible; false otherwise.
 	///
     var clearButtonIsVisible: Bool {

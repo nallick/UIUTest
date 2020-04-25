@@ -34,7 +34,7 @@ import UIKit
         guard !rowBounds.isEmpty else { return nil }
         let rowCenter = self.convert(rowBounds.midPoint, to: topView)
         let hitView = topView.hitTest(rowCenter, with: nil)
-        guard hitView === self || self.contains(subview: hitView) || hitView?.contains(subview: self) ?? false else { return nil }
+        guard hitView === self || self.contains(subview: hitView) else { return nil }
 
         guard let delegate = self.delegate else { return nil }
         guard delegate.responds(to: #selector(UITableViewDelegate.tableView(_:willSelectRowAt:))) else { return indexPath }
