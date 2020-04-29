@@ -1,7 +1,7 @@
 //
 //  UIViewControllerTestable.swift
 //
-//  Copyright © 2017-2019 Purgatory Design. Licensed under the MIT License.
+//  Copyright © 2017-2020 Purgatory Design. Licensed under the MIT License.
 //
 
 import UIKit
@@ -126,9 +126,15 @@ import UIKit
         return result
     }
 
+    /// Called via the Obj-C runtime when this module is loaded to initialize the testable extensions of UIViewController.
+    ///
+    @objc override class func initializeTestableFromObjC() {
+        UIViewController.initializeTestable()
+    }
+
     /// Initialize the testable extensions of UIViewController.
 	///
-	/// - Note: Call this during test setup to use these extensions.
+	/// - Note: Called automatically during module load, or call this during test setup to use these extensions.
 	///
    static func initializeTestable() {
         UIViewController.classInitialized   // reference to ensure initialization is called once and only once

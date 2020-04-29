@@ -50,6 +50,8 @@
 		01A5D3BE22B580B4003F519C /* UIControlSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A5D39522B580B4003F519C /* UIControlSimulation.swift */; };
 		ADB01641224812F700BA3787 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB01640224812F700BA3787 /* XCTest.framework */; };
 		ADB016A72248197500BA3787 /* UIUTest.h in Headers */ = {isa = PBXBuildFile; fileRef = ADB016A32248197500BA3787 /* UIUTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA24F428245A109A0010A2E9 /* UIViewControllerTestable.m in Sources */ = {isa = PBXBuildFile; fileRef = CA24F427245A109A0010A2E9 /* UIViewControllerTestable.m */; };
+		CA24F42A245A10A90010A2E9 /* UIViewControllerTestable.h in Headers */ = {isa = PBXBuildFile; fileRef = CA24F429245A10A90010A2E9 /* UIViewControllerTestable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +100,8 @@
 		ADB01640224812F700BA3787 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		ADB016A32248197500BA3787 /* UIUTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIUTest.h; sourceTree = "<group>"; };
 		ADB016A62248197500BA3787 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA24F427245A109A0010A2E9 /* UIViewControllerTestable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewControllerTestable.m; sourceTree = "<group>"; };
+		CA24F429245A10A90010A2E9 /* UIViewControllerTestable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewControllerTestable.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				01A5D36822B580B4003F519C /* NSObjectTestable.m */,
+				CA24F427245A109A0010A2E9 /* UIViewControllerTestable.m */,
 				01A5D36922B580B4003F519C /* include */,
 			);
 			path = "Obj-C Support";
@@ -135,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				01A5D36A22B580B4003F519C /* NSObjectTestable.h */,
+				CA24F429245A10A90010A2E9 /* UIViewControllerTestable.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -252,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01A5D39722B580B4003F519C /* NSObjectTestable.h in Headers */,
+				CA24F42A245A10A90010A2E9 /* UIViewControllerTestable.h in Headers */,
 				ADB016A72248197500BA3787 /* UIUTest.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +356,7 @@
 				01A5D3A922B580B4003F519C /* UIBarButtonItemTestable.swift in Sources */,
 				01A5D3B622B580B4003F519C /* UIPickerViewSimulation.swift in Sources */,
 				01A5D39822B580B4003F519C /* UITableViewExtensions.swift in Sources */,
+				CA24F428245A109A0010A2E9 /* UIViewControllerTestable.m in Sources */,
 				01A5D3B822B580B4003F519C /* UISwitchSimulation.swift in Sources */,
 				01A5D39922B580B4003F519C /* AlertControllerExtensions.swift in Sources */,
 				01A5D3BB22B580B4003F519C /* UIAlertActionSimulation.swift in Sources */,

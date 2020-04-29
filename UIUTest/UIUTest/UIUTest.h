@@ -13,3 +13,4 @@ FOUNDATION_EXPORT double UIUTestVersionNumber;
 FOUNDATION_EXPORT const unsigned char UIUTestVersionString[];
 
 #import "NSObjectTestable.h"
+#import "UIViewControllerTestable.h"
