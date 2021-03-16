@@ -18,6 +18,13 @@ import UIKit
             let handlerPtr = UnsafeRawPointer(Unmanaged<AnyObject>.passUnretained(handlerBlock as AnyObject).toOpaque())
             let handler = unsafeBitCast(handlerPtr, to: (@convention(block) (UIAlertAction) -> Void).self)
             handler(self)
+
+            guard let alertController = self.value(forKey: "_alertController") as? UIAlertController else { return }
+
+            if !alertController.isBeingDismissed,
+               !alertController.hasBeenDismissed {
+                alertController.dismiss(animated: true)
+            }
         }
     }
 }
