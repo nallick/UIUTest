@@ -13,14 +13,15 @@ import UIKit
 	/// - Note: This uses private system API so should only be used in test targets.
 	///
     func simulateTouch() {
+        if let alertController = self.value(forKey: "_alertController") as? UIAlertController, !alertController.isBeingDismissed, !alertController.hasBeenDismissed {
+            RunLoop.current.singlePass()
+            alertController.dismiss(animated: false)
+            RunLoop.current.singlePass()
+        }
+
         guard self.isEnabled, let handlerBlock = self.value(forKey: "handler") else { return }
         let handlerPtr = UnsafeRawPointer(Unmanaged<AnyObject>.passUnretained(handlerBlock as AnyObject).toOpaque())
         let handler = unsafeBitCast(handlerPtr, to: (@convention(block) (UIAlertAction) -> Void).self)
         handler(self)
-
-        guard let alertController = self.value(forKey: "_alertController") as? UIAlertController,
-              !alertController.isBeingDismissed, !alertController.hasBeenDismissed
-            else { return }
-        alertController.dismiss(animated: false)
     }
 }
