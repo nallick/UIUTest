@@ -159,26 +159,23 @@ import UIKit
 	///   - configure: An optional configuration closure called before UIViewController.viewDidLoad().
 	/// - Returns: The loaded view controller.
 	///
-	static func loadFromStoryboard<T>(identifier: String? = nil, storyboard name: String = "Main", bundle: Bundle = Bundle.main, forNavigation: Bool = false, configure: ((T) -> Void)? = nil) -> T? where T: UIViewController {
-        var viewController: UIViewController?
-        var createNavigationController = false
+    static func loadFromStoryboard<T>(identifier: String? = nil, storyboard name: String = "Main", bundle: Bundle = Bundle.main, forNavigation: Bool = false, configure: ((T) -> Void)? = nil) -> T? where T: UIViewController {
+        return self.privateLoad(identifier: identifier, storyboard: name, bundle: bundle, forNavigation: forNavigation, creator: nil, configure: configure)
+    }
 
-        let storyboard = UIStoryboard(name: name, bundle: bundle)
-        if let identifier = identifier {
-            viewController = storyboard.instantiateViewController(withIdentifier: identifier)
-        }
-        else {
-            guard let initialViewController = storyboard.instantiateInitialViewController() else { return nil }
-            viewController = initialViewController
-        }
-        if let navigationController = viewController as? UINavigationController, let topViewController = navigationController.topViewController {
-            viewController = topViewController
-        }
-        else {
-            createNavigationController = forNavigation
-        }
-
-        return viewController?.loadForTesting(forNavigation: createNavigationController, configure: configure)
+    /// Returns a view controller loaded directly from a storyboard for testing.
+    ///
+    /// - Parameters:
+    ///   - identifier: The view controller's storyboard identifier.
+    ///   - name: The storyboard's name.
+    ///   - bundle: The storyboard's bundle.
+    ///   - forNavigation: Specifies if the loaded view controller is to be embedded in a navigation controller.
+    ///   - creator: An optional creation closure called during instantiation.
+    /// - Returns: The loaded view controller.
+    ///
+    @available(iOS 13, *)
+    static func createFromStoryboard<T>(identifier: String? = nil, storyboard name: String = "Main", bundle: Bundle = Bundle.main, forNavigation: Bool = false, creator: ((NSCoder) -> T?)? = nil) -> T? where T: UIViewController {
+        return self.privateLoad(identifier: identifier, storyboard: name, bundle: bundle, forNavigation: forNavigation, creator: creator, configure: nil)
     }
 
     /// An alternate method to be swizzled with UIViewController.dismiss().
@@ -226,6 +223,47 @@ import UIKit
         }
 
         return true
+    }
+
+    /// Returns a view controller loaded directly from a storyboard for testing.
+    ///
+    /// - Parameters:
+    ///   - identifier: The view controller's storyboard identifier.
+    ///   - name: The storyboard's name.
+    ///   - bundle: The storyboard's bundle.
+    ///   - forNavigation: Specifies if the loaded view controller is to be embedded in a navigation controller.
+    ///   - creator: An optional creation closure called during instantiation (requries iOS 13 or later).
+    ///   - configure: An optional configuration closure called before UIViewController.viewDidLoad().
+    /// - Returns: The loaded view controller.
+    ///
+    private static func privateLoad<T>(identifier: String?, storyboard name: String, bundle: Bundle, forNavigation: Bool, creator: ((NSCoder) -> T?)?, configure: ((T) -> Void)?) -> T? where T: UIViewController {
+        var viewController: UIViewController?
+        var createNavigationController = false
+
+        let storyboard = UIStoryboard(name: name, bundle: bundle)
+        if let identifier = identifier {
+            if #available(iOS 13, *), let creator = creator {
+                viewController = storyboard.instantiateViewController(identifier: identifier, creator: creator)
+            } else {
+                viewController = storyboard.instantiateViewController(withIdentifier: identifier)
+            }
+        }
+        else {
+            if #available(iOS 13, *), let creator = creator {
+                viewController = storyboard.instantiateInitialViewController(creator: creator)
+            } else {
+                viewController = storyboard.instantiateInitialViewController()
+            }
+            guard let _ = viewController else { return nil }
+        }
+        if let navigationController = viewController as? UINavigationController, let topViewController = navigationController.topViewController {
+            viewController = topViewController
+        }
+        else {
+            createNavigationController = forNavigation
+        }
+
+        return viewController?.loadForTesting(forNavigation: createNavigationController, configure: configure)
     }
 
 	/// Initialize the testable extensions of UIViewController. This singleton is only executed once.
