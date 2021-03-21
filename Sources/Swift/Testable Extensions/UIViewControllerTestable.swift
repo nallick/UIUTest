@@ -145,7 +145,9 @@ import UIKit
 	/// - Note: Call this during test tear down when using these extensions.
 	///
     static func flushPendingTestArtifacts() {
-        UIApplication.shared.keyWindow?.removeViewsFromRootViewController()
+        let window = UIApplication.shared.keyWindow
+        window?.removeViewsFromRootViewController()
+        window?.rootViewController = nil
         RunLoop.current.singlePass()
     }
 
