@@ -149,6 +149,7 @@ import UIKit
         window?.removeViewsFromRootViewController()
         window?.rootViewController = nil
         RunLoop.current.singlePass()
+        RunLoop.current.singlePass()
     }
 
 	/// Returns a view controller loaded directly from a storyboard for testing.

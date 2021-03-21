@@ -110,10 +110,11 @@ import UIKit
 	///   - indexPath: The index path of the cell.
 	///
 	func simulateEdit(_ style: UITableViewCell.EditingStyle, rowAt indexPath: IndexPath) {
-		guard self.isEditing, let cell = self.cellForRow(at: indexPath), cell.isEditing,
-			let dataSource = self.dataSource, dataSource.tableView?(self, canEditRowAt: indexPath) != false,
-			style == self.delegate?.tableView?(self, editingStyleForRowAt: indexPath) ?? .delete
-			else { return }
+        guard let cell = self.cellForRow(at: indexPath),
+              style == self.delegate?.tableView?(self, editingStyleForRowAt: indexPath) ?? .delete,
+              style == .delete || (self.isEditing && cell.isEditing),
+              let dataSource = self.dataSource, dataSource.tableView?(self, canEditRowAt: indexPath) != false
+            else { return }
 		dataSource.tableView?(self, commit: style, forRowAt: indexPath)
 	}
 
@@ -124,10 +125,10 @@ import UIKit
 	///   - destinationIndexPath: The index path of the cell after the move.
 	///
 	func simulateEdit(moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-		guard self.isEditing, let cell = self.cellForRow(at: sourceIndexPath), cell.isEditing,
-			let dataSource = self.dataSource, dataSource.responds(to: #selector(UITableViewDataSource.tableView(_:moveRowAt:to:))),
-			dataSource.tableView?(self, canEditRowAt: sourceIndexPath) != false, dataSource.tableView?(self, canMoveRowAt: sourceIndexPath) != false
-			else { return }
+        guard self.isEditing, let cell = self.cellForRow(at: sourceIndexPath), cell.isEditing,
+              let dataSource = self.dataSource, dataSource.responds(to: #selector(UITableViewDataSource.tableView(_:moveRowAt:to:))),
+              dataSource.tableView?(self, canEditRowAt: sourceIndexPath) != false, dataSource.tableView?(self, canMoveRowAt: sourceIndexPath) != false
+            else { return }
 		dataSource.tableView?(self, moveRowAt: sourceIndexPath, to: destinationIndexPath)
 		self.moveRow(at: sourceIndexPath, to: destinationIndexPath)
 	}
